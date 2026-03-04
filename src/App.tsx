@@ -5,6 +5,7 @@ import { BackgroundOrbs } from './components/BackgroundOrbs';
 import { HomePage } from './pages/HomePage';
 import { PathwaysPage } from './pages/PathwaysPage';
 import { ApplicationPage } from './pages/ApplicationPage';
+import { TutorPage } from './pages/TutorPage';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/pathways" element={<PathwaysPage />} />
             <Route path="/apply" element={<ApplicationPage />} />
+            <Route path="/tutor" element={<TutorPage />} />
           </Routes>
         </main>
         <Footer />

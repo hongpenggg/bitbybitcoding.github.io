@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, GraduationCap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export function HeroSection() {
@@ -37,6 +37,15 @@ export function HeroSection() {
             >
               Apply Now
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </Link>
+          <Link to="/tutor">
+            <Button 
+              size="lg" 
+              className="bg-bit-red hover:bg-red-600 text-white text-lg font-bold shadow-[0_10px_30px_-5px_rgba(255,77,109,0.4)] hover:shadow-[0_20px_30px_-10px_rgba(255,77,109,0.6)] transition-all group h-14 px-8"
+            >
+              <GraduationCap className="mr-2 w-5 h-5" />
+              Become a Tutor
             </Button>
           </Link>
           <Link to="/pathways">

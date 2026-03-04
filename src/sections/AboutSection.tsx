@@ -7,12 +7,12 @@ const features = [
     iconColor: 'text-bit-dark',
   },
   {
-    text: 'Industry-relevant curriculum (Python, AI, C++)',
+    text: 'Industry-relevant curriculum (Python, ML, C++)',
     color: 'bg-bit-turquoise',
     iconColor: 'text-bit-dark',
   },
   {
-    text: 'Mentorship from tech professionals',
+    text: 'Expert approved teaching pedagogy',
     color: 'bg-bit-lavender',
     iconColor: 'text-white',
   },

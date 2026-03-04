@@ -5,9 +5,9 @@ import { Button } from '@/components/ui/button';
 const pythonSubBranches = [
   {
     title: 'Language & Application',
-    description: 'Master the syntax, logic, and core concepts of Python. Build your first command-line applications and understand algorithmic thinking.',
+    description: 'Master the syntax, logic, and core concepts of Python. Build your first command-line applications and understand algorithmic thinking. Learn important concepts that will take you everywhere.',
     status: 'active',
-    skills: ['Variables', 'Loops', 'Functions', 'Data Structures'],
+    skills: ['Variables', 'Loops', 'Functions', 'Data Structures', 'OOP', 'Simple APIs', 'Algorithms', 'Time Complexity'],
   },
   {
     title: 'Flask & Front-end',
@@ -17,7 +17,7 @@ const pythonSubBranches = [
   },
   {
     title: 'SQL & Databases',
-    description: 'Data is the new oil. Learn to design, query, and manage relational databases to power your applications.',
+    description: "Data is the new oil. Learn to design, query, and manage relational databases to power your applications. After SQL, you'll be ready to build your big, powerful apps.",
     status: 'coming-soon',
     skills: ['SQL', 'PostgreSQL', 'Database Design', 'ORM'],
   },
@@ -27,7 +27,7 @@ const placementSteps = [
   {
     number: 1,
     title: 'Apply',
-    description: 'Fill out the quick application form to join the program.',
+    description: 'Fill out the quick application form to join the programme.',
   },
   {
     number: 2,
@@ -48,7 +48,7 @@ export function PathwaysPage() {
       <section className="flex flex-col items-center text-center gap-6 py-12 px-6">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-panel-light border border-bit-lavender/30 text-bit-lavender text-sm font-bold tracking-wide uppercase mb-2 shadow-sm">
           <span className="w-2 h-2 rounded-full bg-bit-green animate-pulse"></span>
-          2024 Intake Open
+          2026 Intake Open
         </div>
         <h1 className="text-4xl md:text-5xl lg:text-7xl font-display font-bold tracking-tight leading-tight max-w-4xl text-bit-dark">
           Structured Pathways for{' '}
@@ -216,7 +216,7 @@ export function PathwaysPage() {
                 <div>
                   <h4 className="text-2xl font-display font-bold text-bit-dark">Free</h4>
                   <p className="text-sm text-bit-dark/60 mt-1 font-body leading-snug">
-                    Our curriculum is fully subsidized for eligible youths aged 10-18.
+                    Our curriculum is completely free for all youths aged 10-18 who are passionate about learning to code, and eager to use their coding skills to make a difference.
                   </p>
                 </div>
               </div>
@@ -230,8 +230,8 @@ export function PathwaysPage() {
         <p className="text-bit-dark/50 text-sm font-medium">
           &copy; {new Date().getFullYear()} Bit by Bit Coding. Singapore.{' '}
           <br className="sm:hidden" />
-          Empowering the next generation of tech leaders.
         </p>
+        <p className="text-bit-dark/50 text-sm font-medium">Democratising coding education, bit by bit.</p>
       </section>
     </div>
   );

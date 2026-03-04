@@ -10,8 +10,8 @@ export function Navigation() {
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'Pathways', path: '/pathways' },
-    { name: 'Mentors', path: '/#mentors' },
-    { name: 'About', path: '/#about' },
+    { name: 'Mentors', path: '#mentorssection' },
+    { name: 'About', path: '#aboutsection' },
   ];
 
   const isActive = (path: string) => {

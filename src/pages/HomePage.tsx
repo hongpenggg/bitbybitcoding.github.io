@@ -10,9 +10,13 @@ export function HomePage() {
     <div className="flex flex-col">
       <HeroSection />
       <StatsSection />
-      <AboutSection />
+      <div className="aboutsection">
+        <AboutSection />
+      </div>
       <PathwaysPreview />
-      <MentorsSection />
+      <div className="mentorssection">
+        <MentorsSection />
+      </div>
       <NewsletterSection />
     </div>
   );

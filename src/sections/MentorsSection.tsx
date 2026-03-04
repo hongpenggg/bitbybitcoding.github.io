@@ -1,30 +1,31 @@
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const mentors = [
   {
-    name: 'Sarah Lim',
-    role: 'Software Engineer at Google',
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80',
-    quote: "I love seeing students' eyes light up when their code finally runs. Coding isn't just a skill; it's a superpower.",
+    name: 'Hongpeng Wei',
+    role: 'President & Co-Founder of Bit by Bit, Ex-Computing @ VJC',
+    image: 'https://raw.githubusercontent.com/hongpenggg/hongpenggg.github.io/master/.github/assets/hongpeng.jpeg',
+    quote: "I love seeing students' eyes light up when their code finally runs. I want to help every youth find their superpower in coding.",
     expertise: ['Python', 'AI'],
     borderColor: 'border-t-bit-lavender',
     overlayColor: 'from-bit-lavender/40',
     tagColors: ['bg-bit-lavender/10 text-bit-lavender', 'bg-bit-turquoise/10 text-bit-turquoise'],
   },
   {
-    name: 'James Tan',
-    role: 'Data Scientist at Grab',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80',
-    quote: "Data is the new oil, and I'm here to teach students how to refine it. Let's build models that change the world.",
+    name: 'Brian Lim',
+    role: 'VP & Co-Founder of Bit by Bit, Ex-Computing @ VJC',
+    image: 'https://picsum.photos/400',
+    quote: "I want to teach students how to find the most interesting patterns in the most complex data -- and find joy in doing that.",
     expertise: ['Data', 'ML'],
     borderColor: 'border-t-bit-turquoise',
     overlayColor: 'from-bit-turquoise/40',
     tagColors: ['bg-bit-lavender/10 text-bit-lavender', 'bg-bit-green/10 text-bit-green'],
   },
   {
-    name: 'Priya Kumar',
-    role: 'Product Manager at Shopee',
-    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80',
+    name: 'Raghav Sriram',
+    role: 'Head of Curriculum @ Bit by Bit, Quantum Computing, Ex-Computing @ VJC',
+    image: 'https://picsum.photos/400',
     quote: "Building great tech isn't just about code; it's about solving real user problems. I help students see the big picture.",
     expertise: ['Product', 'UX'],
     borderColor: 'border-t-bit-red',
@@ -32,14 +33,64 @@ const mentors = [
     tagColors: ['bg-bit-red/10 text-bit-red', 'bg-bit-lavender/10 text-bit-lavender'],
   },
   {
-    name: 'David Chen',
-    role: 'Cybersecurity Analyst at GovTech',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80',
+    name: 'Kevin Chua',
+    role: 'Head of Python @ Bit by Bit, Ex-Computing @ VJC',
+    image: 'https://picsum.photos/400',
     quote: "Security is everyone's responsibility. I'm excited to teach the fundamentals of ethical hacking and defense.",
     expertise: ['Security', 'C++'],
     borderColor: 'border-t-bit-green',
     overlayColor: 'from-bit-green/40',
     tagColors: ['bg-bit-green/10 text-bit-green', 'bg-bit-dark/10 text-bit-dark'],
+  },
+  {
+    name: 'Apicha Maneerat',
+    role: 'Python @ Bit by Bit, Maths & CS @ NUS',
+    image: 'https://picsum.photos/400',
+    quote: "Security is everyone's responsibility. I'm excited to teach the fundamentals of ethical hacking and defense.",
+    expertise: ['Python', 'C++'],
+    borderColor: 'border-t-bit-lavender',
+    overlayColor: 'from-bit-lavender/40',
+    tagColors: ['bg-bit-lavender/10 text-bit-lavender', 'bg-bit-turquoise/10 text-bit-turquoise'],
+  },
+  {
+    name: 'Papangkorn Wangchochedkun',
+    role: 'Python @ Bit by Bit, CS @ NUS',
+    image: 'https://picsum.photos/400',
+    quote: "I want to teach students how to find the most interesting patterns in the most complex data -- and find joy in doing that.",
+    expertise: ['Data', 'ML'],
+    borderColor: 'border-t-bit-turquoise',
+    overlayColor: 'from-bit-turquoise/40',
+    tagColors: ['bg-bit-lavender/10 text-bit-lavender', 'bg-bit-green/10 text-bit-green'],
+  },
+  {
+    name: 'Neil Bhandari',
+    role: 'Python @ Bit by Bit, Ex-Computing @ VJC',
+    image: 'https://picsum.photos/400',
+    quote: "Building great tech isn't just about code; it's about solving real user problems. I help students see the big picture.",
+    expertise: ['Product', 'UX'],
+    borderColor: 'border-t-bit-red',
+    overlayColor: 'from-bit-red/40',
+    tagColors: ['bg-bit-red/10 text-bit-red', 'bg-bit-lavender/10 text-bit-lavender'],
+  },
+  {
+    name: 'Ashton Too',
+    role: 'Python @ Bit by Bit, Ex-Computing @ VJC',
+    image: 'https://picsum.photos/400',
+    quote: "Security is everyone's responsibility. I'm excited to teach the fundamentals of ethical hacking and defense.",
+    expertise: ['Security', 'C++'],
+    borderColor: 'border-t-bit-green',
+    overlayColor: 'from-bit-green/40',
+    tagColors: ['bg-bit-green/10 text-bit-green', 'bg-bit-dark/10 text-bit-dark'],
+  },
+  {
+    name: 'Nicholas Yeo',
+    role: 'Python @ Bit by Bit, Ex-Computing @ VJC',
+    image: 'https://picsum.photos/400',
+    quote: "Security is everyone's responsibility. I'm excited to teach the fundamentals of ethical hacking and defense.",
+    expertise: ['Python', 'C++'],
+    borderColor: 'border-t-bit-lavender',
+    overlayColor: 'from-bit-lavender/40',
+    tagColors: ['bg-bit-lavender/10 text-bit-lavender', 'bg-bit-turquoise/10 text-bit-turquoise'],
   },
 ];
 
@@ -54,14 +105,13 @@ export function MentorsSection() {
         {/* Header */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-bit-lavender/10 border border-bit-lavender/20 mb-4">
-            <span className="text-xs font-bold text-bit-lavender uppercase tracking-wider">Guidance</span>
+            <span className="text-xs font-bold text-bit-lavender uppercase tracking-wider">Learn from Us</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-4 text-bit-dark">
-            Meet our <span className="text-bit-lavender">Mentors</span>
+            Meet our <span className="text-bit-lavender">Tutors</span>
           </h2>
           <p className="text-bit-dark/60 max-w-2xl mx-auto text-lg leading-relaxed">
-            Learn from the best. Our mentors are industry professionals from top tech companies, 
-            dedicated to guiding the next generation of Singaporean innovators.
+            Our tutors have many years of experience with multiple coding languages and frameworks. These are people who speak Python better than their mother tongues -- sometimes.
           </p>
         </div>
 
@@ -135,9 +185,11 @@ export function MentorsSection() {
               <p className="text-sm text-bit-dark/70">Join our community and mentor the next generation.</p>
             </div>
             
-            <Button className="bg-bit-red hover:bg-red-500 text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:shadow-red-500/30 transition-all transform hover:-translate-y-1">
-              Join as a Mentor
-            </Button>
+            <Link to="/tutor">
+              <Button className="bg-bit-red hover:bg-red-500 text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:shadow-red-500/30 transition-all transform hover:-translate-y-1">
+                Join as a Mentor
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

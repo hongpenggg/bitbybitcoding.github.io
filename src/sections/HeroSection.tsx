@@ -10,7 +10,7 @@ export function HeroSection() {
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/70 border border-bit-lavender/30 mb-8 shadow-sm">
           <span className="w-2 h-2 rounded-full bg-bit-red animate-pulse"></span>
           <span className="text-xs font-bold text-bit-lavender uppercase tracking-wider">
-            New Cohort Opening Soon
+            Python Language & Application Cohort Opening Soon
           </span>
         </div>
 
@@ -25,7 +25,7 @@ export function HeroSection() {
         {/* Subheadline */}
         <p className="text-lg md:text-xl lg:text-2xl text-bit-dark/70 max-w-3xl mb-10 font-body leading-relaxed">
           Free, structured, multi-year coding pathways for youths aged 10-18. 
-          We don't just teach syntax; we build future innovators.
+          Advanced, structured and highly innovative curriculum.
         </p>
 
         {/* CTA Buttons */}
@@ -46,6 +46,7 @@ export function HeroSection() {
             >
               <GraduationCap className="mr-2 w-5 h-5" />
               Become a Tutor
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </Link>
           <Link to="/pathways">

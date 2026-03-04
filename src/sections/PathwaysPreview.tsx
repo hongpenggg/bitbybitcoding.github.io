@@ -5,10 +5,10 @@ import { Button } from '@/components/ui/button';
 const pathways = [
   {
     icon: Terminal,
-    title: 'Intro to Python',
+    title: 'Python',
     description: 'The perfect starting point. Learn programming logic, syntax, and build your first applications.',
     status: 'active',
-    ageRange: 'Ages 10-14',
+    ageRange: 'Ages 10-18',
     duration: '12 Weeks',
     color: 'from-blue-500 to-blue-600',
     shadowColor: 'shadow-blue-500/30',
@@ -16,9 +16,9 @@ const pathways = [
   {
     icon: Brain,
     title: 'AI & Machine Learning',
-    description: 'Dive into the future. Understand neural networks and train your own models.',
+    description: 'Dive into the future. Understand neural networks, learn to find patterns in data, and train your own models.',
     status: 'soon',
-    ageRange: 'Ages 14-18',
+    ageRange: 'Ages 10-18',
     duration: 'Intermediate',
     color: 'from-purple-500 to-purple-600',
     shadowColor: 'shadow-purple-500/20',
@@ -26,9 +26,9 @@ const pathways = [
   {
     icon: Cpu,
     title: 'C++ & Algorithms',
-    description: 'Master memory management and high-performance computing concepts.',
+    description: 'Master memory management and high-performance computing concepts. Write code for competition.',
     status: 'soon',
-    ageRange: 'Ages 15+',
+    ageRange: 'Ages 13+',
     duration: 'Advanced',
     color: 'from-orange-500 to-orange-600',
     shadowColor: 'shadow-orange-500/20',
@@ -39,7 +39,7 @@ const pathways = [
     description: 'A supportive community track specifically for young women in technology.',
     status: 'soon',
     ageRange: 'All Ages',
-    duration: 'Community',
+    duration: 'All Levels',
     color: 'from-pink-500 to-pink-600',
     shadowColor: 'shadow-pink-500/20',
   },
@@ -138,7 +138,7 @@ export function PathwaysPreview() {
                       disabled 
                       className="w-full border-2 border-bit-dark/5 bg-transparent text-bit-dark/40 text-sm font-bold cursor-not-allowed"
                     >
-                      {pathway.title === '#GirlsWhoCode' ? 'Notify Me' : 'Waitlist Open'}
+                      {pathway.title === '#GirlsWhoCode' ? 'In the Works' : 'Coming Soon'}
                     </Button>
                   )}
                 </div>

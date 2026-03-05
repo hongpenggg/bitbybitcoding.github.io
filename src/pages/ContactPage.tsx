@@ -6,7 +6,7 @@ const contactInfo = [
     icon: Mail,
     title: 'Email Us',
     description: 'We typically respond within 24 hours',
-    detail: 'hello@bitbybitcoding.sg',
+    detail: 'info.bbbcoding@gmail.com',
     color: 'from-bit-lavender to-bit-red',
   },
   {
@@ -19,7 +19,7 @@ const contactInfo = [
   {
     icon: Phone,
     title: 'General Inquiries',
-    description: 'Questions about programs, volunteering, or partnerships',
+    description: 'Questions about programmes, volunteering, or partnerships',
     detail: 'We\'re here to help',
     color: 'from-bit-red to-bit-lavender',
   },
@@ -66,7 +66,7 @@ export function ContactPage() {
               </span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 text-bit-dark tracking-tight">
-              Contact <span className="text-transparent bg-clip-text bg-gradient-to-r from-bit-lavender to-bit-red">Us</span>
+              Contact Us
             </h1>
             <p className="text-lg md:text-xl text-bit-dark/70 max-w-3xl mx-auto leading-relaxed">
               Have questions about our programs? Want to volunteer? Looking to partner with us? We'd love to hear from you.
@@ -103,7 +103,7 @@ export function ContactPage() {
               <div className="lg:col-span-7 p-8 md:p-12 bg-white/40">
                 <div className="mb-6">
                   <h2 className="text-3xl md:text-4xl font-display font-bold mb-3 text-bit-dark">
-                    Send Us a Message
+                    Drop Us a Message
                   </h2>
                   <p className="text-bit-dark/70">
                     Fill out the form below and we'll get back to you as soon as possible.
@@ -181,7 +181,7 @@ export function ContactPage() {
                 <div className="relative z-10 mt-8">
                   <div className="bg-white/10 border border-white/30 rounded-2xl p-6 backdrop-blur-md">
                     <p className="text-sm text-white/90 leading-relaxed italic">
-                      "Bit by Bit isn't just about coding—it's about building a community of young innovators who will shape Singapore's future."
+                      "Bit by Bit isn't just about coding — it's about building a community of young innovators who will shape Singapore's future."
                     </p>
                     <p className="text-xs text-white/70 mt-3 font-semibold">— The Bit by Bit Team</p>
                   </div>
@@ -194,7 +194,8 @@ export function ContactPage() {
 
       {/* Footer */}
       <footer className="w-full py-6 text-center text-bit-dark/50 text-sm relative z-10">
-        <p>&copy; {new Date().getFullYear()} Bit by Bit Coding. A Non-Profit Organization.</p>
+        <p>&copy; {new Date().getFullYear()} Bit by Bit Coding.</p>
+        <p>Democratising coding education, bit by bit.</p>
       </footer>
     </div>
   );

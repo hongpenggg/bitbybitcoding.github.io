@@ -167,7 +167,8 @@ export function PartnersPage() {
 
       {/* Footer */}
       <footer className="w-full py-6 text-center text-bit-dark/50 text-sm relative z-10">
-        <p>&copy; {new Date().getFullYear()} Bit by Bit Coding. A Non-Profit Organization.</p>
+        <p>&copy; {new Date().getFullYear()} Bit by Bit Coding.</p>
+        <p>Democratising coding education, bit by bit.</p>
       </footer>
     </div>
   );

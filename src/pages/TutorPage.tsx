@@ -15,7 +15,7 @@ const benefits = [
   {
     icon: Users,
     title: 'Join Our Community',
-    description: 'Connect with like-minded educators and industry professionals in Singapore.',
+    description: 'Connect with like-minded educators and programmers in Singapore.',
   },
 ];
 
@@ -127,7 +127,7 @@ export function TutorPage() {
                 <p className="text-sm text-white/90 leading-relaxed">
                   We welcome{' '}
                   <span className="text-white font-bold border-b border-white/50">industry professionals</span>,{' '}
-                  <span className="text-white font-bold border-b border-white/50">university students</span>, and{' '}
+                  <span className="text-white font-bold border-b border-white/50"> students with coding experience</span>, and{' '}
                   <span className="text-white font-bold border-b border-white/50">passionate senior learners</span>{' '}
                   who want to make a difference.
                 </p>

@@ -10,7 +10,7 @@ export function Navigation() {
 
   const navLinks = [
     { name: 'Home', path: '/' },
-    { name: 'Pathways', path: '/pathways' },
+    { name: 'Pathways', path: '/#/pathways' },
     { name: 'Tutors', path: '/#mentors', scrollTo: 'mentors' },
     { name: 'About', path: '/#about', scrollTo: 'about' },
   ];

@@ -19,13 +19,13 @@ const supportingPartners = [
   {
     name: 'Temasek Foundation',
     description: 'Temasek Foundation supports sustainable and resilient communities. Their backing through BAGUS enables us to scale our impact.',
-    logo: 'https://www.temasekfoundation.org.sg/~/media/TF/Images/Header/TF_logo.svg',
+    logo: 'https://www.temasekfoundation.org.sg/media/TF/Images/Header/TF_logo.svg',
     website: 'https://www.temasekfoundation.org.sg',
     color: 'from-bit-red to-bit-lavender',
   },
   {
     name: 'Tote Board',
-    description: 'As Singapore's primary funding agency for social causes, Tote Board provides crucial support for our educational programmes.',
+    description: 'As Singapore\'s primary funding agency for social causes, Tote Board provides crucial support for our educational programmes.',
     logo: 'https://www.toteboard.gov.sg/themes/custom/toteboard/logo.svg',
     website: 'https://www.toteboard.gov.sg',
     color: 'from-bit-lavender to-bit-turquoise',
@@ -49,7 +49,7 @@ export function PartnersPage() {
               Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-bit-lavender to-bit-red">Partners</span>
             </h1>
             <p className="text-lg md:text-xl text-bit-dark/70 max-w-3xl mx-auto leading-relaxed">
-              We're grateful to work with organizations that share our vision of making coding education accessible to every Singaporean youth.
+              We\'re grateful to work with organizations that share our vision of making coding education accessible to every Singaporean youth.
             </p>
           </div>
 
@@ -152,7 +152,7 @@ export function PartnersPage() {
                 Interested in Partnering?
               </h3>
               <p className="text-bit-dark/70 mb-6 max-w-lg">
-                We're always looking for organizations that share our mission to empower young coders.
+                We\'re always looking for organizations that share our mission to empower young coders.
               </p>
               <a
                 href="/#/contact"

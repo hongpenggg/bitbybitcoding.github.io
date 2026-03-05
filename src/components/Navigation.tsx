@@ -1,18 +1,44 @@
 import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'Pathways', path: '/pathways' },
-    { name: 'Mentors', path: '#mentorssection' },
-    { name: 'About', path: '#aboutsection' },
+    { name: 'Tutors', path: '/#mentors', scrollTo: 'mentors' },
+    { name: 'About', path: '/#about', scrollTo: 'about' },
   ];
+
+  const handleNavClick = (link: typeof navLinks[0], e: React.MouseEvent) => {
+    if (link.scrollTo) {
+      e.preventDefault();
+      
+      // If not on home page, navigate to home first
+      if (location.pathname !== '/') {
+        navigate('/');
+        // Wait for navigation to complete before scrolling
+        setTimeout(() => {
+          const element = document.getElementById(link.scrollTo!);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }, 100);
+      } else {
+        // Already on home page, just scroll
+        const element = document.getElementById(link.scrollTo);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+      setIsOpen(false);
+    }
+  };
 
   const isActive = (path: string) => {
     if (path.startsWith('/#')) {
@@ -39,17 +65,18 @@ export function Navigation() {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <Link
+            <a
               key={link.name}
-              to={link.path}
-              className={`text-base font-medium transition-colors ${
+              href={link.path}
+              onClick={(e) => handleNavClick(link, e)}
+              className={`text-base font-medium transition-colors cursor-pointer ${
                 isActive(link.path)
                   ? 'text-bit-lavender font-bold'
                   : 'text-bit-dark/80 hover:text-bit-lavender'
               }`}
             >
               {link.name}
-            </Link>
+            </a>
           ))}
           <Link to="/apply">
             <Button className="bg-bit-lavender hover:bg-bit-lavender/90 text-white font-bold shadow-lavender transition-all transform hover:scale-105">
@@ -72,18 +99,18 @@ export function Navigation() {
         <div className="md:hidden glass-panel border-t border-white/40">
           <div className="px-6 py-4 flex flex-col gap-4">
             {navLinks.map((link) => (
-              <Link
+              <a
                 key={link.name}
-                to={link.path}
-                className={`text-base font-medium py-2 transition-colors ${
+                href={link.path}
+                onClick={(e) => handleNavClick(link, e)}
+                className={`text-base font-medium py-2 transition-colors cursor-pointer ${
                   isActive(link.path)
                     ? 'text-bit-lavender font-bold'
                     : 'text-bit-dark/80 hover:text-bit-lavender'
                 }`}
-                onClick={() => setIsOpen(false)}
               >
                 {link.name}
-              </Link>
+              </a>
             ))}
             <Link to="/apply" onClick={() => setIsOpen(false)}>
               <Button className="w-full bg-bit-lavender hover:bg-bit-lavender/90 text-white font-bold shadow-lavender">

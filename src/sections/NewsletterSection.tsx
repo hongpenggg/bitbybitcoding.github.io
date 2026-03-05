@@ -1,18 +1,32 @@
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
+import { useEffect } from 'react';
 
 export function NewsletterSection() {
-  const [email, setEmail] = useState('');
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email) {
-      setSubmitted(true);
-      setEmail('');
+  // Load Tally embed script
+  useEffect(() => {
+    // Check if script already exists
+    const existingScript = document.querySelector('script[src="https://tally.so/widgets/embed.js"]');
+    
+    if (!existingScript) {
+      const script = document.createElement('script');
+      script.src = 'https://tally.so/widgets/embed.js';
+      script.async = true;
+      script.onload = () => {
+        // @ts-ignore - Tally is loaded from external script
+        if (typeof window.Tally !== 'undefined') {
+          // @ts-ignore
+          window.Tally.loadEmbeds();
+        }
+      };
+      document.body.appendChild(script);
+    } else {
+      // If script exists, try to load embeds
+      // @ts-ignore
+      if (typeof window.Tally !== 'undefined') {
+        // @ts-ignore
+        window.Tally.loadEmbeds();
+      }
     }
-  };
+  }, []);
 
   return (
     <section className="py-16 px-6">
@@ -23,39 +37,29 @@ export function NewsletterSection() {
           <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-bit-red rounded-full blur-[80px] opacity-20 pointer-events-none"></div>
           
           {/* Content */}
-          <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 relative z-10 text-bit-dark">
-            Stay Updated
-          </h2>
-          <p className="text-bit-dark/70 mb-8 max-w-lg mx-auto relative z-10 text-lg">
-            Join our mailing list to get notified when new cohorts open and receive updates about our mission.
-          </p>
+          <div className="mb-8 relative z-10">
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-bit-dark">
+              Stay Updated
+            </h2>
+            <p className="text-bit-dark/70 max-w-lg mx-auto text-lg">
+              Join our mailing list to get notified when new cohorts open and receive updates about our mission.
+            </p>
+          </div>
           
-          {submitted ? (
-            <div className="relative z-10 p-6 bg-bit-green/20 rounded-xl border border-bit-green/30">
-              <p className="text-bit-dark font-bold text-lg">Thank you for subscribing!</p>
-              <p className="text-bit-dark/70">We'll keep you updated on our latest news.</p>
-            </div>
-          ) : (
-            <form 
-              onSubmit={handleSubmit}
-              className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto relative z-10"
-            >
-              <Input
-                type="email"
-                placeholder="Enter your email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                className="flex-grow bg-white/80 border border-bit-dark/10 rounded-xl px-4 py-4 text-bit-dark placeholder:text-bit-dark/40 focus:outline-none focus:border-bit-lavender focus:ring-2 focus:ring-bit-lavender/20 transition-all shadow-inner h-12"
-              />
-              <Button 
-                type="submit"
-                className="bg-bit-dark text-white font-bold px-8 py-4 rounded-xl hover:bg-black transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 h-12"
-              >
-                Subscribe
-              </Button>
-            </form>
-          )}
+          {/* Tally Form Embed */}
+          <div className="relative z-10">
+            <iframe 
+              data-tally-src="https://tally.so/embed/EkPpQr?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1&formEventsForwarding=1" 
+              loading="lazy" 
+              width="100%" 
+              height="638" 
+              frameBorder="0" 
+              marginHeight={0} 
+              marginWidth={0} 
+              title="Bit by Bit — Newsletter"
+              className="w-full"
+            ></iframe>
+          </div>
         </div>
       </div>
     </section>

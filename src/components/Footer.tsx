@@ -1,7 +1,20 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Twitter, Github, Linkedin } from 'lucide-react';
 
 export function Footer() {
+  const navigate = useNavigate();
+
+  const handleAboutClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    navigate('/');
+    setTimeout(() => {
+      const element = document.getElementById('about');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 100);
+  };
+
   return (
     <footer className="border-t border-bit-dark/5 bg-white/40 backdrop-blur-xl pt-16 pb-8 px-6 mt-auto relative z-10">
       <div className="max-w-7xl mx-auto">
@@ -21,25 +34,33 @@ export function Footer() {
             </p>
           </div>
 
-          {/* Programs */}
+          {/* Programmes */}
           <div>
-            <h5 className="text-bit-dark font-display font-bold text-lg mb-4">Programs</h5>
+            <h5 className="text-bit-dark font-display font-bold text-lg mb-4">Programmes</h5>
             <ul className="flex flex-col gap-3 text-sm text-bit-dark/60">
-              <li><Link to="/pathways" className="hover:text-bit-lavender transition-colors">Intro to Python</Link></li>
-              <li><Link to="/pathways" className="hover:text-bit-lavender transition-colors">Web Development</Link></li>
-              <li><Link to="/pathways" className="hover:text-bit-lavender transition-colors">Data Science</Link></li>
-              <li><Link to="/pathways" className="hover:text-bit-lavender transition-colors">Workshops</Link></li>
+              <li><Link to="/pathways" className="hover:text-bit-lavender transition-colors">Python</Link></li>
+              <li><Link to="/pathways" className="hover:text-bit-lavender transition-colors">AI & Machine Learning</Link></li>
+              <li><Link to="/pathways" className="hover:text-bit-lavender transition-colors">C++ & Algorithms</Link></li>
+              <li><Link to="/pathways" className="hover:text-bit-lavender transition-colors">#GirlsWhoCode</Link></li>
             </ul>
           </div>
 
-          {/* Organization */}
+          {/* Organisation */}
           <div>
-            <h5 className="text-bit-dark font-display font-bold text-lg mb-4">Organization</h5>
+            <h5 className="text-bit-dark font-display font-bold text-lg mb-4">Organisation</h5>
             <ul className="flex flex-col gap-3 text-sm text-bit-dark/60">
-              <li><Link to="/" className="hover:text-bit-lavender transition-colors">About Us</Link></li>
-              <li><Link to="/" className="hover:text-bit-lavender transition-colors">Volunteer</Link></li>
-              <li><Link to="/" className="hover:text-bit-lavender transition-colors">Partners</Link></li>
-              <li><Link to="/" className="hover:text-bit-lavender transition-colors">Contact</Link></li>
+              <li>
+                <a 
+                  href="/#about" 
+                  onClick={handleAboutClick}
+                  className="hover:text-bit-lavender transition-colors cursor-pointer"
+                >
+                  About Us
+                </a>
+              </li>
+              <li><Link to="/tutor" className="hover:text-bit-lavender transition-colors">Volunteer</Link></li>
+              <li><Link to="/partners" className="hover:text-bit-lavender transition-colors">Partners</Link></li>
+              <li><Link to="/contact" className="hover:text-bit-lavender transition-colors">Contact</Link></li>
             </ul>
           </div>
 

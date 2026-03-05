@@ -15,9 +15,9 @@ const mentors = [
   {
     name: 'Brian Lim',
     role: 'VP & Co-Founder of Bit by Bit, Ex-Computing @ VJC',
-    image: 'https://picsum.photos/400',
-    quote: "I want to teach students how to find the most interesting patterns in the most complex data -- and find joy in doing that.",
-    expertise: ['Data', 'ML'],
+    image: 'https://raw.githubusercontent.com/bitbybitcoding/bitbybitcoding.github.io/main/.github/assets/brian_profile.jpeg',
+    quote: "I've always believed that the best way to master a craft is ton share it. BbB is my creative space where technical expertise meets my love for inspiring others.",
+    expertise: ['Python', 'ML'],
     borderColor: 'border-t-bit-turquoise',
     overlayColor: 'from-bit-turquoise/40',
     tagColors: ['bg-bit-lavender/10 text-bit-lavender', 'bg-bit-green/10 text-bit-green'],

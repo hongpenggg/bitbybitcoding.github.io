@@ -59,9 +59,9 @@ const mentors = [
   {
     name: 'Apicha Maneerat',
     role: 'Python @ Bit by Bit, Maths & CS @ NUS',
-    image: 'https://picsum.photos/400',
-    quote: "Security is everyone's responsibility. I'm excited to teach the fundamentals of ethical hacking and defense.",
-    expertise: ['Python', 'C++'],
+    image: 'https://raw.githubusercontent.com/bitbybitcoding/bitbybitcoding.github.io/main/.github/assets/suki_profile.jpeg',
+    quote: "The most elegant solutions in computer science and life are often the simplest. I want to help every student grasp how technology truly works, so they can find the simple path to solving any challenge.",
+    expertise: ['Python', 'Algorithms'],
     borderColor: 'border-t-bit-lavender',
     overlayColor: 'from-bit-lavender/40',
   },

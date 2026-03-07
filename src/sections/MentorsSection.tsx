@@ -25,9 +25,9 @@ const mentors = [
   {
     name: 'Raghav Sriram',
     role: 'Head of Curriculum @ Bit by Bit, Quantum Computing, Ex-Computing @ VJC',
-    image: 'https://picsum.photos/400',
-    quote: "Building great tech isn't just about code; it's about solving real user problems. I help students see the big picture.",
-    expertise: ['Product', 'UX'],
+    image: 'https://raw.githubusercontent.com/bitbybitcoding/bitbybitcoding.github.io/main/.github/assets/raghav_profile.jpeg',
+    quote: "Quantum Computing Researcher & Hardware Security Engineer who loves Monster Energy, motorbikes and lockpicking.",
+    expertise: ['C++', 'Cybersecurity'],
     borderColor: 'border-t-bit-red',
     overlayColor: 'from-bit-red/40',
     tagColors: ['bg-bit-red/10 text-bit-red', 'bg-bit-lavender/10 text-bit-lavender'],

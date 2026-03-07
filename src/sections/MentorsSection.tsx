@@ -13,6 +13,7 @@ const expertiseColors: Record<string, string> = {
   'Product': 'bg-pink-100 text-pink-700',
   'UX': 'bg-indigo-100 text-indigo-700',
   'Security': 'bg-amber-100 text-amber-700',
+  'Algorithms': 'bg-teal-100 text-teal-700',
 };
 
 const getExpertiseColor = (skill: string): string => {

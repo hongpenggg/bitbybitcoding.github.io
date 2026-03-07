@@ -35,9 +35,9 @@ const mentors = [
   {
     name: 'Kevin Chua',
     role: 'Head of Python @ Bit by Bit, Ex-Computing @ VJC',
-    image: 'https://picsum.photos/400',
-    quote: "Security is everyone's responsibility. I'm excited to teach the fundamentals of ethical hacking and defense.",
-    expertise: ['Security', 'C++'],
+    image: 'https://raw.githubusercontent.com/bitbybitcoding/bitbybitcoding.github.io/main/.github/assets/kevin_profile.jpeg',
+    quote: "Some Kevin-y quote here...",
+    expertise: ['Python', 'SQL'],
     borderColor: 'border-t-bit-green',
     overlayColor: 'from-bit-green/40',
     tagColors: ['bg-bit-green/10 text-bit-green', 'bg-bit-dark/10 text-bit-dark'],

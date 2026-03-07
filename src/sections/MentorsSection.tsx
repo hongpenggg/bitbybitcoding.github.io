@@ -51,7 +51,7 @@ const mentors = [
     name: 'Kevin Chua',
     role: 'Head of Python @ Bit by Bit, Ex-Computing @ VJC',
     image: 'https://raw.githubusercontent.com/bitbybitcoding/bitbybitcoding.github.io/main/.github/assets/kevin_profile.jpeg',
-    quote: "Some Kevin-y quote here...",
+    quote: "Computing doesn't have to always be a boring 6-7 hour long lecture to sit through, with me it'll be fun!",
     expertise: ['Python', 'SQL'],
     borderColor: 'border-t-bit-green',
     overlayColor: 'from-bit-green/40',

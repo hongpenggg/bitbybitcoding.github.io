@@ -3,20 +3,20 @@ import { Link } from 'react-router-dom';
 
 // Consistent color mapping for expertise tags
 const expertiseColors: Record<string, string> = {
-  'Python': 'bg-bit-lavender/10 text-bit-lavender',
-  'AI': 'bg-bit-turquoise/10 text-bit-turquoise',
-  'ML': 'bg-bit-green/10 text-bit-green',
-  'C++': 'bg-bit-red/10 text-bit-red',
-  'Cybersecurity': 'bg-orange-500/10 text-orange-600',
-  'SQL': 'bg-blue-500/10 text-blue-600',
-  'Data': 'bg-purple-500/10 text-purple-600',
-  'Product': 'bg-pink-500/10 text-pink-600',
-  'UX': 'bg-indigo-500/10 text-indigo-600',
-  'Security': 'bg-amber-500/10 text-amber-600',
+  'Python': 'bg-purple-100 text-purple-700',
+  'AI': 'bg-cyan-100 text-cyan-700',
+  'ML': 'bg-emerald-100 text-emerald-700',
+  'C++': 'bg-red-100 text-red-700',
+  'Cybersecurity': 'bg-orange-100 text-orange-700',
+  'SQL': 'bg-blue-100 text-blue-700',
+  'Data': 'bg-violet-100 text-violet-700',
+  'Product': 'bg-pink-100 text-pink-700',
+  'UX': 'bg-indigo-100 text-indigo-700',
+  'Security': 'bg-amber-100 text-amber-700',
 };
 
 const getExpertiseColor = (skill: string): string => {
-  return expertiseColors[skill] || 'bg-bit-dark/10 text-bit-dark';
+  return expertiseColors[skill] || 'bg-gray-100 text-gray-700';
 };
 
 const mentors = [

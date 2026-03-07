@@ -1,6 +1,24 @@
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
+// Consistent color mapping for expertise tags
+const expertiseColors: Record<string, string> = {
+  'Python': 'bg-bit-lavender/10 text-bit-lavender',
+  'AI': 'bg-bit-turquoise/10 text-bit-turquoise',
+  'ML': 'bg-bit-green/10 text-bit-green',
+  'C++': 'bg-bit-red/10 text-bit-red',
+  'Cybersecurity': 'bg-orange-500/10 text-orange-600',
+  'SQL': 'bg-blue-500/10 text-blue-600',
+  'Data': 'bg-purple-500/10 text-purple-600',
+  'Product': 'bg-pink-500/10 text-pink-600',
+  'UX': 'bg-indigo-500/10 text-indigo-600',
+  'Security': 'bg-amber-500/10 text-amber-600',
+};
+
+const getExpertiseColor = (skill: string): string => {
+  return expertiseColors[skill] || 'bg-bit-dark/10 text-bit-dark';
+};
+
 const mentors = [
   {
     name: 'Hongpeng Wei',
@@ -10,7 +28,6 @@ const mentors = [
     expertise: ['Python', 'AI'],
     borderColor: 'border-t-bit-lavender',
     overlayColor: 'from-bit-lavender/40',
-    tagColors: ['bg-bit-lavender/10 text-bit-lavender', 'bg-bit-turquoise/10 text-bit-turquoise'],
   },
   {
     name: 'Brian Lim',
@@ -20,7 +37,6 @@ const mentors = [
     expertise: ['Python', 'ML'],
     borderColor: 'border-t-bit-turquoise',
     overlayColor: 'from-bit-turquoise/40',
-    tagColors: ['bg-bit-lavender/10 text-bit-lavender', 'bg-bit-green/10 text-bit-green'],
   },
   {
     name: 'Raghav Sriram',
@@ -30,7 +46,6 @@ const mentors = [
     expertise: ['C++', 'Cybersecurity'],
     borderColor: 'border-t-bit-red',
     overlayColor: 'from-bit-red/40',
-    tagColors: ['bg-bit-red/10 text-bit-red', 'bg-bit-lavender/10 text-bit-lavender'],
   },
   {
     name: 'Kevin Chua',
@@ -40,7 +55,6 @@ const mentors = [
     expertise: ['Python', 'SQL'],
     borderColor: 'border-t-bit-green',
     overlayColor: 'from-bit-green/40',
-    tagColors: ['bg-bit-green/10 text-bit-green', 'bg-bit-dark/10 text-bit-dark'],
   },
   {
     name: 'Apicha Maneerat',
@@ -50,7 +64,6 @@ const mentors = [
     expertise: ['Python', 'C++'],
     borderColor: 'border-t-bit-lavender',
     overlayColor: 'from-bit-lavender/40',
-    tagColors: ['bg-bit-lavender/10 text-bit-lavender', 'bg-bit-turquoise/10 text-bit-turquoise'],
   },
   {
     name: 'Papangkorn Wangchochedkun',
@@ -60,7 +73,6 @@ const mentors = [
     expertise: ['Data', 'ML'],
     borderColor: 'border-t-bit-turquoise',
     overlayColor: 'from-bit-turquoise/40',
-    tagColors: ['bg-bit-lavender/10 text-bit-lavender', 'bg-bit-green/10 text-bit-green'],
   },
   {
     name: 'Neil Bhandari',
@@ -70,7 +82,6 @@ const mentors = [
     expertise: ['Product', 'UX'],
     borderColor: 'border-t-bit-red',
     overlayColor: 'from-bit-red/40',
-    tagColors: ['bg-bit-red/10 text-bit-red', 'bg-bit-lavender/10 text-bit-lavender'],
   },
   {
     name: 'Ashton Too',
@@ -80,7 +91,6 @@ const mentors = [
     expertise: ['Security', 'C++'],
     borderColor: 'border-t-bit-green',
     overlayColor: 'from-bit-green/40',
-    tagColors: ['bg-bit-green/10 text-bit-green', 'bg-bit-dark/10 text-bit-dark'],
   },
   {
     name: 'Nicholas Yeo',
@@ -90,7 +100,6 @@ const mentors = [
     expertise: ['Python', 'C++'],
     borderColor: 'border-t-bit-lavender',
     overlayColor: 'from-bit-lavender/40',
-    tagColors: ['bg-bit-lavender/10 text-bit-lavender', 'bg-bit-turquoise/10 text-bit-turquoise'],
   },
 ];
 
@@ -146,11 +155,11 @@ export function MentorsSection() {
                 </p>
                 <div className="flex items-center gap-2 mt-auto pt-4 border-t border-bit-dark/5">
                   <span className="text-xs font-bold text-bit-dark/40 uppercase tracking-wide">Expertise:</span>
-                  <div className="flex gap-1">
+                  <div className="flex gap-1 flex-wrap">
                     {mentor.expertise.map((skill, skillIndex) => (
                       <span 
                         key={skillIndex}
-                        className={`px-2 py-0.5 rounded text-[10px] font-bold ${mentor.tagColors[skillIndex]}`}
+                        className={`px-2 py-0.5 rounded text-[10px] font-bold ${getExpertiseColor(skill)}`}
                       >
                         {skill}
                       </span>

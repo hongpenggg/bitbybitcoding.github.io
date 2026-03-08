@@ -3,7 +3,7 @@ import { ExternalLink } from 'lucide-react';
 const mainPartner = {
   name: 'BAGUS Together',
   description: 'BAGUS Together is a vibrant network of ground-up initiatives empowering communities across Singapore. As our key partner, they provide essential support and resources to help us reach more young learners.',
-  logo: 'https://www.bagustogether.sg/images/logos/logo-coloured.png',
+  logo: 'https://raw.githubusercontent.com/bitbybitcoding/bitbybitcoding.github.io/main/.github/assets/bagus_together.png',
   website: 'https://www.bagustogether.sg/about',
   color: 'from-bit-lavender to-bit-red',
 };
@@ -12,21 +12,21 @@ const supportingPartners = [
   {
     name: 'NVPC',
     description: 'National Volunteer & Philanthropy Centre champions strategic giving and volunteerism in Singapore, supporting our mission through the BAGUS network.',
-    logo: 'https://nvpc.org.sg/wp-content/uploads/2023/03/NVPC-Logo-1.png',
+    logo: 'https://raw.githubusercontent.com/bitbybitcoding/bitbybitcoding.github.io/main/.github/assets/nvpc.png',
     website: 'https://nvpc.org.sg',
     color: 'from-bit-turquoise to-bit-green',
   },
   {
     name: 'Temasek Foundation',
     description: 'Temasek Foundation supports sustainable and resilient communities. Their backing through BAGUS enables us to scale our impact.',
-    logo: 'https://www.temasekfoundation.org.sg/media/TF/Images/Header/TF_logo.svg',
+    logo: 'https://raw.githubusercontent.com/bitbybitcoding/bitbybitcoding.github.io/main/.github/assets/temasek_foundation.webp',
     website: 'https://www.temasekfoundation.org.sg',
     color: 'from-bit-red to-bit-lavender',
   },
   {
     name: 'Tote Board',
     description: 'As Singapore\'s primary funding agency for social causes, Tote Board provides crucial support for our educational programmes.',
-    logo: 'https://www.toteboard.gov.sg/themes/custom/toteboard/logo.svg',
+    logo: 'https://raw.githubusercontent.com/bitbybitcoding/bitbybitcoding.github.io/main/.github/assets/tote_board.png',
     website: 'https://www.toteboard.gov.sg',
     color: 'from-bit-lavender to-bit-turquoise',
   },

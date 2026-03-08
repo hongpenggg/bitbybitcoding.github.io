@@ -10,7 +10,7 @@ export function HeroSection() {
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/70 border border-bit-lavender/30 mb-8 shadow-sm">
           <span className="w-2 h-2 rounded-full bg-bit-red animate-pulse"></span>
           <span className="text-xs font-bold text-bit-lavender uppercase tracking-wider">
-            Python Language & Application Cohort Opening Soon
+            Python Language & Application Cohort Open
           </span>
         </div>
 

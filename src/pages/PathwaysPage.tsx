@@ -31,8 +31,8 @@ const placementSteps = [
   },
   {
     number: 2,
-    title: 'Assess',
-    description: 'Complete a logic-based placement test. No coding experience required.',
+    title: 'Interview',
+    description: 'Complete a quick, informal interview to help us get to know you better. No coding experience required.',
   },
   {
     number: 3,

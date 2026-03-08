@@ -14,7 +14,7 @@ export function CookieConsent() {
   const [showBanner, setShowBanner] = useState(false);
   const [showPreferences, setShowPreferences] = useState(false);
   const [preferences, setPreferences] = useState<CookiePreferences>({
-    analytics: false,
+    analytics: true,  // Default analytics enabled
     marketing: false,
   });
 
@@ -89,10 +89,7 @@ export function CookieConsent() {
 
   return (
     <>
-      {/* Backdrop */}
-      <div className="fixed inset-0 bg-black/30 backdrop-blur-sm z-[100]" />
-
-      {/* Banner */}
+      {/* Banner - No backdrop, users can interact with page */}
       <div className="fixed bottom-0 left-0 right-0 z-[101] p-4 md:p-6">
         <div className="max-w-6xl mx-auto">
           {!showPreferences ? (
@@ -174,7 +171,7 @@ export function CookieConsent() {
                       </p>
                     </div>
                     <div className="shrink-0">
-                      <div className="px-3 py-1 rounded-full bg-bit-green/20 text-bit-green text-xs font-bold">
+                      <div className="px-3 py-1 rounded-full bg-bit-green text-white text-xs font-bold">
                         Always On
                       </div>
                     </div>

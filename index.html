@@ -6,15 +6,25 @@
     <meta name="description" content="Bit by Bit Coding - Free, structured, multi-year coding pathways for Singaporean youth aged 10-18. Learn Python, AI/ML, and more." />
     <meta name="theme-color" content="#8C52FF" />
     
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2F9M7WG6X9"></script>
+    <!-- Google Consent Mode (Default to denied) -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      
+      // Set default consent to denied
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+      
       gtag('js', new Date());
-
       gtag('config', 'G-2F9M7WG6X9');
     </script>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2F9M7WG6X9"></script>
     
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

@@ -10,6 +10,8 @@ import { TutorPage } from './pages/TutorPage';
 import { PartnersPage } from './pages/PartnersPage';
 import { ContactPage } from './pages/ContactPage';
 import { Privacy } from './pages/Privacy';
+import { BlogPage } from './pages/BlogPage';
+import { BlogPostPage } from './pages/BlogPostPage';
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
             <Route path="/partners" element={<PartnersPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/privacy" element={<Privacy />} />
+            <Route path="/blog" element={<BlogPage />} />
+            <Route path="/blog/:slug" element={<BlogPostPage />} />
           </Routes>
         </main>
         <Footer />

@@ -99,7 +99,7 @@ export function Footer() {
             &copy; {new Date().getFullYear()} Bit by Bit Coding. All rights reserved.
           </p>
           <div className="flex gap-6 text-xs text-bit-dark/50">
-            <a href="#" className="hover:text-bit-dark transition-colors">Privacy Policy</a>
+            <Link to="/privacy" className="hover:text-bit-dark transition-colors">Privacy Policy</Link>
             <a href="#" className="hover:text-bit-dark transition-colors">Terms of Service</a>
           </div>
         </div>

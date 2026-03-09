@@ -15,7 +15,7 @@ const benefits = [
   {
     icon: Users,
     title: 'Knowledgeable Tutors',
-    description: 'Learn directly from Singapore-based experienced programmers, industry experts and passionate senior students.',
+    description: 'Learn directly from experienced Singapore-based programmers, industry experts and passionate senior students.',
   },
 ];
 

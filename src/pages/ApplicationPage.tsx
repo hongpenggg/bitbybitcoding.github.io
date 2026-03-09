@@ -14,8 +14,8 @@ const benefits = [
   },
   {
     icon: Users,
-    title: 'Expert Mentorship',
-    description: 'Learn directly from Singapore-based industry professionals and passionate senior students.',
+    title: 'Knowledgeable Tutors',
+    description: 'Learn directly from experienced Singapore-based programmers, industry experts and passionate senior students.',
   },
 ];
 
@@ -126,7 +126,7 @@ export function ApplicationPage() {
                 </h4>
                 <p className="text-sm text-white/90 leading-relaxed">
                   Our next Python cohort starts{' '}
-                  <span className="text-white font-bold border-b border-white/50">October 15th</span>. 
+                  <span className="text-white font-bold border-b border-white/50">March 21st</span>. 
                   Slots are limited to ensure quality mentorship ratios.
                 </p>
               </div>

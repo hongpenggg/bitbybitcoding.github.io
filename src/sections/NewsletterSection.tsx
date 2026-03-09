@@ -46,8 +46,8 @@ export function NewsletterSection() {
             </p>
           </div>
           
-          {/* Tally Form Embed */}
-          <div className="relative z-10">
+          {/* Tally Form Embed - Add background wrapper for better visibility */}
+          <div className="relative z-10 bg-white/60 dark:bg-gray-800/60 rounded-xl p-6">
             <iframe 
               data-tally-src="https://tally.so/embed/EkPpQr?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1&formEventsForwarding=1" 
               loading="lazy" 

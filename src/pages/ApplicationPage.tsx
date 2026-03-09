@@ -50,21 +50,21 @@ export function ApplicationPage() {
   return (
     <div className="flex flex-col min-h-screen">
       <main className="flex-grow flex items-center justify-center p-4 md:p-8 lg:p-12">
-        <div className="w-full max-w-6xl min-h-[650px] glass-panel bg-white/45 border border-bit-lavender/30 rounded-[2rem] grid lg:grid-cols-12 overflow-hidden relative shadow-xl shadow-bit-lavender/5">
+        <div className="w-full max-w-6xl min-h-[650px] glass-panel bg-white/45 dark:bg-gray-900/45 border border-bit-lavender/30 dark:border-bit-lavender/50 rounded-[2rem] grid lg:grid-cols-12 overflow-hidden relative shadow-xl shadow-bit-lavender/5">
           
           {/* Left Column - Tally Form */}
-          <div className="lg:col-span-7 p-6 md:p-10 lg:p-12 flex flex-col relative bg-white/40">
+          <div className="lg:col-span-7 p-6 md:p-10 lg:p-12 flex flex-col relative bg-white/40 dark:bg-gray-800/40">
             <div className="mb-6">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-3 text-bit-dark tracking-tight">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-3 text-bit-dark dark:text-white tracking-tight">
                 Start Your Journey
               </h1>
-              <p className="text-bit-dark/70 text-lg">
+              <p className="text-bit-dark/70 dark:text-gray-300 text-lg">
                 Join our community of young developers in Singapore.
               </p>
             </div>
 
-            {/* Tally Form Embed */}
-            <div className="flex-grow">
+            {/* Tally Form Embed - Add wrapper for better visibility */}
+            <div className="flex-grow bg-white/80 dark:bg-gray-800/80 rounded-xl p-4">
               <iframe 
                 data-tally-src="https://tally.so/embed/gD0zMl?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1&formEventsForwarding=1" 
                 loading="lazy" 
@@ -78,7 +78,7 @@ export function ApplicationPage() {
               ></iframe>
             </div>
 
-            <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-bit-lavender/10 to-transparent rounded-bl-full pointer-events-none"></div>
+            <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-bit-lavender/10 dark:from-bit-lavender/5 to-transparent rounded-bl-full pointer-events-none"></div>
           </div>
 
           {/* Right Column - Benefits */}
@@ -136,7 +136,7 @@ export function ApplicationPage() {
       </main>
 
       {/* Footer */}
-      <footer className="w-full py-6 text-center text-bit-dark/50 text-sm relative z-10">
+      <footer className="w-full py-6 text-center text-bit-dark/50 dark:text-gray-500 text-sm relative z-10">
         <p>&copy; {new Date().getFullYear()} Bit by Bit Coding. A Non-Profit Organization.</p>
       </footer>
     </div>

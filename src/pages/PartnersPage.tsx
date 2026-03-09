@@ -39,26 +39,26 @@ export function PartnersPage() {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/70 border border-bit-lavender/30 mb-6 shadow-sm">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/70 dark:bg-gray-800/70 border border-bit-lavender/30 dark:border-bit-lavender/50 mb-6 shadow-sm">
               <span className="w-2 h-2 rounded-full bg-bit-lavender animate-pulse"></span>
               <span className="text-xs font-bold text-bit-lavender uppercase tracking-wider">
                 Building Together
               </span>
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 text-bit-dark tracking-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 text-bit-dark dark:text-white tracking-tight">
               Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-bit-lavender to-bit-red">Partners</span>
             </h1>
-            <p className="text-lg md:text-xl text-bit-dark/70 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-bit-dark/70 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
               We\'re grateful to work with organizations that share our vision of making coding education accessible to every Singaporean youth.
             </p>
           </div>
 
           {/* Main Partner */}
           <div className="mb-16">
-            <h2 className="text-3xl font-display font-bold mb-8 text-bit-dark text-center">
+            <h2 className="text-3xl font-display font-bold mb-8 text-bit-dark dark:text-white text-center">
               Main Partner
             </h2>
-            <div className="glass rounded-3xl overflow-hidden border border-white/60 shadow-xl shadow-bit-lavender/10">
+            <div className="glass rounded-3xl overflow-hidden border border-white/60 dark:border-gray-700 shadow-xl shadow-bit-lavender/10">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 {/* Logo Side */}
                 <div className={`relative p-12 bg-gradient-to-br ${mainPartner.color} flex items-center justify-center min-h-[300px]`}>
@@ -76,11 +76,11 @@ export function PartnersPage() {
                 </div>
 
                 {/* Content Side */}
-                <div className="p-8 md:p-12">
-                  <h3 className="text-2xl md:text-3xl font-display font-bold mb-4 text-bit-dark">
+                <div className="p-8 md:p-12 bg-white/40 dark:bg-gray-800/40">
+                  <h3 className="text-2xl md:text-3xl font-display font-bold mb-4 text-bit-dark dark:text-white">
                     {mainPartner.name}
                   </h3>
-                  <p className="text-bit-dark/70 leading-relaxed mb-6">
+                  <p className="text-bit-dark/70 dark:text-gray-300 leading-relaxed mb-6">
                     {mainPartner.description}
                   </p>
                   <a
@@ -99,14 +99,14 @@ export function PartnersPage() {
 
           {/* Supporting Partners */}
           <div>
-            <h2 className="text-3xl font-display font-bold mb-8 text-bit-dark text-center">
+            <h2 className="text-3xl font-display font-bold mb-8 text-bit-dark dark:text-white text-center">
               Supporting through BAGUS
             </h2>
             <div className="grid md:grid-cols-3 gap-6">
               {supportingPartners.map((partner, index) => (
                 <div 
                   key={index}
-                  className="glass rounded-2xl overflow-hidden border border-white/60 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col"
+                  className="glass rounded-2xl overflow-hidden border border-white/60 dark:border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col"
                 >
                   {/* Logo Section */}
                   <div className={`relative p-8 bg-gradient-to-br ${partner.color} flex items-center justify-center min-h-[180px]`}>
@@ -123,11 +123,11 @@ export function PartnersPage() {
                   </div>
 
                   {/* Content Section */}
-                  <div className="p-6 bg-white/40 flex flex-col flex-grow">
-                    <h3 className="text-xl font-display font-bold mb-3 text-bit-dark">
+                  <div className="p-6 bg-white/40 dark:bg-gray-800/40 flex flex-col flex-grow">
+                    <h3 className="text-xl font-display font-bold mb-3 text-bit-dark dark:text-white">
                       {partner.name}
                     </h3>
-                    <p className="text-sm text-bit-dark/70 leading-relaxed mb-4 flex-grow">
+                    <p className="text-sm text-bit-dark/70 dark:text-gray-400 leading-relaxed mb-4 flex-grow">
                       {partner.description}
                     </p>
                     <a
@@ -147,11 +147,11 @@ export function PartnersPage() {
 
           {/* CTA Section */}
           <div className="mt-16 text-center">
-            <div className="glass inline-block rounded-2xl p-8 border border-bit-lavender/30 shadow-lg bg-white/40 backdrop-blur-md">
-              <h3 className="text-2xl font-display font-bold mb-3 text-bit-dark">
+            <div className="glass inline-block rounded-2xl p-8 border border-bit-lavender/30 dark:border-bit-lavender/50 shadow-lg bg-white/40 dark:bg-gray-800/40 backdrop-blur-md">
+              <h3 className="text-2xl font-display font-bold mb-3 text-bit-dark dark:text-white">
                 Interested in Partnering?
               </h3>
-              <p className="text-bit-dark/70 mb-6 max-w-lg">
+              <p className="text-bit-dark/70 dark:text-gray-300 mb-6 max-w-lg">
                 We\'re always looking for organizations that share our mission to empower young coders.
               </p>
               <a
@@ -166,7 +166,7 @@ export function PartnersPage() {
       </main>
 
       {/* Footer */}
-      <footer className="w-full py-6 text-center text-bit-dark/50 text-sm relative z-10">
+      <footer className="w-full py-6 text-center text-bit-dark/50 dark:text-gray-500 text-sm relative z-10">
         <p>&copy; {new Date().getFullYear()} Bit by Bit Coding.</p>
         <p>Democratising coding education, bit by bit.</p>
       </footer>

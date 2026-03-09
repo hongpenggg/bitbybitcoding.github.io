@@ -46,17 +46,17 @@ export function PathwaysPage() {
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
       <section className="flex flex-col items-center text-center gap-6 py-12 px-6">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-panel-light border border-bit-lavender/30 text-bit-lavender text-sm font-bold tracking-wide uppercase mb-2 shadow-sm">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-panel-light border border-bit-lavender/30 dark:border-bit-lavender/50 text-bit-lavender text-sm font-bold tracking-wide uppercase mb-2 shadow-sm">
           <span className="w-2 h-2 rounded-full bg-bit-green animate-pulse"></span>
           2026 Intake Open
         </div>
-        <h1 className="text-4xl md:text-5xl lg:text-7xl font-display font-bold tracking-tight leading-tight max-w-4xl text-bit-dark">
+        <h1 className="text-4xl md:text-5xl lg:text-7xl font-display font-bold tracking-tight leading-tight max-w-4xl text-bit-dark dark:text-white">
           Structured Pathways for{' '}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-bit-lavender to-bit-red">
             Future Coders
           </span>
         </h1>
-        <p className="text-bit-dark/60 text-lg md:text-xl max-w-2xl font-body leading-relaxed">
+        <p className="text-bit-dark/60 dark:text-gray-400 text-lg md:text-xl max-w-2xl font-body leading-relaxed">
           From your first line of Python to building complex AI models. Our curriculum 
           evolves with you, ensuring you master the fundamentals before tackling the future.
         </p>
@@ -68,19 +68,19 @@ export function PathwaysPage() {
           {/* Left Column - Python Pathway */}
           <div className="flex flex-col gap-8">
             {/* Section Header */}
-            <div className="flex items-center justify-between border-b border-bit-dark/5 pb-4">
-              <h2 className="text-2xl md:text-3xl font-display font-bold flex items-center gap-3 text-bit-dark">
+            <div className="flex items-center justify-between border-b border-bit-dark/5 dark:border-gray-800 pb-4">
+              <h2 className="text-2xl md:text-3xl font-display font-bold flex items-center gap-3 text-bit-dark dark:text-white">
                 <Route className="text-bit-lavender w-8 h-8" />
                 The Python Core
               </h2>
-              <span className="text-sm font-bold text-bit-dark/50 uppercase tracking-widest font-body">
+              <span className="text-sm font-bold text-bit-dark/50 dark:text-gray-500 uppercase tracking-widest font-body">
                 Phase 1
               </span>
             </div>
 
             {/* Timeline */}
             <div className="glass-panel rounded-3xl p-6 md:p-10 relative overflow-hidden shadow-glass">
-              <div className="absolute top-0 right-0 w-96 h-96 bg-bit-lavender/10 rounded-full filter blur-3xl"></div>
+              <div className="absolute top-0 right-0 w-96 h-96 bg-bit-lavender/10 dark:bg-bit-lavender/5 rounded-full filter blur-3xl"></div>
               
               <div className="relative z-10 flex flex-col gap-8">
                 {pythonSubBranches.map((branch, index) => (
@@ -90,18 +90,18 @@ export function PathwaysPage() {
                       <div 
                         className={`absolute left-[11px] top-8 bottom-[-32px] w-[2px] ${
                           branch.status === 'active' 
-                            ? 'bg-gradient-to-b from-bit-lavender to-slate-200' 
-                            : 'bg-slate-200'
+                            ? 'bg-gradient-to-b from-bit-lavender to-slate-200 dark:to-gray-700' 
+                            : 'bg-slate-200 dark:bg-gray-700'
                         }`}
                       ></div>
                     )}
                     
                     {/* Timeline Dot */}
                     <div 
-                      className={`absolute left-0 top-1 w-6 h-6 rounded-full border-4 border-white z-10 ${
+                      className={`absolute left-0 top-1 w-6 h-6 rounded-full border-4 border-white dark:border-gray-900 z-10 ${
                         branch.status === 'active'
                           ? 'bg-bit-lavender shadow-lg ring-2 ring-bit-lavender/20'
-                          : 'bg-slate-300'
+                          : 'bg-slate-300 dark:bg-gray-600'
                       }`}
                     ></div>
                     
@@ -109,26 +109,26 @@ export function PathwaysPage() {
                     <div 
                       className={`rounded-2xl p-6 transition-all duration-300 ${
                         branch.status === 'active'
-                          ? 'glass-panel-light bg-white/60 border-l-4 border-l-bit-lavender hover:bg-white/80 hover:scale-[1.01] hover:shadow-lg cursor-pointer'
-                          : 'glass-panel-light border border-white/40 border-l-4 border-l-slate-300'
+                          ? 'glass-panel-light bg-white/60 dark:bg-gray-800/60 border-l-4 border-l-bit-lavender hover:bg-white/80 dark:hover:bg-gray-800/80 hover:scale-[1.01] hover:shadow-lg cursor-pointer'
+                          : 'glass-panel-light border border-white/40 dark:border-gray-700 border-l-4 border-l-slate-300 dark:border-l-gray-600'
                       }`}
                     >
                       {/* Header */}
                       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-3">
                         <h3 className={`text-xl md:text-2xl font-display font-bold ${
-                          branch.status === 'active' ? 'text-bit-dark group-hover:text-bit-lavender transition-colors' : 'text-slate-500'
+                          branch.status === 'active' ? 'text-bit-dark dark:text-white group-hover:text-bit-lavender transition-colors' : 'text-slate-500 dark:text-gray-500'
                         }`}>
                           {branch.title}
                         </h3>
                         <span 
                           className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold ${
                             branch.status === 'active'
-                              ? 'bg-bit-green/10 text-bit-green border border-bit-green/20'
-                              : 'bg-slate-100 text-slate-500 border border-slate-200'
+                              ? 'bg-bit-green/10 dark:bg-green-900/30 text-bit-green dark:text-green-400 border border-bit-green/20 dark:border-green-700'
+                              : 'bg-slate-100 dark:bg-gray-800 text-slate-500 dark:text-gray-400 border border-slate-200 dark:border-gray-700'
                           }`}
                         >
                           {branch.status === 'active' && (
-                            <span className="w-1.5 h-1.5 rounded-full bg-bit-green"></span>
+                            <span className="w-1.5 h-1.5 rounded-full bg-bit-green dark:bg-green-400"></span>
                           )}
                           {branch.status === 'active' ? 'Active Now' : 'Coming Soon'}
                         </span>
@@ -136,7 +136,7 @@ export function PathwaysPage() {
                       
                       {/* Description */}
                       <p className={`text-base font-body leading-relaxed mb-5 ${
-                        branch.status === 'active' ? 'text-bit-dark/70' : 'text-slate-500'
+                        branch.status === 'active' ? 'text-bit-dark/70 dark:text-gray-300' : 'text-slate-500 dark:text-gray-500'
                       }`}>
                         {branch.description}
                       </p>
@@ -147,7 +147,7 @@ export function PathwaysPage() {
                           {branch.skills.map((skill, skillIndex) => (
                             <span 
                               key={skillIndex}
-                              className="px-3 py-1 rounded-lg bg-white border border-slate-200 text-sm font-medium text-slate-600 shadow-sm"
+                              className="px-3 py-1 rounded-lg bg-white dark:bg-gray-700 border border-slate-200 dark:border-gray-600 text-sm font-medium text-slate-600 dark:text-gray-300 shadow-sm"
                             >
                               {skill}
                             </span>
@@ -160,15 +160,15 @@ export function PathwaysPage() {
               </div>
 
               {/* Next Horizon */}
-              <div className="mt-10 pt-8 border-t border-slate-200 flex flex-col md:flex-row items-center gap-6 opacity-80">
-                <div className="h-16 w-0.5 border-l-2 border-slate-300 border-dashed md:h-0.5 md:w-16"></div>
-                <div className="flex items-center gap-4 text-slate-500">
-                  <div className="p-3 rounded-full bg-white shadow-sm border border-slate-200">
+              <div className="mt-10 pt-8 border-t border-slate-200 dark:border-gray-700 flex flex-col md:flex-row items-center gap-6 opacity-80">
+                <div className="h-16 w-0.5 border-l-2 border-slate-300 dark:border-gray-700 border-dashed md:h-0.5 md:w-16"></div>
+                <div className="flex items-center gap-4 text-slate-500 dark:text-gray-400">
+                  <div className="p-3 rounded-full bg-white dark:bg-gray-800 shadow-sm border border-slate-200 dark:border-gray-700">
                     <Bot className="w-5 h-5 text-bit-turquoise" />
                   </div>
                   <div>
                     <h4 className="text-sm font-bold uppercase tracking-wider text-bit-turquoise">Next Horizon</h4>
-                    <p className="text-base font-medium text-bit-dark/70">Artificial Intelligence & Machine Learning</p>
+                    <p className="text-base font-medium text-bit-dark/70 dark:text-gray-300">Artificial Intelligence & Machine Learning</p>
                   </div>
                 </div>
               </div>
@@ -178,23 +178,23 @@ export function PathwaysPage() {
           {/* Right Column - Placement Process */}
           <div className="flex flex-col gap-6 sticky top-24">
             {/* Placement Process Card */}
-            <div className="glass-panel rounded-3xl p-8 bg-white/40 shadow-glass border-white/50">
-              <h3 className="text-xl font-display font-bold mb-8 flex items-center gap-2 text-bit-dark">
+            <div className="glass-panel rounded-3xl p-8 bg-white/40 dark:bg-gray-800/40 shadow-glass border-white/50 dark:border-gray-700">
+              <h3 className="text-xl font-display font-bold mb-8 flex items-center gap-2 text-bit-dark dark:text-white">
                 <GraduationCap className="text-bit-red w-5 h-5" />
                 Placement Process
               </h3>
               
               <div className="flex flex-col gap-0 relative">
-                <div className="absolute left-4 top-4 bottom-4 w-0.5 bg-slate-200"></div>
+                <div className="absolute left-4 top-4 bottom-4 w-0.5 bg-slate-200 dark:bg-gray-700"></div>
                 
                 {placementSteps.map((step, index) => (
                   <div key={index} className="relative flex gap-5 pb-8 group">
-                    <div className="relative z-10 w-8 h-8 rounded-full bg-white border-2 border-bit-lavender flex items-center justify-center shrink-0 shadow-sm group-hover:scale-110 transition-transform">
+                    <div className="relative z-10 w-8 h-8 rounded-full bg-white dark:bg-gray-800 border-2 border-bit-lavender flex items-center justify-center shrink-0 shadow-sm group-hover:scale-110 transition-transform">
                       <span className="text-sm font-bold text-bit-lavender">{step.number}</span>
                     </div>
                     <div>
-                      <h4 className="font-bold text-bit-dark text-lg mb-1">{step.title}</h4>
-                      <p className="text-sm text-bit-dark/60 font-body leading-snug">{step.description}</p>
+                      <h4 className="font-bold text-bit-dark dark:text-white text-lg mb-1">{step.title}</h4>
+                      <p className="text-sm text-bit-dark/60 dark:text-gray-400 font-body leading-snug">{step.description}</p>
                     </div>
                   </div>
                 ))}
@@ -208,14 +208,14 @@ export function PathwaysPage() {
             </div>
 
             {/* Free Card */}
-            <div className="glass-panel-light rounded-3xl p-6 border border-white/60 bg-gradient-to-br from-white/80 to-bit-turquoise/10 shadow-sm">
+            <div className="glass-panel-light rounded-3xl p-6 border border-white/60 dark:border-gray-700 bg-gradient-to-br from-white/80 dark:from-gray-800/80 to-bit-turquoise/10 dark:to-teal-900/20 shadow-sm">
               <div className="flex items-start gap-4">
-                <div className="p-3 bg-bit-turquoise/10 rounded-xl text-bit-turquoise">
+                <div className="p-3 bg-bit-turquoise/10 dark:bg-teal-900/30 rounded-xl text-bit-turquoise dark:text-teal-400">
                   <CheckCircle2 className="w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="text-2xl font-display font-bold text-bit-dark">Free</h4>
-                  <p className="text-sm text-bit-dark/60 mt-1 font-body leading-snug">
+                  <h4 className="text-2xl font-display font-bold text-bit-dark dark:text-white">Free</h4>
+                  <p className="text-sm text-bit-dark/60 dark:text-gray-400 mt-1 font-body leading-snug">
                     Our curriculum is completely free for all youths aged 10-18 who are passionate about learning to code, and eager to use their coding skills to make a difference.
                   </p>
                 </div>
@@ -226,12 +226,12 @@ export function PathwaysPage() {
       </section>
 
       {/* Footer Note */}
-      <section className="text-center py-10 border-t border-slate-200/60 mt-auto">
-        <p className="text-bit-dark/50 text-sm font-medium">
+      <section className="text-center py-10 border-t border-slate-200/60 dark:border-gray-800 mt-auto">
+        <p className="text-bit-dark/50 dark:text-gray-500 text-sm font-medium">
           &copy; {new Date().getFullYear()} Bit by Bit Coding. Singapore.{' '}
           <br className="sm:hidden" />
         </p>
-        <p className="text-bit-dark/50 text-sm font-medium">Democratising coding education, bit by bit.</p>
+        <p className="text-bit-dark/50 dark:text-gray-500 text-sm font-medium">Democratising coding education, bit by bit.</p>
       </section>
     </div>
   );

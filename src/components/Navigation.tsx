@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { ThemeToggle } from './ThemeToggle';
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -49,7 +50,7 @@ export function Navigation() {
   };
 
   return (
-    <nav className="sticky top-0 z-50 w-full glass border-b border-white/40">
+    <nav className="sticky top-0 z-50 w-full glass border-b border-white/40 dark:border-gray-700 bg-white/90 dark:bg-gray-900/90">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3">
@@ -64,7 +65,7 @@ export function Navigation() {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
             <a
               key={link.name}
@@ -73,12 +74,13 @@ export function Navigation() {
               className={`text-base font-medium transition-colors cursor-pointer ${
                 isActive(link.path)
                   ? 'text-bit-lavender font-bold'
-                  : 'text-bit-dark/80 hover:text-bit-lavender'
+                  : 'text-bit-dark/80 dark:text-gray-300 hover:text-bit-lavender'
               }`}
             >
               {link.name}
             </a>
           ))}
+          <ThemeToggle />
           <Link to="/apply">
             <Button className="bg-bit-lavender hover:bg-bit-lavender/90 text-white font-bold shadow-lavender transition-all transform hover:scale-105">
               Apply Now
@@ -87,17 +89,20 @@ export function Navigation() {
         </div>
 
         {/* Mobile Menu Button */}
-        <button
-          className="md:hidden text-bit-dark p-2"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
+        <div className="md:hidden flex items-center gap-2">
+          <ThemeToggle />
+          <button
+            className="text-bit-dark dark:text-gray-300 p-2"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden glass-panel border-t border-white/40">
+        <div className="md:hidden glass-panel border-t border-white/40 dark:border-gray-700 bg-white/95 dark:bg-gray-900/95">
           <div className="px-6 py-4 flex flex-col gap-4">
             {navLinks.map((link) => (
               <a
@@ -107,7 +112,7 @@ export function Navigation() {
                 className={`text-base font-medium py-2 transition-colors cursor-pointer ${
                   isActive(link.path)
                     ? 'text-bit-lavender font-bold'
-                    : 'text-bit-dark/80 hover:text-bit-lavender'
+                    : 'text-bit-dark/80 dark:text-gray-300 hover:text-bit-lavender'
                 }`}
               >
                 {link.name}

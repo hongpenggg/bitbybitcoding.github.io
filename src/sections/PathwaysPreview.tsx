@@ -48,23 +48,23 @@ const pathways = [
 export function PathwaysPreview() {
   return (
     <section className="py-20 px-6 relative" id="pathways">
-      <div className="absolute right-0 top-1/4 w-1/3 h-1/2 bg-gradient-to-b from-bit-turquoise/10 to-transparent blur-3xl pointer-events-none"></div>
+      <div className="absolute right-0 top-1/4 w-1/3 h-1/2 bg-gradient-to-b from-bit-turquoise/10 dark:from-bit-turquoise/5 to-transparent blur-3xl pointer-events-none"></div>
       
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
-        <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6 border-b border-bit-dark/5 pb-8">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6 border-b border-bit-dark/5 dark:border-gray-700 pb-8">
           <div>
-            <h2 className="text-4xl md:text-5xl font-display font-bold mb-4 text-bit-dark">
+            <h2 className="text-4xl md:text-5xl font-display font-bold mb-4 text-bit-dark dark:text-white">
               Our <span className="text-bit-lavender">Pathways</span>
             </h2>
-            <p className="text-bit-dark/60 max-w-xl text-lg">
+            <p className="text-bit-dark/60 dark:text-gray-400 max-w-xl text-lg">
               Curated learning tracks designed for different age groups and skill levels. 
               Start your journey today.
             </p>
           </div>
           <Link 
             to="/pathways" 
-            className="text-bit-lavender font-bold hover:text-bit-dark flex items-center gap-2 transition-colors px-4 py-2 rounded-lg hover:bg-white/50"
+            className="text-bit-lavender font-bold hover:text-bit-red dark:hover:text-bit-red flex items-center gap-2 transition-colors px-4 py-2 rounded-lg hover:bg-white/50 dark:hover:bg-gray-800/50"
           >
             View Full Curriculum <ArrowRight className="w-4 h-4" />
           </Link>
@@ -84,12 +84,12 @@ export function PathwaysPreview() {
               {/* Status Badge */}
               <div className="absolute top-0 right-0 p-3 z-20">
                 {pathway.status === 'active' ? (
-                  <div className="bg-bit-green backdrop-blur-md text-bit-dark text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5 shadow-sm">
-                    <span className="w-1.5 h-1.5 rounded-full bg-black animate-pulse"></span>
+                  <div className="bg-bit-green dark:bg-green-600 backdrop-blur-md text-bit-dark dark:text-white text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5 shadow-sm">
+                    <span className="w-1.5 h-1.5 rounded-full bg-black dark:bg-white animate-pulse"></span>
                     ACCEPTING
                   </div>
                 ) : (
-                  <div className="bg-white/50 backdrop-blur-md border border-white/60 text-bit-dark/50 text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5">
+                  <div className="bg-white/50 dark:bg-gray-800/50 backdrop-blur-md border border-white/60 dark:border-gray-600 text-bit-dark/50 dark:text-gray-400 text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5">
                     <Lock className="w-3.5 h-3.5" />
                     SOON
                   </div>
@@ -98,7 +98,7 @@ export function PathwaysPreview() {
 
               {/* Card Content */}
               <div className={`h-full rounded-xl p-6 flex flex-col relative z-10 backdrop-blur-sm ${
-                pathway.status === 'active' ? 'bg-white/40' : 'bg-white/20'
+                pathway.status === 'active' ? 'bg-white/40 dark:bg-gray-800/40' : 'bg-white/20 dark:bg-gray-800/20'
               }`}>
                 {/* Icon */}
                 <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${pathway.color} flex items-center justify-center mb-6 text-white shadow-lg ${pathway.shadowColor} ${
@@ -109,19 +109,19 @@ export function PathwaysPreview() {
 
                 {/* Title */}
                 <h3 className={`text-2xl font-display font-bold mb-2 ${
-                  pathway.status === 'soon' ? 'text-bit-dark group-hover:text-bit-lavender transition-colors' : 'text-bit-dark'
+                  pathway.status === 'soon' ? 'text-bit-dark dark:text-white group-hover:text-bit-lavender transition-colors' : 'text-bit-dark dark:text-white'
                 }`}>
                   {pathway.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-bit-dark/60 text-sm mb-6 flex-grow leading-relaxed">
+                <p className="text-bit-dark/60 dark:text-gray-400 text-sm mb-6 flex-grow leading-relaxed">
                   {pathway.description}
                 </p>
 
                 {/* Footer */}
-                <div className="border-t border-bit-dark/10 pt-4 mt-auto">
-                  <div className="flex justify-between items-center text-xs font-semibold text-bit-dark/50 mb-4 uppercase tracking-wider">
+                <div className="border-t border-bit-dark/10 dark:border-gray-700 pt-4 mt-auto">
+                  <div className="flex justify-between items-center text-xs font-semibold text-bit-dark/50 dark:text-gray-500 mb-4 uppercase tracking-wider">
                     <span>{pathway.ageRange}</span>
                     <span>{pathway.duration}</span>
                   </div>
@@ -136,7 +136,7 @@ export function PathwaysPreview() {
                     <Button 
                       variant="outline" 
                       disabled 
-                      className="w-full border-2 border-bit-dark/5 bg-transparent text-bit-dark/40 text-sm font-bold cursor-not-allowed"
+                      className="w-full border-2 border-bit-dark/5 dark:border-gray-700 bg-transparent text-bit-dark/40 dark:text-gray-600 text-sm font-bold cursor-not-allowed"
                     >
                       {pathway.title === '#GirlsWhoCode' ? 'In the Works' : 'Coming Soon'}
                     </Button>

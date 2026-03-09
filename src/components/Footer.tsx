@@ -16,7 +16,7 @@ export function Footer() {
   };
 
   return (
-    <footer className="border-t border-bit-dark/5 bg-white/40 backdrop-blur-xl pt-16 pb-8 px-6 mt-auto relative z-10">
+    <footer className="border-t border-bit-dark/5 dark:border-gray-800 bg-white/40 dark:bg-gray-900/40 backdrop-blur-xl pt-16 pb-8 px-6 mt-auto relative z-10">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Logo & Description */}
@@ -29,15 +29,15 @@ export function Footer() {
               </svg>
               <span className="text-bit-red text-lg font-display font-bold">Bit by Bit</span>
             </div>
-            <p className="text-bit-dark/60 text-sm leading-relaxed">
+            <p className="text-bit-dark/60 dark:text-gray-400 text-sm leading-relaxed">
               A non-profit initiative dedicated to making coding education accessible to every Singaporean youth.
             </p>
           </div>
 
           {/* Programmes */}
           <div>
-            <h5 className="text-bit-dark font-display font-bold text-lg mb-4">Programmes</h5>
-            <ul className="flex flex-col gap-3 text-sm text-bit-dark/60">
+            <h5 className="text-bit-dark dark:text-white font-display font-bold text-lg mb-4">Programmes</h5>
+            <ul className="flex flex-col gap-3 text-sm text-bit-dark/60 dark:text-gray-400">
               <li><Link to="/pathways" className="hover:text-bit-lavender transition-colors">Python</Link></li>
               <li><Link to="/pathways" className="hover:text-bit-lavender transition-colors">AI & Machine Learning</Link></li>
               <li><Link to="/pathways" className="hover:text-bit-lavender transition-colors">C++ & Algorithms</Link></li>
@@ -47,8 +47,8 @@ export function Footer() {
 
           {/* Organisation */}
           <div>
-            <h5 className="text-bit-dark font-display font-bold text-lg mb-4">Organisation</h5>
-            <ul className="flex flex-col gap-3 text-sm text-bit-dark/60">
+            <h5 className="text-bit-dark dark:text-white font-display font-bold text-lg mb-4">Organisation</h5>
+            <ul className="flex flex-col gap-3 text-sm text-bit-dark/60 dark:text-gray-400">
               <li>
                 <a 
                   href="/#about" 
@@ -66,25 +66,25 @@ export function Footer() {
 
           {/* Connect */}
           <div>
-            <h5 className="text-bit-dark font-display font-bold text-lg mb-4">Connect</h5>
+            <h5 className="text-bit-dark dark:text-white font-display font-bold text-lg mb-4">Connect</h5>
             <div className="flex gap-3">
               <a 
                 href="#" 
-                className="w-10 h-10 rounded-full bg-bit-dark/5 flex items-center justify-center text-bit-dark/60 hover:bg-bit-lavender hover:text-white transition-all"
+                className="w-10 h-10 rounded-full bg-bit-dark/5 dark:bg-gray-800 flex items-center justify-center text-bit-dark/60 dark:text-gray-400 hover:bg-bit-lavender hover:text-white transition-all"
                 aria-label="Twitter"
               >
                 <Twitter size={18} />
               </a>
               <a 
                 href="#" 
-                className="w-10 h-10 rounded-full bg-bit-dark/5 flex items-center justify-center text-bit-dark/60 hover:bg-bit-lavender hover:text-white transition-all"
+                className="w-10 h-10 rounded-full bg-bit-dark/5 dark:bg-gray-800 flex items-center justify-center text-bit-dark/60 dark:text-gray-400 hover:bg-bit-lavender hover:text-white transition-all"
                 aria-label="GitHub"
               >
                 <Github size={18} />
               </a>
               <a 
                 href="#" 
-                className="w-10 h-10 rounded-full bg-bit-dark/5 flex items-center justify-center text-bit-dark/60 hover:bg-bit-lavender hover:text-white transition-all"
+                className="w-10 h-10 rounded-full bg-bit-dark/5 dark:bg-gray-800 flex items-center justify-center text-bit-dark/60 dark:text-gray-400 hover:bg-bit-lavender hover:text-white transition-all"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={18} />
@@ -94,13 +94,13 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-bit-dark/5 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-bit-dark/50">
+        <div className="border-t border-bit-dark/5 dark:border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-xs text-bit-dark/50 dark:text-gray-500">
             &copy; {new Date().getFullYear()} Bit by Bit Coding. All rights reserved.
           </p>
-          <div className="flex gap-6 text-xs text-bit-dark/50">
-            <Link to="/privacy" className="hover:text-bit-dark transition-colors">Privacy Policy</Link>
-            <a href="#" className="hover:text-bit-dark transition-colors">Terms of Service</a>
+          <div className="flex gap-6 text-xs text-bit-dark/50 dark:text-gray-500">
+            <Link to="/privacy" className="hover:text-bit-dark dark:hover:text-gray-300 transition-colors">Privacy Policy</Link>
+            <a href="#" className="hover:text-bit-dark dark:hover:text-gray-300 transition-colors">Terms of Service</a>
           </div>
         </div>
       </div>

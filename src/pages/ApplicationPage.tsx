@@ -14,8 +14,8 @@ const benefits = [
   },
   {
     icon: Users,
-    title: 'Expert Mentorship',
-    description: 'Learn directly from Singapore-based industry professionals and passionate senior students.',
+    title: 'Knowledgeable Tutors',
+    description: 'Learn directly from Singapore-based experienced programmers, industry experts and passionate senior students.',
   },
 ];
 

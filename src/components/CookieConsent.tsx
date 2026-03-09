@@ -94,7 +94,7 @@ export function CookieConsent() {
         <div className="max-w-6xl mx-auto">
           {!showPreferences ? (
             // Main consent banner
-            <div className="glass rounded-2xl p-6 md:p-8 border border-white/60 shadow-2xl bg-white/95 backdrop-blur-xl">
+            <div className="glass rounded-2xl p-6 md:p-8 border border-white/60 dark:border-gray-700 shadow-2xl bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl">
               <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
                 {/* Icon */}
                 <div className="shrink-0">
@@ -105,10 +105,10 @@ export function CookieConsent() {
 
                 {/* Content */}
                 <div className="flex-grow">
-                  <h3 className="text-xl md:text-2xl font-display font-bold text-bit-dark mb-2">
+                  <h3 className="text-xl md:text-2xl font-display font-bold text-bit-dark dark:text-white mb-2">
                     We Value Your Privacy
                   </h3>
-                  <p className="text-bit-dark/70 text-sm md:text-base leading-relaxed">
+                  <p className="text-bit-dark/70 dark:text-gray-300 text-sm md:text-base leading-relaxed">
                     We use cookies to improve your experience and analyze website traffic. You can choose which cookies to accept.{' '}
                     <Link to="/privacy" className="text-bit-lavender hover:text-bit-red underline transition-colors">
                       Read our Privacy Policy
@@ -120,7 +120,7 @@ export function CookieConsent() {
                 <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto shrink-0">
                   <button
                     onClick={handleManagePreferences}
-                    className="px-6 py-3 rounded-xl border-2 border-bit-lavender text-bit-lavender font-bold hover:bg-bit-lavender/10 transition-all whitespace-nowrap"
+                    className="px-6 py-3 rounded-xl border-2 border-bit-lavender text-bit-lavender font-bold hover:bg-bit-lavender/10 dark:hover:bg-bit-lavender/20 transition-all whitespace-nowrap"
                   >
                     Manage Preferences
                   </button>
@@ -135,43 +135,43 @@ export function CookieConsent() {
             </div>
           ) : (
             // Preferences panel
-            <div className="glass rounded-2xl p-6 md:p-8 border border-white/60 shadow-2xl bg-white/95 backdrop-blur-xl max-h-[80vh] overflow-y-auto">
+            <div className="glass rounded-2xl p-6 md:p-8 border border-white/60 dark:border-gray-700 shadow-2xl bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl max-h-[80vh] overflow-y-auto">
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-bit-turquoise to-bit-green flex items-center justify-center">
                     <Settings className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl md:text-2xl font-display font-bold text-bit-dark">
+                  <h3 className="text-xl md:text-2xl font-display font-bold text-bit-dark dark:text-white">
                     Cookie Preferences
                   </h3>
                 </div>
                 <button
                   onClick={() => setShowPreferences(false)}
-                  className="w-8 h-8 rounded-lg hover:bg-bit-dark/5 flex items-center justify-center transition-colors"
+                  className="w-8 h-8 rounded-lg hover:bg-bit-dark/5 dark:hover:bg-gray-700 flex items-center justify-center transition-colors"
                   aria-label="Close preferences"
                 >
-                  <X className="w-5 h-5 text-bit-dark/60" />
+                  <X className="w-5 h-5 text-bit-dark/60 dark:text-gray-400" />
                 </button>
               </div>
 
-              <p className="text-bit-dark/70 text-sm mb-6">
+              <p className="text-bit-dark/70 dark:text-gray-300 text-sm mb-6">
                 Manage your cookie preferences below. You can enable or disable different types of cookies according to your preferences.
               </p>
 
               <div className="space-y-4">
                 {/* Essential Cookies - Always On */}
-                <div className="p-4 rounded-xl bg-bit-dark/5 border border-bit-dark/10">
+                <div className="p-4 rounded-xl bg-bit-dark/5 dark:bg-gray-800/50 border border-bit-dark/10 dark:border-gray-700">
                   <div className="flex items-start justify-between gap-4">
                     <div className="flex-grow">
-                      <h4 className="font-display font-bold text-bit-dark mb-1">
+                      <h4 className="font-display font-bold text-bit-dark dark:text-white mb-1">
                         Essential Cookies
                       </h4>
-                      <p className="text-sm text-bit-dark/60">
+                      <p className="text-sm text-bit-dark/60 dark:text-gray-400">
                         These cookies are necessary for the website to function and cannot be disabled. They enable core functionality such as security, network management, and accessibility.
                       </p>
                     </div>
                     <div className="shrink-0">
-                      <div className="px-3 py-1 rounded-full bg-bit-green text-white text-xs font-bold">
+                      <div className="px-3 py-1 rounded-full bg-emerald-600 dark:bg-emerald-600 text-white text-xs font-bold">
                         Always On
                       </div>
                     </div>
@@ -179,13 +179,13 @@ export function CookieConsent() {
                 </div>
 
                 {/* Analytics Cookies */}
-                <div className="p-4 rounded-xl border border-bit-dark/10 hover:border-bit-lavender/30 transition-colors">
+                <div className="p-4 rounded-xl border border-bit-dark/10 dark:border-gray-700 hover:border-bit-lavender/30 dark:hover:border-bit-lavender/50 transition-colors bg-white/40 dark:bg-gray-800/40">
                   <div className="flex items-start justify-between gap-4">
                     <div className="flex-grow">
-                      <h4 className="font-display font-bold text-bit-dark mb-1">
+                      <h4 className="font-display font-bold text-bit-dark dark:text-white mb-1">
                         Analytics Cookies
                       </h4>
-                      <p className="text-sm text-bit-dark/60">
+                      <p className="text-sm text-bit-dark/60 dark:text-gray-400">
                         These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously. We use Google Analytics to improve user experience.
                       </p>
                     </div>
@@ -193,7 +193,7 @@ export function CookieConsent() {
                       <button
                         onClick={() => handleTogglePreference('analytics')}
                         className={`relative w-14 h-8 rounded-full transition-colors ${
-                          preferences.analytics ? 'bg-bit-lavender' : 'bg-bit-dark/20'
+                          preferences.analytics ? 'bg-bit-lavender' : 'bg-bit-dark/20 dark:bg-gray-700'
                         }`}
                         aria-label="Toggle analytics cookies"
                       >
@@ -208,13 +208,13 @@ export function CookieConsent() {
                 </div>
 
                 {/* Marketing Cookies */}
-                <div className="p-4 rounded-xl border border-bit-dark/10 hover:border-bit-lavender/30 transition-colors">
+                <div className="p-4 rounded-xl border border-bit-dark/10 dark:border-gray-700 hover:border-bit-lavender/30 dark:hover:border-bit-lavender/50 transition-colors bg-white/40 dark:bg-gray-800/40">
                   <div className="flex items-start justify-between gap-4">
                     <div className="flex-grow">
-                      <h4 className="font-display font-bold text-bit-dark mb-1">
+                      <h4 className="font-display font-bold text-bit-dark dark:text-white mb-1">
                         Marketing Cookies
                       </h4>
-                      <p className="text-sm text-bit-dark/60">
+                      <p className="text-sm text-bit-dark/60 dark:text-gray-400">
                         These cookies track your online activity to help us deliver more relevant advertising and measure the effectiveness of our campaigns. Currently not in use.
                       </p>
                     </div>
@@ -222,7 +222,7 @@ export function CookieConsent() {
                       <button
                         onClick={() => handleTogglePreference('marketing')}
                         className={`relative w-14 h-8 rounded-full transition-colors ${
-                          preferences.marketing ? 'bg-bit-lavender' : 'bg-bit-dark/20'
+                          preferences.marketing ? 'bg-bit-lavender' : 'bg-bit-dark/20 dark:bg-gray-700'
                         }`}
                         aria-label="Toggle marketing cookies"
                       >
@@ -238,10 +238,10 @@ export function CookieConsent() {
               </div>
 
               {/* Action Buttons */}
-              <div className="flex flex-col sm:flex-row gap-3 mt-6 pt-6 border-t border-bit-dark/10">
+              <div className="flex flex-col sm:flex-row gap-3 mt-6 pt-6 border-t border-bit-dark/10 dark:border-gray-700">
                 <button
                   onClick={() => setShowPreferences(false)}
-                  className="flex-1 px-6 py-3 rounded-xl border-2 border-bit-dark/20 text-bit-dark/70 font-bold hover:bg-bit-dark/5 transition-all"
+                  className="flex-1 px-6 py-3 rounded-xl border-2 border-bit-dark/20 dark:border-gray-600 text-bit-dark/70 dark:text-gray-300 font-bold hover:bg-bit-dark/5 dark:hover:bg-gray-700 transition-all"
                 >
                   Cancel
                 </button>

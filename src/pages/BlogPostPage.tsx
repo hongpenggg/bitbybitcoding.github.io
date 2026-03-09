@@ -203,7 +203,7 @@ export function BlogPostPage() {
               </p>
 
               <p className="text-bit-dark/80 leading-relaxed mb-6">
-                If you are a parent with a child who fits that description — share this with them. The sign-up is simple. The commitment is three hours on Saturday mornings, for twelve weeks. The potential return, we believe, is significant.
+                If you are a parent with a child who fits that description — share this with them. The sign-up is simple. The commitment is three hours on Saturdays, for twelve weeks. The potential return, we believe, is significant.
               </p>
 
               <p className="text-bit-dark/80 leading-relaxed mb-6">
@@ -265,6 +265,15 @@ export function BlogPostPage() {
                     className="inline-flex items-center gap-1 text-bit-lavender hover:text-bit-red transition-colors font-medium"
                   >
                     bitbybitcoding.github.io
+                    <ExternalLink className="w-3 h-3" />
+                  </a>
+                  <a 
+                    href="https://resonanceblog.net/post/why-we-founded-bit-by-bit-coding" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-bit-lavender hover:text-bit-red transition-colors font-medium"
+                  >
+                    Read the post on Resonance Blog
                     <ExternalLink className="w-3 h-3" />
                   </a>
                 </div>

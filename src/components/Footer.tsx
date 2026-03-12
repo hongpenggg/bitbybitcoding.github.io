@@ -41,8 +41,8 @@ export function Footer() {
             <h5 className="text-bit-dark dark:text-white font-display font-bold text-lg mb-4">Programmes</h5>
             <ul className="flex flex-col gap-3 text-sm text-bit-dark/60 dark:text-gray-400">
               <li><Link to="/pathways" className="hover:text-bit-lavender transition-colors">Python</Link></li>
-              <li><Link to="/pathways" className="hover:text-bit-lavender transition-colors">AI & Machine Learning</Link></li>
-              <li><Link to="/pathways" className="hover:text-bit-lavender transition-colors">C++ & Algorithms</Link></li>
+              <li><Link to="/pathways" className="hover:text-bit-lavender transition-colors">AI &amp; Machine Learning</Link></li>
+              <li><Link to="/pathways" className="hover:text-bit-lavender transition-colors">C++ &amp; Algorithms</Link></li>
               <li><Link to="/pathways" className="hover:text-bit-lavender transition-colors">#GirlsWhoCode</Link></li>
             </ul>
           </div>
@@ -100,9 +100,11 @@ export function Footer() {
           <p className="text-xs text-bit-dark/50 dark:text-gray-500">
             &copy; {new Date().getFullYear()} Bit by Bit Coding. All rights reserved.
           </p>
-          <div className="flex gap-6 text-xs text-bit-dark/50 dark:text-gray-500">
+          <div className="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2 text-xs text-bit-dark/50 dark:text-gray-500">
             <Link to="/privacy" className="hover:text-bit-dark dark:hover:text-gray-300 transition-colors">Privacy Policy</Link>
-            <a href="#" className="hover:text-bit-dark dark:hover:text-gray-300 transition-colors">Terms of Service</a>
+            <Link to="/terms" className="hover:text-bit-dark dark:hover:text-gray-300 transition-colors">Terms of Service</Link>
+            <Link to="/consent" className="hover:text-bit-dark dark:hover:text-gray-300 transition-colors">Consent Form</Link>
+            <Link to="/child-policy" className="hover:text-bit-dark dark:hover:text-gray-300 transition-colors">Child Protection Policy</Link>
           </div>
         </div>
       </div>

@@ -1,12 +1,12 @@
 import { useEffect } from 'react';
 import { BookOpen, Users, Shield, AlertTriangle, Heart, Scale, MessageSquare, Star, RefreshCw } from 'lucide-react';
 
-// ─── Data ────────────────────────────────────────────────────────────────────
+// ─── Data ───────────────────────────────────────────────────────────────────
 
 const tutorStandards = [
   'Treat every student, parent, co-tutor, and member of the BbB community with dignity and respect.',
   'Maintain clear professional boundaries with all participants at all times.',
-  'Prepare and deliver lessons to a standard that serves students\u2019 learning.',
+  'Prepare and deliver lessons to a standard that serves students’ learning.',
   'Communicate with students and their families only through BbB-approved channels.',
   'Dress appropriately and conduct themselves with decorum in and around sessions.',
   'Use language appropriate for the presence of children and teenagers at all times.',
@@ -47,7 +47,7 @@ const tutorPenalties = [
       'Using mildly inappropriate language in the presence of students',
       'Dressing inappropriately for sessions',
     ],
-    penalty: 'First and second instance \u2014 verbal warning. Third instance \u2014 written warning, plus a two to five week suspension from tutor duties and possible additional administrative duties as determined by the ExCo.',
+    penalty: 'First and second instance — verbal warning. Third instance — written warning, plus a two to five week suspension from tutor duties and possible additional administrative duties as determined by the ExCo.',
   },
   {
     level: 'Moderate',
@@ -87,7 +87,7 @@ const studentExpected = [
   'Treat all tutors, administrators, and fellow students with respect.',
   'Use computing devices and online platforms responsibly and for learning purposes.',
   'Communicate concerns or difficulties to a tutor or administrator rather than disengaging.',
-  'Comply with venue rules and BbB\u2019s policies at all times.',
+  'Comply with venue rules and BbB’s policies at all times.',
 ];
 
 const studentDigital = [
@@ -184,7 +184,7 @@ export function Conduct() {
       <main className="flex-grow py-16 px-6">
         <div className="max-w-4xl mx-auto">
 
-          {/* ── Header ── */}
+          {/* Header */}
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/70 dark:bg-gray-800/70 border border-bit-lavender/30 dark:border-bit-lavender/50 mb-6 shadow-sm">
               <BookOpen className="w-4 h-4 text-bit-lavender" />
@@ -203,27 +203,24 @@ export function Conduct() {
             </div>
           </div>
 
-          {/* ── Applies to Banner ── */}
+          {/* Applies-to Banner */}
           <div className="glass rounded-2xl p-6 border border-bit-lavender/30 dark:border-bit-lavender/50 bg-bit-lavender/5 dark:bg-bit-lavender/10 mb-10 flex items-start gap-4">
             <div className="p-2 bg-bit-lavender/10 dark:bg-bit-lavender/20 rounded-xl shrink-0">
               <Shield className="w-5 h-5 text-bit-lavender" />
             </div>
             <p className="text-sm text-bit-dark/80 dark:text-gray-300 leading-relaxed">
-              This Code of Conduct applies to <strong>all BbB tutors, administrators, co-founders, volunteers, and students</strong> in all BbB settings \u2014 in-person sessions, online classes, and any associated communications. All BbB personnel are required to read, sign, and comply with this document before their first session. It should be read together with the{' '}
+              This Code of Conduct applies to <strong>all BbB tutors, administrators, co-founders, volunteers, and students</strong> in all BbB settings — in-person sessions, online classes, and any associated communications. All BbB personnel are required to read, sign, and comply with this document before their first session. It should be read together with the{' '}
               <a href="/#/child-policy" className="text-bit-lavender hover:text-bit-red transition-colors">Child Protection Policy</a>, which takes precedence in any matter involving the safety or welfare of a child.
             </p>
           </div>
 
-          {/* ═══════════════════════════════════════════════════════════
-              PART 1: TUTORS & ADMINISTRATORS
-          ═══════════════════════════════════════════════════════════ */}
+          {/* PART 1 */}
           <PartDivider number="1" title="Tutors and Administrators" icon={Users} gradient="from-bit-lavender to-violet-400" />
 
-          {/* Philosophy */}
           <Card>
-            <SectionHeading icon={BookOpen} gradient="from-bit-lavender to-violet-400" title="1.1 Guiding Philosophy" />
+            <SH icon={BookOpen} gradient="from-bit-lavender to-violet-400" title="1.1 Guiding Philosophy" />
             <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-3">
-              BbB volunteers give their time freely to serve our students. In doing so, they take on a responsibility \u2014 to those students, to their families, and to the organisation \u2014 to conduct themselves with integrity, professionalism, and genuine care. Many of our students are minors. <strong>This demands a higher standard, not a lower one.</strong>
+              BbB volunteers give their time freely to serve our students. In doing so, they take on a responsibility — to those students, to their families, and to the organisation — to conduct themselves with integrity, professionalism, and genuine care. Many of our students are minors. <strong>This demands a higher standard, not a lower one.</strong>
             </p>
             <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed">
               This Code of Conduct sets out the standards BbB expects. It should be read together with the{' '}
@@ -231,30 +228,27 @@ export function Conduct() {
             </p>
           </Card>
 
-          {/* Core Standards */}
           <Card>
-            <SectionHeading icon={Shield} gradient="from-bit-green to-emerald-400" title="1.2 Core Standards" />
+            <SH icon={Shield} gradient="from-bit-green to-emerald-400" title="1.2 Core Standards" />
             <p className="text-bit-dark/70 dark:text-gray-400 text-sm mb-4">All BbB tutors and administrators are expected to:</p>
             <BulletList items={tutorStandards} color="bg-bit-lavender" />
           </Card>
 
-          {/* Digital Communications */}
           <Card>
-            <SectionHeading icon={MessageSquare} gradient="from-bit-turquoise to-cyan-400" title="1.3 Digital Communications and Social Media" />
+            <SH icon={MessageSquare} gradient="from-bit-turquoise to-cyan-400" title="1.3 Digital Communications and Social Media" />
             <p className="text-bit-dark/70 dark:text-gray-400 text-sm mb-4">The following standards govern all digital communication between BbB personnel and students:</p>
             <BulletList items={digitalStandards} color="bg-bit-turquoise" />
             <div className="mt-5 p-4 rounded-xl bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-800">
               <p className="text-xs text-orange-700 dark:text-orange-300 leading-relaxed">
-                <strong>\u26a0\ufe0f Note:</strong> Contacting a student through any personal or unofficial channel is a <strong>moderate offence</strong> on first occurrence and a <strong>severe offence</strong> on recurrence.
+                <strong>⚠️ Note:</strong> Contacting a student through any personal or unofficial channel is a <strong>moderate offence</strong> on first occurrence and a <strong>severe offence</strong> on recurrence.
               </p>
             </div>
           </Card>
 
-          {/* Conflict of Interest */}
           <Card>
-            <SectionHeading icon={Scale} gradient="from-orange-400 to-yellow-400" title="1.4 Conflict of Interest" />
+            <SH icon={Scale} gradient="from-orange-400 to-yellow-400" title="1.4 Conflict of Interest" />
             <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-4">
-              A conflict of interest arises where a tutor or administrator\u2019s personal, familial, or financial relationships could compromise \u2014 or appear to compromise \u2014 their professional judgement or conduct within BbB.
+              A conflict of interest arises where a tutor or administrator’s personal, familial, or financial relationships could compromise — or appear to compromise — their professional judgement or conduct within BbB.
             </p>
             <BulletList
               color="bg-orange-400"
@@ -267,17 +261,15 @@ export function Conduct() {
             />
           </Card>
 
-          {/* Tutor Commitment */}
           <Card>
-            <SectionHeading icon={Star} gradient="from-bit-lavender to-bit-red" title="1.5 Tutor Commitment" />
+            <SH icon={Star} gradient="from-bit-lavender to-bit-red" title="1.5 Tutor Commitment" />
             <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed">
-              All tutors join BbB with an agreed commitment, as outlined in BbB\u2019s Constitution. This commitment includes lesson planning, attendance at assigned sessions, and participation in curriculum development where required. Failure to fulfil this commitment without valid reason is a <strong>light offence</strong>.
+              All tutors join BbB with an agreed commitment, as outlined in BbB’s Constitution. This commitment includes lesson planning, attendance at assigned sessions, and participation in curriculum development where required. Failure to fulfil this commitment without valid reason is a <strong>light offence</strong>.
             </p>
           </Card>
 
-          {/* Prohibited Conduct */}
           <Card>
-            <SectionHeading icon={AlertTriangle} gradient="from-bit-red to-rose-500" title="1.6 Prohibited Conduct" />
+            <SH icon={AlertTriangle} gradient="from-bit-red to-rose-500" title="1.6 Prohibited Conduct" />
             <p className="text-bit-dark/70 dark:text-gray-400 text-sm mb-4">The following conduct is prohibited in all BbB settings and circumstances:</p>
             <div className="flex flex-col gap-2">
               {prohibitedConduct.map((item, i) => (
@@ -289,9 +281,8 @@ export function Conduct() {
             </div>
           </Card>
 
-          {/* Tutor Penalties */}
           <Card>
-            <SectionHeading icon={Scale} gradient="from-bit-red to-bit-lavender" title="1.7 Penalties for Tutor and Administrator Misconduct" />
+            <SH icon={Scale} gradient="from-bit-red to-bit-lavender" title="1.7 Penalties for Tutor and Administrator Misconduct" />
             <p className="text-bit-dark/70 dark:text-gray-400 text-sm mb-6">Offences are classified as light, moderate, or severe. Penalties are determined by the ExCo.</p>
             <div className="flex flex-col gap-5">
               {tutorPenalties.map((p, i) => (
@@ -300,24 +291,21 @@ export function Conduct() {
             </div>
             <div className="mt-6 grid md:grid-cols-2 gap-4">
               <div className="p-5 rounded-2xl bg-bit-green/5 dark:bg-green-900/20 border border-bit-green/20 dark:border-green-900/40">
-                <p className="font-bold text-bit-green dark:text-green-400 text-sm mb-2">\ud83d\udee1\ufe0f Whistleblower Protection</p>
-                <p className="text-xs text-bit-dark/70 dark:text-gray-400 leading-relaxed">Any tutor or administrator who reports a genuine concern about another person\u2019s conduct in good faith is protected from retaliation. Retaliation is itself a <strong>severe offence</strong>.</p>
+                <p className="font-bold text-bit-green dark:text-green-400 text-sm mb-2">🛡️ Whistleblower Protection</p>
+                <p className="text-xs text-bit-dark/70 dark:text-gray-400 leading-relaxed">Any tutor or administrator who reports a genuine concern about another person’s conduct in good faith is protected from retaliation. Retaliation is itself a <strong>severe offence</strong>.</p>
               </div>
               <div className="p-5 rounded-2xl bg-bit-lavender/5 dark:bg-bit-lavender/10 border border-bit-lavender/20 dark:border-bit-lavender/30">
-                <p className="font-bold text-bit-lavender text-sm mb-2">\u2696\ufe0f Process</p>
+                <p className="font-bold text-bit-lavender text-sm mb-2">⚖️ Process</p>
                 <p className="text-xs text-bit-dark/70 dark:text-gray-400 leading-relaxed">Only the ExCo may vote on penalties. Non-compliance with corrective actions, without approved extenuating circumstances, results in immediate dismissal. The ExCo may grant exceptions for genuine extenuating circumstances.</p>
               </div>
             </div>
           </Card>
 
-          {/* ═══════════════════════════════════════════════════════════
-              PART 2: STUDENTS
-          ═══════════════════════════════════════════════════════════ */}
+          {/* PART 2 */}
           <PartDivider number="2" title="Students" icon={Heart} gradient="from-bit-turquoise to-cyan-400" />
 
-          {/* Philosophy */}
           <Card>
-            <SectionHeading icon={Heart} gradient="from-bit-turquoise to-cyan-400" title="2.1 Guiding Philosophy" />
+            <SH icon={Heart} gradient="from-bit-turquoise to-cyan-400" title="2.1 Guiding Philosophy" />
             <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-3">
               BbB believes in <strong>restorative discipline</strong>. When students make mistakes, our first response is to understand what happened, help them make better choices, and support them to grow. We recognise that students may be dealing with pressures and challenges outside of BbB that affect their behaviour.
             </p>
@@ -326,23 +314,20 @@ export function Conduct() {
             </p>
           </Card>
 
-          {/* Expected Conduct */}
           <Card>
-            <SectionHeading icon={Shield} gradient="from-bit-green to-emerald-400" title="2.2 Expected Conduct" />
+            <SH icon={Shield} gradient="from-bit-green to-emerald-400" title="2.2 Expected Conduct" />
             <p className="text-bit-dark/70 dark:text-gray-400 text-sm mb-4">Students are expected to:</p>
             <BulletList items={studentExpected} color="bg-bit-green" />
           </Card>
 
-          {/* Student Digital Conduct */}
           <Card>
-            <SectionHeading icon={MessageSquare} gradient="from-bit-turquoise to-cyan-400" title="2.3 Digital Conduct" />
+            <SH icon={MessageSquare} gradient="from-bit-turquoise to-cyan-400" title="2.3 Digital Conduct" />
             <p className="text-bit-dark/70 dark:text-gray-400 text-sm mb-4">Students must:</p>
             <BulletList items={studentDigital} color="bg-bit-turquoise" />
           </Card>
 
-          {/* Student Penalties */}
           <Card>
-            <SectionHeading icon={Scale} gradient="from-bit-red to-bit-lavender" title="2.4\u20132.7 Disciplinary Framework" />
+            <SH icon={Scale} gradient="from-bit-red to-bit-lavender" title="2.4–2.7 Disciplinary Framework" />
             <p className="text-bit-dark/70 dark:text-gray-400 text-sm mb-6">
               Offences are classified as light, moderate, severe, or extraordinary. BbB takes a <strong>trauma-informed approach</strong>: we ask what happened, not what is wrong with the student.
             </p>
@@ -353,9 +338,8 @@ export function Conduct() {
             </div>
           </Card>
 
-          {/* Special Considerations */}
           <Card>
-            <SectionHeading icon={Heart} gradient="from-bit-lavender to-violet-400" title="2.8 Special Considerations" />
+            <SH icon={Heart} gradient="from-bit-lavender to-violet-400" title="2.8 Special Considerations" />
             <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-4">
               When evaluating any offence, tutors and administrators will consider:
             </p>
@@ -374,9 +358,8 @@ export function Conduct() {
             </p>
           </Card>
 
-          {/* Appeals */}
           <Card>
-            <SectionHeading icon={Scale} gradient="from-bit-turquoise to-bit-lavender" title="2.9 Appeals" />
+            <SH icon={Scale} gradient="from-bit-turquoise to-bit-lavender" title="2.9 Appeals" />
             <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-4">
               Students and families may appeal any moderate or severe penalty to the ExCo. Appeals must be submitted <strong>in writing within one week</strong> of the penalty being imposed. The ExCo will review and respond within two weeks.
             </p>
@@ -389,26 +372,23 @@ export function Conduct() {
             />
           </Card>
 
-          {/* Privacy in Disciplinary Matters */}
           <Card>
-            <SectionHeading icon={Shield} gradient="from-bit-green to-bit-turquoise" title="2.10 Privacy in Disciplinary Matters" />
+            <SH icon={Shield} gradient="from-bit-green to-bit-turquoise" title="2.10 Privacy in Disciplinary Matters" />
             <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed">
-              Disciplinary matters will be handled privately. Other students will not be told specific details of another student\u2019s consequences. Documentation will be kept confidential and shared only with those who need it.
+              Disciplinary matters will be handled privately. Other students will not be told specific details of another student’s consequences. Documentation will be kept confidential and shared only with those who need it.
             </p>
           </Card>
 
-          {/* Mandatory Reporting */}
           <Card>
-            <SectionHeading icon={AlertTriangle} gradient="from-bit-red to-rose-500" title="2.11 Mandatory Reporting" />
+            <SH icon={AlertTriangle} gradient="from-bit-red to-rose-500" title="2.11 Mandatory Reporting" />
             <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed">
               If student behaviour or disclosures suggest abuse, neglect, or a safety concern involving any person, tutors and administrators are required to follow the{' '}
               <a href="/#/child-policy" className="text-bit-lavender hover:text-bit-red transition-colors">Child Protection Policy</a>, which may include reporting to the relevant Singapore authorities.
             </p>
           </Card>
 
-          {/* Positive Reinforcement */}
           <Card>
-            <SectionHeading icon={Star} gradient="from-bit-lavender to-bit-red" title="2.12 Positive Reinforcement" />
+            <SH icon={Star} gradient="from-bit-lavender to-bit-red" title="2.12 Positive Reinforcement" />
             <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-4">
               While this document addresses misconduct, BbB exists above all to <strong>celebrate growth</strong>. Students who demonstrate consistent effort, support for peers, curiosity, persistence, and positive contributions to the learning community will be recognised through:
             </p>
@@ -421,12 +401,12 @@ export function Conduct() {
               ))}
             </div>
             <p className="mt-5 text-center text-bit-dark/60 dark:text-gray-400 text-sm italic">
-              \u201cWe will work harder to catch students doing things right than to catch them doing things wrong.\u201d
+              “We will work harder to catch students doing things right than to catch them doing things wrong.”
             </p>
           </Card>
 
-          {/* ── Version History ── */}
-          <div className="glass rounded-3xl p-8 border border-white/60 dark:border-gray-700 shadow-xl bg-white/40 dark:bg-gray-800/40 mt-8">
+          {/* Version History */}
+          <div className="glass rounded-3xl p-8 border border-white/60 dark:border-gray-700 shadow-xl bg-white/40 dark:bg-gray-800/40 mt-2">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-bit-lavender to-violet-400 flex items-center justify-center shrink-0">
                 <RefreshCw className="w-4 h-4 text-white" />
@@ -497,7 +477,7 @@ function PartDivider({
   );
 }
 
-function SectionHeading({
+function SH({
   icon: Icon, gradient, title,
 }: {
   icon: React.ElementType; gradient: string; title: string;

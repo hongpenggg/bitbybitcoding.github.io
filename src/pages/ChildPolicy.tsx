@@ -16,7 +16,7 @@ const summaryCards = [
   {
     icon: BookOpen,
     title: 'UN Convention',
-    body: 'Guided by the UNCRC (1989) — Article 19 (protection from abuse), Article 3 (best interests of the child), and Article 12 (the child\u2019s right to be heard).',
+    body: 'Guided by the UNCRC (1989) — Article 19 (protection from abuse), Article 3 (best interests of the child), and Article 12 (the child’s right to be heard).',
     gradient: 'from-bit-lavender to-violet-400',
   },
   {
@@ -69,8 +69,8 @@ const prohibitedConduct = [
 ];
 
 const approvedChannels = [
-  'BbB\u2019s official email address (info.bbbcoding@gmail.com)',
-  'BbB\u2019s official messaging or class management platform, as designated by the ExCo',
+  'BbB’s official email address (info.bbbcoding@gmail.com)',
+  'BbB’s official messaging or class management platform, as designated by the ExCo',
   'Parent or guardian group chats where a parent or guardian is present',
 ];
 
@@ -87,7 +87,7 @@ const signsOfConcern = [
   'Expressions of fear, anxiety, or distress relating to specific people or places',
   'Inappropriate sexual knowledge or behaviour',
   'Withdrawal, social isolation, or regression',
-  'Disclosures \u2014 direct or indirect \u2014 of abuse or harm',
+  'Disclosures — direct or indirect — of abuse or harm',
   'Signs of neglect including persistent hunger, poor hygiene, or inadequate clothing',
 ];
 
@@ -97,7 +97,7 @@ const disclosureSteps = [
   'Reassure the child that they have done the right thing by telling you.',
   'Do not promise confidentiality. Explain that you may need to share what they have told you to keep them safe.',
   'Do not investigate the matter yourself or confront any alleged perpetrator.',
-  'As soon as possible, record what was said in the child\u2019s own words, noting the time, date, and circumstances.',
+  'As soon as possible, record what was said in the child’s own words, noting the time, date, and circumstances.',
   'Report to the CPO immediately.',
 ];
 
@@ -113,7 +113,7 @@ export function ChildPolicy() {
       <main className="flex-grow py-16 px-6">
         <div className="max-w-4xl mx-auto">
 
-          {/* ── Header ── */}
+          {/* Header */}
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/70 dark:bg-gray-800/70 border border-bit-green/30 dark:border-bit-green/50 mb-6 shadow-sm">
               <ShieldCheck className="w-4 h-4 text-bit-green" />
@@ -159,11 +159,11 @@ export function ChildPolicy() {
 
           <div className="flex flex-col gap-8">
 
-            {/* ── Section 1: Commitment ── */}
+            {/* Section 1 */}
             <Card>
               <SH icon={Heart} gradient="from-bit-green to-emerald-400" title="1. Our Commitment" />
               <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-4">
-                Bit by Bit Coding (&quot;BbB&quot;) is <strong>unconditionally committed</strong> to the safety, dignity, and wellbeing of every child who participates in our programmes. The protection of children is not a secondary concern \u2014 it is a core organisational value that takes precedence over all other operational considerations.
+                Bit by Bit Coding (&quot;BbB&quot;) is <strong>unconditionally committed</strong> to the safety, dignity, and wellbeing of every child who participates in our programmes. The protection of children is not a secondary concern — it is a core organisational value that takes precedence over all other operational considerations.
               </p>
               <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-4">
                 BbB opposes all forms of abuse, exploitation, discrimination, and harm directed at children. We are guided by the <strong>United Nations Convention on the Rights of the Child (UNCRC, 1989)</strong>, with particular reference to:
@@ -172,7 +172,7 @@ export function ChildPolicy() {
                 {[
                   { art: 'Article 19', desc: 'Protection from violence and abuse' },
                   { art: 'Article 3', desc: 'Best interests of the child' },
-                  { art: 'Article 12', desc: 'The child\u2019s right to be heard' },
+                  { art: 'Article 12', desc: 'The child’s right to be heard' },
                 ].map((a, i) => (
                   <div key={i} className="p-4 rounded-2xl bg-bit-green/5 dark:bg-green-900/20 border border-bit-green/20 dark:border-green-900/40 text-center">
                     <p className="font-bold text-bit-green text-sm mb-1">{a.art}</p>
@@ -185,7 +185,7 @@ export function ChildPolicy() {
               </p>
             </Card>
 
-            {/* ── Section 2: Scope ── */}
+            {/* Section 2 */}
             <Card>
               <SH icon={BookOpen} gradient="from-bit-lavender to-violet-400" title="2. Scope" />
               <div className="grid md:grid-cols-2 gap-6">
@@ -205,11 +205,11 @@ export function ChildPolicy() {
               </div>
             </Card>
 
-            {/* ── Section 3: CPO ── */}
+            {/* Section 3 */}
             <Card>
               <SH icon={UserCheck} gradient="from-bit-turquoise to-cyan-400" title="3. Designated Child Protection Officer" />
               <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-4">
-                BbB designates a <strong>Child Protection Officer (CPO)</strong> who holds primary responsibility for implementing this policy, receiving reports of concern, and coordinating BbB\u2019s response to any child protection matter.
+                BbB designates a <strong>Child Protection Officer (CPO)</strong> who holds primary responsibility for implementing this policy, receiving reports of concern, and coordinating BbB’s response to any child protection matter.
               </p>
               <div className="p-5 rounded-2xl bg-bit-turquoise/5 dark:bg-cyan-900/20 border border-bit-turquoise/20 dark:border-cyan-900/40 mb-5">
                 <p className="text-sm font-bold text-bit-dark dark:text-white mb-1">Current CPO</p>
@@ -219,70 +219,65 @@ export function ChildPolicy() {
               <div className="flex flex-col gap-3">
                 <div className="p-4 rounded-xl bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-800">
                   <p className="text-xs text-orange-700 dark:text-orange-300 leading-relaxed">
-                    <strong>\u26a0\ufe0f If an allegation is made against the CPO:</strong> The next senior available ExCo member assumes CPO responsibilities. The matter is escalated directly to the relevant Singapore authorities and, where appropriate, to BbB\u2019s supporting bodies (NVPC, Temasek Foundation, Tote Board).
+                    <strong>⚠️ If an allegation is made against the CPO:</strong> The next senior available ExCo member assumes CPO responsibilities. The matter is escalated directly to the relevant Singapore authorities and, where appropriate, to BbB’s supporting bodies (NVPC, Temasek Foundation, Tote Board).
                   </p>
                 </div>
                 <div className="p-4 rounded-xl bg-bit-lavender/5 dark:bg-bit-lavender/10 border border-bit-lavender/20 dark:border-bit-lavender/30">
                   <p className="text-xs text-bit-dark/70 dark:text-gray-400 leading-relaxed">
-                    All reports of concern must be directed to the CPO in the first instance, except where the allegation involves the CPO \u2014 in which case reports should be made directly to another ExCo member or to the relevant authorities.
+                    All reports of concern must be directed to the CPO in the first instance, except where the allegation involves the CPO — in which case reports should be made directly to another ExCo member or to the relevant authorities.
                   </p>
                 </div>
               </div>
             </Card>
 
-            {/* ── Section 4: Safe Recruitment ── */}
+            {/* Section 4 */}
             <Card>
               <SH icon={Search} gradient="from-bit-green to-emerald-400" title="4. Safe Recruitment and Vetting" />
               <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-6">
                 BbB is committed to recruiting and retaining tutors and volunteers who are suitable to work with children.
               </p>
-
               <SubSH title="4.1 Pre-Engagement Checks" />
               <BulletList color="bg-bit-green" items={[
                 'All prospective tutors and volunteers must provide at least one character reference from a person who can speak to their suitability to work with children.',
                 'BbB will conduct a brief structured interview or onboarding conversation before any tutor or volunteer interacts unsupervised with participants.',
                 'Prospective tutors and volunteers must declare any previous convictions, investigations, or disciplinary action relating to children or young people. Failure to disclose may result in immediate removal.',
-                'Where feasible, BbB will request a Basic Criminal Record Check or equivalent from the Singapore Police Force. This requirement will be mandatory as BbB\u2019s capacity permits.',
+                'Where feasible, BbB will request a Basic Criminal Record Check or equivalent from the Singapore Police Force. This requirement will be mandatory as BbB’s capacity permits.',
               ]} />
-
               <SubSH title="4.2 Onboarding Requirements" />
               <BulletList color="bg-bit-lavender" items={[
-                'All new tutors and volunteers must read, sign, and return a copy of this Child Protection Policy and BbB\u2019s Code of Conduct before their first session.',
+                'All new tutors and volunteers must read, sign, and return a copy of this Child Protection Policy and BbB’s Code of Conduct before their first session.',
                 'All new tutors and volunteers must complete a BbB safeguarding induction covering: recognising signs of abuse, reporting procedures, and appropriate conduct with minors.',
                 'Co-founders and ExCo members are subject to the same requirements.',
               ]} />
-
               <SubSH title="4.3 Ongoing Requirements" />
               <BulletList color="bg-bit-turquoise" items={[
                 'All tutors and volunteers must immediately notify the CPO if they are subject to any investigation, charge, or conviction relating to children or young people at any point during their engagement with BbB.',
-                'BbB reserves the right to suspend or terminate a tutor\u2019s or volunteer\u2019s engagement pending any investigation or on receipt of a credible safeguarding concern.',
+                'BbB reserves the right to suspend or terminate a tutor’s or volunteer’s engagement pending any investigation or on receipt of a credible safeguarding concern.',
               ]} />
             </Card>
 
-            {/* ── Section 5: Standards of Conduct ── */}
+            {/* Section 5 */}
             <Card>
               <SH icon={Users} gradient="from-bit-lavender to-bit-red" title="5. Standards of Conduct Towards Children" />
-
               <SubSH title="5.1 Required Conduct" />
               <p className="text-bit-dark/70 dark:text-gray-400 text-sm mb-4">All BbB personnel must at all times:</p>
               <div className="flex flex-col gap-2 mb-7">
                 {requiredConduct.map((item, i) => (
                   <div key={i} className="flex items-start gap-3 p-3 rounded-xl bg-bit-green/5 dark:bg-green-900/20 border border-bit-green/10 dark:border-green-900/40">
                     <span className="w-5 h-5 rounded-full bg-bit-green/20 dark:bg-green-900/40 flex items-center justify-center shrink-0 mt-0.5">
-                      <span className="text-bit-green text-xs font-bold">\u2713</span>
+                      <span className="text-bit-green text-xs font-bold">✓</span>
                     </span>
                     <p className="text-sm text-bit-dark/80 dark:text-gray-300 leading-relaxed">{item}</p>
                   </div>
                 ))}
               </div>
-
               <SubSH title="5.2 Prohibited Conduct" />
               <p className="text-bit-dark/70 dark:text-gray-400 text-sm mb-4">All BbB personnel must never:</p>
               <div className="flex flex-col gap-2">
                 {prohibitedConduct.map((item, i) => (
                   <div key={i} className="flex items-start gap-3 p-3 rounded-xl bg-red-50/60 dark:bg-red-900/20 border border-red-100 dark:border-red-900/40">
                     <span className="w-5 h-5 rounded-full bg-bit-red/10 dark:bg-red-900/40 flex items-center justify-center shrink-0 mt-0.5">
-                      <span className="text-bit-red text-xs font-bold">\u00d7</span>
+                      <span className="text-bit-red text-xs font-bold">×</span>
                     </span>
                     <p className="text-sm text-bit-dark/80 dark:text-gray-300 leading-relaxed">{item}</p>
                   </div>
@@ -293,21 +288,20 @@ export function ChildPolicy() {
               </p>
             </Card>
 
-            {/* ── Section 6: Online Safeguarding ── */}
+            {/* Section 6 */}
             <Card>
               <SH icon={MessageSquare} gradient="from-bit-turquoise to-cyan-400" title="6. Online Safeguarding" />
               <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-6">
                 BbB programmes involve digital tools and online interaction. The following standards apply to all online and digital activity.
               </p>
-
               <SubSH title="6.1 Approved Communication Channels" />
               <div className="grid md:grid-cols-2 gap-4 mb-7">
                 <div>
-                  <p className="text-xs font-bold text-bit-green dark:text-green-400 uppercase tracking-wider mb-3">\u2713 Approved channels</p>
+                  <p className="text-xs font-bold text-bit-green dark:text-green-400 uppercase tracking-wider mb-3">✓ Approved channels</p>
                   <BulletList items={approvedChannels} color="bg-bit-green" />
                 </div>
                 <div>
-                  <p className="text-xs font-bold text-bit-red dark:text-red-400 uppercase tracking-wider mb-3">\u00d7 Expressly prohibited</p>
+                  <p className="text-xs font-bold text-bit-red dark:text-red-400 uppercase tracking-wider mb-3">× Expressly prohibited</p>
                   <div className="flex flex-col gap-2">
                     {prohibitedChannels.map((item, i) => (
                       <div key={i} className="flex items-start gap-3 p-3 rounded-xl bg-red-50/60 dark:bg-red-900/20 border border-red-100 dark:border-red-900/40">
@@ -318,15 +312,13 @@ export function ChildPolicy() {
                   </div>
                 </div>
               </div>
-
               <SubSH title="6.2 Online Session Conduct" />
               <BulletList color="bg-bit-turquoise" items={[
-                'Online sessions must not be conducted in private one-to-one video calls without a parent or guardian\u2019s knowledge and consent.',
+                'Online sessions must not be conducted in private one-to-one video calls without a parent or guardian’s knowledge and consent.',
                 'Tutors must not share personal contact information or social media handles with students.',
                 'Tutors must report any inappropriate online behaviour by a student or any online contact from a student through unofficial channels to the CPO immediately.',
                 'If a student discloses harm or distress through an online channel, the tutor must respond safely and report to the CPO as outlined in Section 7.',
               ]} />
-
               <SubSH title="6.3 Student Online Behaviour" />
               <BulletList color="bg-bit-lavender" items={[
                 'Students must not attempt to contact tutors or administrators through personal or unofficial channels.',
@@ -335,10 +327,9 @@ export function ChildPolicy() {
               ]} />
             </Card>
 
-            {/* ── Section 7: Recognising and Reporting ── */}
+            {/* Section 7 */}
             <Card>
               <SH icon={Eye} gradient="from-bit-red to-rose-500" title="7. Recognising and Reporting Concerns" />
-
               <SubSH title="7.1 Recognising Signs of Concern" />
               <p className="text-bit-dark/70 dark:text-gray-400 text-sm mb-4">BbB personnel should be alert to the following possible indicators of abuse or harm:</p>
               <div className="grid sm:grid-cols-2 gap-2 mb-3">
@@ -352,7 +343,6 @@ export function ChildPolicy() {
               <p className="text-xs text-bit-dark/50 dark:text-gray-500 mb-7 leading-relaxed">
                 The presence of one or more of these indicators does not confirm abuse. They are signals that a concern should be logged and, where appropriate, reported.
               </p>
-
               <SubSH title="7.2 How to Respond to a Disclosure" />
               <p className="text-bit-dark/70 dark:text-gray-400 text-sm mb-4">If a child discloses abuse or harm to you:</p>
               <div className="flex flex-col gap-2 mb-7">
@@ -363,7 +353,6 @@ export function ChildPolicy() {
                   </div>
                 ))}
               </div>
-
               <SubSH title="7.3 Mandatory Reporting" />
               <div className="p-5 rounded-2xl bg-bit-red/5 dark:bg-red-900/20 border border-bit-red/20 dark:border-red-900/40 mb-5">
                 <p className="text-sm text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-3">
@@ -388,10 +377,9 @@ export function ChildPolicy() {
                   Failure to report a known or reasonably suspected concern is a serious breach of this policy and may result in immediate dismissal.
                 </p>
               </div>
-
               <SubSH title="7.4 Reporting to Authorities" />
               <p className="text-bit-dark/80 dark:text-gray-300 text-sm leading-relaxed mb-4">
-                BbB will report concerns to the relevant Singapore authorities where there are reasonable grounds to believe a child is at risk of harm. <strong>BbB will not wait for internal processes to conclude where a child\u2019s immediate safety is at risk.</strong>
+                BbB will report concerns to the relevant Singapore authorities where there are reasonable grounds to believe a child is at risk of harm. <strong>BbB will not wait for internal processes to conclude where a child’s immediate safety is at risk.</strong>
               </p>
               <div className="flex flex-col gap-3 mb-5">
                 {[
@@ -408,12 +396,11 @@ export function ChildPolicy() {
                   </div>
                 ))}
               </div>
-              <div className="p-4 rounded-xl bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-800">
+              <div className="p-4 rounded-xl bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-800 mb-6">
                 <p className="text-xs text-orange-700 dark:text-orange-300 leading-relaxed">
-                  <strong>\u26a0\ufe0f Where an allegation is made against a founder or ExCo member:</strong> Any BbB tutor or volunteer may \u2014 and must \u2014 report directly to the authorities listed above, and should notify BbB\u2019s supporting bodies (NVPC / Temasek Foundation / Tote Board) as appropriate.
+                  <strong>⚠️ Where an allegation is made against a founder or ExCo member:</strong> Any BbB tutor or volunteer may — and must — report directly to the authorities listed above, and should notify BbB’s supporting bodies (NVPC / Temasek Foundation / Tote Board) as appropriate.
                 </p>
               </div>
-
               <SubSH title="7.5 Confidentiality and Information Sharing" />
               <p className="text-bit-dark/80 dark:text-gray-300 text-sm leading-relaxed mb-2">
                 All child protection concerns and reports must be treated with strict confidentiality. Information will be shared only with those who need it to protect the child. Breach of confidentiality in child protection matters is a serious disciplinary offence.
@@ -423,17 +410,16 @@ export function ChildPolicy() {
               </p>
             </Card>
 
-            {/* ── Section 8: Response Procedure ── */}
+            {/* Section 8 */}
             <Card>
               <SH icon={AlertTriangle} gradient="from-orange-400 to-yellow-400" title="8. Response Procedure After a Report" />
-
               <SubSH title="8.1 Immediate Steps" />
               <div className="flex flex-col gap-2 mb-7">
                 {[
                   'The CPO acknowledges receipt of the report within 24 hours.',
                   'The CPO assesses whether the child is in immediate danger. If so, emergency services or CPS are contacted immediately.',
                   'If the concern involves a BbB tutor or volunteer, that person is suspended from all BbB activities pending investigation. This suspension is precautionary, not disciplinary.',
-                  'The CPO documents the concern in BbB\u2019s safeguarding log (confidential).',
+                  'The CPO documents the concern in BbB’s safeguarding log (confidential).',
                 ].map((step, i) => (
                   <div key={i} className="flex items-start gap-4 p-3 rounded-xl bg-white/50 dark:bg-gray-700/50 border border-white/60 dark:border-gray-600">
                     <span className="w-6 h-6 rounded-full bg-gradient-to-br from-orange-400 to-yellow-400 flex items-center justify-center text-white text-xs font-bold shrink-0 mt-0.5">{i + 1}</span>
@@ -441,15 +427,13 @@ export function ChildPolicy() {
                   </div>
                 ))}
               </div>
-
               <SubSH title="8.2 Investigation and Escalation" />
               <BulletList color="bg-orange-400" items={[
-                'The CPO determines, based on the nature of the concern, whether to: manage the matter internally (e.g. a minor conduct issue), refer to the child\u2019s family, or report to CPS or the Police.',
+                'The CPO determines, based on the nature of the concern, whether to: manage the matter internally (e.g. a minor conduct issue), refer to the child’s family, or report to CPS or the Police.',
                 'In cases of alleged abuse or criminal conduct, BbB will always report to the relevant authorities and will cooperate fully with any investigation.',
                 'BbB will not conduct its own investigation into allegations of abuse in parallel with or instead of an official investigation.',
-                'The child\u2019s wellbeing and safety remain the primary focus throughout. The child and their family will be kept informed as appropriate.',
+                'The child’s wellbeing and safety remain the primary focus throughout. The child and their family will be kept informed as appropriate.',
               ]} />
-
               <SubSH title="8.3 Following an Investigation" />
               <BulletList color="bg-bit-lavender" items={[
                 'If a concern is substantiated, BbB will take appropriate action under the Code of Conduct, up to and including permanent dismissal of the person concerned.',
@@ -458,7 +442,7 @@ export function ChildPolicy() {
               ]} />
             </Card>
 
-            {/* ── Section 9: Whistleblower ── */}
+            {/* Section 9 */}
             <Card>
               <SH icon={ShieldCheck} gradient="from-bit-green to-emerald-400" title="9. Whistleblower Protection" />
               <div className="p-5 rounded-2xl bg-bit-green/5 dark:bg-green-900/20 border border-bit-green/20 dark:border-green-900/40 mb-4">
@@ -468,11 +452,11 @@ export function ChildPolicy() {
               </div>
               <BulletList color="bg-bit-green" items={[
                 'Retaliation against a person who has raised a safeguarding concern is itself a serious breach of this policy and will be treated as a severe disciplinary offence.',
-                'If a person making a report believes they are being subjected to retaliation, they should contact BbB\u2019s supporting bodies (NVPC, Temasek Foundation, Tote Board) or the relevant authorities directly.',
+                'If a person making a report believes they are being subjected to retaliation, they should contact BbB’s supporting bodies (NVPC, Temasek Foundation, Tote Board) or the relevant authorities directly.',
               ]} />
             </Card>
 
-            {/* ── Section 10: Conflict of Interest ── */}
+            {/* Section 10 */}
             <Card>
               <SH icon={Scale} gradient="from-bit-lavender to-bit-turquoise" title="10. Conflict of Interest" />
               <BulletList color="bg-bit-lavender" items={[
@@ -482,7 +466,7 @@ export function ChildPolicy() {
               ]} />
             </Card>
 
-            {/* ── Section 11: Child Privacy ── */}
+            {/* Child Privacy */}
             <Card>
               <SH icon={Lock} gradient="from-bit-lavender to-violet-400" title="Child Privacy" />
               <div className="flex flex-col gap-4">
@@ -493,7 +477,7 @@ export function ChildPolicy() {
                   },
                   {
                     title: 'Parental Rights',
-                    body: 'Parents and guardians may at any time request access to, correction of, or deletion of their child\u2019s personal data held by BbB, and may withdraw consent for any optional processing. To exercise these rights, email info.bbbcoding@gmail.com.',
+                    body: '',
                   },
                   {
                     title: 'Minimum Necessary',
@@ -505,7 +489,7 @@ export function ChildPolicy() {
                     <p className="text-sm text-bit-dark/70 dark:text-gray-400 leading-relaxed">
                       {i === 1 ? (
                         <>
-                          Parents and guardians may at any time request access to, correction of, or deletion of their child\u2019s personal data held by BbB, and may withdraw consent for any optional processing. To exercise these rights, email{' '}
+                          Parents and guardians may at any time request access to, correction of, or deletion of their child’s personal data held by BbB, and may withdraw consent for any optional processing. To exercise these rights, email{' '}
                           <a href="mailto:info.bbbcoding@gmail.com" className="text-bit-lavender hover:text-bit-red transition-colors">info.bbbcoding@gmail.com</a>.
                         </>
                       ) : item.body}
@@ -515,11 +499,11 @@ export function ChildPolicy() {
               </div>
             </Card>
 
-            {/* ── Section 11: Review & Version History ── */}
+            {/* Section 11 */}
             <Card>
               <SH icon={RefreshCw} gradient="from-bit-lavender to-violet-400" title="11. Policy Review and Version History" />
               <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-6">
-                This policy will be reviewed at minimum annually, or sooner following any significant incident or change in BbB\u2019s operations. All updates will be version-numbered and dated.
+                This policy will be reviewed at minimum annually, or sooner following any significant incident or change in BbB’s operations. All updates will be version-numbered and dated.
               </p>
               <div className="flex flex-col gap-3">
                 <div className="flex items-start gap-4 p-4 rounded-2xl bg-white/50 dark:bg-gray-700/50 border border-white/60 dark:border-gray-600">

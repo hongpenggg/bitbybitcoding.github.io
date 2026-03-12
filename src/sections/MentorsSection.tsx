@@ -124,8 +124,8 @@ const mentors = [
   {
     name: 'Chee Heng Seow',
     role: 'Python @ Bit by Bit, Ex-Computing @ HCI',
-    image: 'https://picsum.photos/400',
-    quote: "Chee Heng-y quote here.",
+    image: 'https://raw.githubusercontent.com/bitbybitcoding/bitbybitcoding.github.io/main/.github/assets/cheeheng_profile.jpeg',
+    quote: "I want to share my love for coding, and inspire the next batch to make their communities a better place.",
     expertise: ['Python', 'AI'],
     borderColor: 'border-t-bit-red',
     roleColor: 'text-red-600 dark:text-red-400',

@@ -13,6 +13,7 @@ import { Privacy } from './pages/Privacy';
 import { Terms } from './pages/Terms';
 import { Consent } from './pages/Consent';
 import { ChildPolicy } from './pages/ChildPolicy';
+import { Conduct } from './pages/Conduct';
 import { BlogPage } from './pages/BlogPage';
 import { BlogPostPage } from './pages/BlogPostPage';
 
@@ -34,6 +35,7 @@ function App() {
             <Route path="/terms" element={<Terms />} />
             <Route path="/consent" element={<Consent />} />
             <Route path="/child-policy" element={<ChildPolicy />} />
+            <Route path="/conduct" element={<Conduct />} />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/blog/:slug" element={<BlogPostPage />} />
           </Routes>

@@ -10,6 +10,9 @@ import { TutorPage } from './pages/TutorPage';
 import { PartnersPage } from './pages/PartnersPage';
 import { ContactPage } from './pages/ContactPage';
 import { Privacy } from './pages/Privacy';
+import { Terms } from './pages/Terms';
+import { Consent } from './pages/Consent';
+import { ChildPolicy } from './pages/ChildPolicy';
 import { BlogPage } from './pages/BlogPage';
 import { BlogPostPage } from './pages/BlogPostPage';
 
@@ -28,6 +31,9 @@ function App() {
             <Route path="/partners" element={<PartnersPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/privacy" element={<Privacy />} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="/consent" element={<Consent />} />
+            <Route path="/child-policy" element={<ChildPolicy />} />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/blog/:slug" element={<BlogPostPage />} />
           </Routes>

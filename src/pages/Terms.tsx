@@ -1,120 +1,211 @@
-// Terms of Service
+import { useEffect } from 'react';
+import { FileText, Users, Shield, Camera, Database, Scale, AlertTriangle, BookOpen } from 'lucide-react';
 
-/*
+const sections = [
+  { icon: Users, label: 'Eligibility', color: 'from-bit-lavender to-violet-400' },
+  { icon: BookOpen, label: 'Programme Conduct', color: 'from-bit-turquoise to-cyan-400' },
+  { icon: AlertTriangle, label: 'Attendance', color: 'from-bit-red to-pink-400' },
+  { icon: Shield, label: 'Safety', color: 'from-bit-green to-emerald-400' },
+  { icon: Camera, label: 'Media', color: 'from-orange-400 to-yellow-400' },
+  { icon: Database, label: 'Data Protection', color: 'from-bit-lavender to-bit-red' },
+  { icon: Scale, label: 'Liability', color: 'from-bit-turquoise to-bit-lavender' },
+  { icon: FileText, label: 'IP & Amendments', color: 'from-bit-red to-bit-lavender' },
+];
 
-Bit by Bit Coding
-Terms and Conditions of Participation
-Effective: March 2026  |  Applies to: Students, Parents/Guardians, and Participants
+export function Terms() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
-These Terms and Conditions ("Terms") govern participation in all programmes, workshops, events, and activities (collectively, "Programmes") organised by Bit by Bit Coding ("BbB", "we", "us", "our"). By registering for or participating in any BbB Programme, the participant and their parent or legal guardian (where the participant is under 18 years of age) agree to be bound by these Terms.
-BbB is a community groundup recognised under the BAGUS Together initiative, supported by the National Volunteer and Philanthropy Centre (NVPC), Temasek Foundation, and Tote Board. We are committed to providing a safe, inclusive, and rigorous coding education environment for all participants.
-These Terms should be read alongside BbB's Privacy Policy and Code of Conduct, both of which are incorporated herein by reference.
+  return (
+    <div className="flex flex-col min-h-screen">
+      <main className="flex-grow py-16 px-6">
+        <div className="max-w-4xl mx-auto">
+          {/* Header */}
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/70 dark:bg-gray-800/70 border border-bit-lavender/30 dark:border-bit-lavender/50 mb-6 shadow-sm">
+              <FileText className="w-4 h-4 text-bit-lavender" />
+              <span className="text-xs font-bold text-bit-lavender uppercase tracking-wider">
+                Legal Documents
+              </span>
+            </div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 text-bit-dark dark:text-white tracking-tight">
+              Terms &amp; Conditions
+            </h1>
+            <p className="text-lg md:text-xl text-bit-dark/70 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              These Terms govern participation in all Bit by Bit Coding programmes, workshops, events, and activities.
+            </p>
+            <p className="text-sm text-bit-dark/50 dark:text-gray-500 mt-4">Effective: March 2026 &nbsp;&bull;&nbsp; Applies to: Students, Parents/Guardians, and Participants</p>
+          </div>
 
-1. Eligibility and Registration
-1.1 Eligibility
-BbB Programmes are open to youth aged 13 to 18 residing in Singapore, unless otherwise stated for a specific programme. Participation by persons outside this age range may be considered at BbB's discretion.
-1.2 Registration
-Registration must be completed via BbB's official registration form. A place in a Programme is only confirmed upon receipt of a completed registration form and, where applicable, any required consent documents. BbB reserves the right to refuse or cancel registration at its discretion.
-1.3 Parental or Guardian Consent
-As BbB Programmes are designed for minors, a parent or legal guardian must complete the registration form on behalf of the participant. By submitting the form, the parent or guardian confirms that they have the legal authority to consent on the participant's behalf and that all information provided is accurate and complete.
+          {/* Quick Reference Cards */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+            {sections.map((s, i) => {
+              const Icon = s.icon;
+              return (
+                <div key={i} className="glass rounded-2xl p-4 border border-white/60 dark:border-gray-700 text-center hover:shadow-lg transition-all duration-300">
+                  <div className={`w-10 h-10 mx-auto rounded-xl bg-gradient-to-br ${s.color} flex items-center justify-center mb-3`}>
+                    <Icon className="w-5 h-5 text-white" />
+                  </div>
+                  <p className="text-xs font-bold text-bit-dark dark:text-gray-300">{s.label}</p>
+                </div>
+              );
+            })}
+          </div>
 
-2. Programme Conduct
-2.1 Code of Conduct
-All participants are required to comply with BbB's Code of Conduct at all times during Programme activities, including online sessions and any associated communications. The Code of Conduct is available on BbB's website and governs expected standards of behaviour for students, tutors, and administrators.
-2.2 Disciplinary Action
-BbB reserves the right to take disciplinary action, including suspension or permanent removal from the Programme, in response to breaches of the Code of Conduct. Disciplinary procedures are outlined in full in the Code of Conduct. BbB's decisions on disciplinary matters are final, subject to the appeals process described therein.
-2.3 Removal from Programme
-BbB reserves the right to remove any participant from a Programme at any time if, in BbB's reasonable judgement, the participant's continued presence poses a risk to the safety, wellbeing, or learning experience of others, or if the participant repeatedly or seriously violates these Terms or the Code of Conduct.
+          {/* Main Content */}
+          <div className="glass rounded-3xl p-8 md:p-12 border border-white/60 dark:border-gray-700 shadow-xl shadow-bit-lavender/10 bg-white/40 dark:bg-gray-800/40">
+            <div className="prose prose-lg max-w-none">
 
-3. Attendance and Commitment
-3.1 Expected Attendance
-Participants are expected to attend all scheduled sessions of the Programme they have enrolled in. We understand that unforeseen circumstances arise; however, consistent or unexplained absence may result in the participant's place being offered to another student on the waitlist.
-3.2 Absence Notification
-If a participant is unable to attend a session, the parent or guardian should notify BbB as early as possible via our official communication channels. Repeated absences without notice may be treated as a light offence under the Code of Conduct.
-3.3 Punctuality
-Participants are expected to arrive on time for all sessions. Arriving more than 15 minutes late without prior notice may be recorded as a light offence under the Code of Conduct.
+              <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-8">
+                These Terms and Conditions ("Terms") govern participation in all programmes, workshops, events, and activities (collectively, "Programmes") organised by Bit by Bit Coding ("BbB", "we", "us", "our"). By registering for or participating in any BbB Programme, the participant and their parent or legal guardian (where the participant is under 18 years of age) agree to be bound by these Terms.
+              </p>
 
-4. Supervision and Safety
-4.1 Scope of Supervision
-BbB's duty of care and supervision of participants begins at the scheduled start time of each session and ends at the scheduled end time. BbB is not responsible for the safety or supervision of participants travelling to or from the venue, or during any time outside of scheduled session hours.
-4.2 Arrival and Departure
-Parents and guardians are responsible for ensuring their child arrives at and departs from sessions safely. If a participant requires a specific arrangement for pickup, this must be communicated to BbB in advance.
-4.3 Emergency Situations
-In the event of a medical emergency or accident during a BbB session, our tutors and administrators will take reasonable steps to ensure the participant's safety, including contacting emergency services if necessary. By registering, parents and guardians authorise BbB to consent to emergency medical treatment on their child's behalf in circumstances where the parent or guardian cannot be reached in time and immediate medical attention is required.
-BbB will make all reasonable efforts to contact the parent or guardian immediately in any emergency situation using the contact information provided at registration. It is the responsibility of the parent or guardian to ensure that contact details are accurate and up to date.
-4.4 Medical and Health Disclosure
-Parents and guardians are required to disclose, at the time of registration, any known medical conditions, allergies, or special needs that may affect the participant's safety or require accommodation during Programme activities. BbB will handle such information in accordance with our Privacy Policy.
-Failure to disclose relevant medical information may affect BbB's ability to provide appropriate care in an emergency. BbB shall not be liable for any adverse outcomes arising from incomplete or inaccurate medical disclosures.
+              <div className="bg-bit-lavender/5 dark:bg-bit-lavender/10 border-l-4 border-bit-lavender rounded-r-xl p-6 mb-10">
+                <p className="text-bit-dark/80 dark:text-gray-300 text-sm leading-relaxed">
+                  BbB is a community ground-up recognised under the <strong>BAGUS Together</strong> initiative, supported by <strong>NVPC</strong>, <strong>Temasek Foundation</strong>, and <strong>Tote Board</strong>. These Terms should be read alongside BbB's <a href="/#/privacy" className="text-bit-lavender hover:text-bit-red transition-colors">Privacy Policy</a> and Code of Conduct.
+                </p>
+              </div>
 
-5. Programme Changes and Cancellations
-5.1 Right to Amend
-BbB reserves the right to amend, reschedule, cancel, or discontinue any Programme or session at any time, with or without prior notice, where reasonably necessary. Where advance notice is possible, BbB will communicate changes via the contact details provided at registration.
-5.2 Venue and Format Changes
-BbB reserves the right to change the venue, format (in-person or online), or structure of a Programme. Where a significant change is made, BbB will notify registered participants as early as reasonably practicable.
-5.3 No Fees
-As BbB Programmes are offered free of charge, no monetary refunds apply. In the event of a cancellation or significant change, BbB will endeavour to offer participants an alternative session or placement where possible.
+              {/* Section 1 */}
+              <h2 className="text-2xl font-display font-bold text-bit-dark dark:text-white mt-10 mb-4 flex items-center gap-3">
+                <span className="w-8 h-8 rounded-full bg-gradient-to-br from-bit-lavender to-violet-400 flex items-center justify-center text-white text-sm font-bold shrink-0">1</span>
+                Eligibility and Registration
+              </h2>
+              <h3 className="text-lg font-display font-bold text-bit-dark dark:text-gray-200 mt-6 mb-2">1.1 Eligibility</h3>
+              <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-4">BbB Programmes are open to youth aged 13 to 18 residing in Singapore, unless otherwise stated for a specific programme. Participation by persons outside this age range may be considered at BbB's discretion.</p>
+              <h3 className="text-lg font-display font-bold text-bit-dark dark:text-gray-200 mt-6 mb-2">1.2 Registration</h3>
+              <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-4">Registration must be completed via BbB's official registration form. A place in a Programme is only confirmed upon receipt of a completed registration form and, where applicable, any required consent documents. BbB reserves the right to refuse or cancel registration at its discretion.</p>
+              <h3 className="text-lg font-display font-bold text-bit-dark dark:text-gray-200 mt-6 mb-2">1.3 Parental or Guardian Consent</h3>
+              <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-4">As BbB Programmes are designed for minors, a parent or legal guardian must complete the registration form on behalf of the participant. By submitting the form, the parent or guardian confirms that they have the legal authority to consent on the participant's behalf and that all information provided is accurate and complete.</p>
 
-6. Photography, Videography, and Media
-6.1 BbB Media
-BbB may take photographs and videos during Programme sessions for use in our social media, website, publications, and marketing materials. BbB will not publish clearly identifiable photographs of individual minors without the explicit consent of their parent or guardian.
-6.2 Parental Consent for Photography
-Parents and guardians will be asked to provide explicit consent for photography and videography of their child as part of the registration process. Where consent is not given, BbB will take reasonable steps to ensure the participant is not individually identifiable in any published media.
-6.3 Venue and Partner Photography
-From time to time, the venues or partner organisations hosting BbB sessions may also take photographs or videos for their own marketing purposes. BbB will inform parents and guardians of this possibility where known in advance and will communicate the same photo consent terms to venue partners.
-6.4 Participant and Parent Media
-Participants and parents are welcome to take photographs or videos for personal use during sessions. However, the sharing or publication of photographs or videos that include other participants — particularly other minors — on social media or any public platform is strictly prohibited without the express consent of those participants' parents or guardians.
+              {/* Section 2 */}
+              <h2 className="text-2xl font-display font-bold text-bit-dark dark:text-white mt-10 mb-4 flex items-center gap-3">
+                <span className="w-8 h-8 rounded-full bg-gradient-to-br from-bit-turquoise to-cyan-400 flex items-center justify-center text-white text-sm font-bold shrink-0">2</span>
+                Programme Conduct
+              </h2>
+              <h3 className="text-lg font-display font-bold text-bit-dark dark:text-gray-200 mt-6 mb-2">2.1 Code of Conduct</h3>
+              <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-4">All participants are required to comply with BbB's Code of Conduct at all times during Programme activities, including online sessions and any associated communications.</p>
+              <h3 className="text-lg font-display font-bold text-bit-dark dark:text-gray-200 mt-6 mb-2">2.2 Disciplinary Action</h3>
+              <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-4">BbB reserves the right to take disciplinary action, including suspension or permanent removal from the Programme, in response to breaches of the Code of Conduct. BbB's decisions on disciplinary matters are final, subject to the appeals process described therein.</p>
+              <h3 className="text-lg font-display font-bold text-bit-dark dark:text-gray-200 mt-6 mb-2">2.3 Removal from Programme</h3>
+              <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-4">BbB reserves the right to remove any participant from a Programme at any time if the participant's continued presence poses a risk to the safety, wellbeing, or learning experience of others, or if the participant repeatedly or seriously violates these Terms or the Code of Conduct.</p>
 
-7. Personal Data Protection
-BbB collects, uses, and stores personal data in accordance with Singapore's Personal Data Protection Act 2012 (PDPA) and BbB's Privacy Policy, which is available in full on our website.
-7.1 Data Collected
-During registration and throughout participation, BbB may collect personal data including but not limited to: the participant's name, age, school, contact information, and relevant medical information; the parent or guardian's name and contact information; and programme-related data such as attendance records and learning progress.
-7.2 Purpose of Collection
-Personal data is collected for the following purposes:
-Programme administration and delivery
-Communication with participants, parents, and guardians regarding sessions, changes, and programme updates
-Safety and emergency response
-Impact measurement and reporting to our supporting organisations
-Marketing and communications, where consent has been given
-7.3 Data Sharing
-BbB will not sell personal data. We may share limited personal data with trusted service providers, venue operators, or supporting organisations (such as NVPC, Temasek Foundation, and Tote Board) where necessary for programme delivery or reporting obligations, in accordance with our Privacy Policy.
-7.4 Access and Correction
-Parents and guardians may request access to, correction of, or deletion of personal data held by BbB by contacting us at info.bbbcoding@gmail.com.
+              {/* Section 3 */}
+              <h2 className="text-2xl font-display font-bold text-bit-dark dark:text-white mt-10 mb-4 flex items-center gap-3">
+                <span className="w-8 h-8 rounded-full bg-gradient-to-br from-bit-red to-pink-400 flex items-center justify-center text-white text-sm font-bold shrink-0">3</span>
+                Attendance and Commitment
+              </h2>
+              <h3 className="text-lg font-display font-bold text-bit-dark dark:text-gray-200 mt-6 mb-2">3.1 Expected Attendance</h3>
+              <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-4">Participants are expected to attend all scheduled sessions of the Programme they have enrolled in. Consistent or unexplained absence may result in the participant's place being offered to another student on the waitlist.</p>
+              <h3 className="text-lg font-display font-bold text-bit-dark dark:text-gray-200 mt-6 mb-2">3.2 Absence Notification</h3>
+              <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-4">If a participant is unable to attend a session, the parent or guardian should notify BbB as early as possible via our official communication channels. Repeated absences without notice may be treated as a light offence under the Code of Conduct.</p>
+              <h3 className="text-lg font-display font-bold text-bit-dark dark:text-gray-200 mt-6 mb-2">3.3 Punctuality</h3>
+              <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-4">Participants are expected to arrive on time for all sessions. Arriving more than 15 minutes late without prior notice may be recorded as a light offence under the Code of Conduct.</p>
 
-8. Intellectual Property
-8.1 BbB Curriculum and Materials
-All curriculum materials, lesson content, worksheets, and resources produced by BbB remain the intellectual property of Bit by Bit Coding. Participants are permitted to use these materials for their own personal learning. Reproduction, distribution, or commercial use of BbB materials without prior written consent is prohibited.
-8.2 Student Work
-Participants retain ownership of original code, projects, and creative work produced during BbB Programmes. By participating, participants and their parents or guardians grant BbB a non-exclusive, royalty-free licence to showcase participant work (in anonymised or credited form, with consent) for educational, promotional, or reporting purposes.
+              {/* Section 4 */}
+              <h2 className="text-2xl font-display font-bold text-bit-dark dark:text-white mt-10 mb-4 flex items-center gap-3">
+                <span className="w-8 h-8 rounded-full bg-gradient-to-br from-bit-green to-emerald-400 flex items-center justify-center text-white text-sm font-bold shrink-0">4</span>
+                Supervision and Safety
+              </h2>
+              <h3 className="text-lg font-display font-bold text-bit-dark dark:text-gray-200 mt-6 mb-2">4.1 Scope of Supervision</h3>
+              <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-4">BbB's duty of care and supervision of participants begins at the scheduled start time of each session and ends at the scheduled end time. BbB is not responsible for the safety or supervision of participants travelling to or from the venue.</p>
+              <h3 className="text-lg font-display font-bold text-bit-dark dark:text-gray-200 mt-6 mb-2">4.2 Arrival and Departure</h3>
+              <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-4">Parents and guardians are responsible for ensuring their child arrives at and departs from sessions safely. If a participant requires a specific arrangement for pickup, this must be communicated to BbB in advance.</p>
+              <h3 className="text-lg font-display font-bold text-bit-dark dark:text-gray-200 mt-6 mb-2">4.3 Emergency Situations</h3>
+              <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-4">In the event of a medical emergency, our tutors and administrators will take reasonable steps to ensure the participant's safety, including contacting emergency services if necessary. By registering, parents and guardians authorise BbB to consent to emergency medical treatment on their child's behalf in circumstances where the parent or guardian cannot be reached in time.</p>
+              <h3 className="text-lg font-display font-bold text-bit-dark dark:text-gray-200 mt-6 mb-2">4.4 Medical and Health Disclosure</h3>
+              <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-4">Parents and guardians are required to disclose, at the time of registration, any known medical conditions, allergies, or special needs. BbB shall not be liable for any adverse outcomes arising from incomplete or inaccurate medical disclosures.</p>
 
-9. Liability
-9.1 Limitation of Liability
-To the maximum extent permitted by applicable law, BbB, its volunteers, tutors, administrators, and affiliated organisations shall not be liable for any loss, damage, injury, or harm — whether direct, indirect, incidental, or consequential — arising from or in connection with participation in any BbB Programme, except where such loss or damage arises from BbB's gross negligence or wilful misconduct.
-9.2 Equipment and Personal Property
-Participants are responsible for their own personal devices and belongings during sessions. BbB shall not be liable for loss, theft, or damage to personal property, including computing devices, brought to or used during sessions.
-9.3 Third-Party Venues
-Where sessions are held at third-party venues, BbB shall not be liable for any loss, injury, or damage caused by the condition or facilities of those venues. Participants and guardians agree to comply with all rules and requirements of the venue as communicated by BbB or the venue operator.
-9.4 Online Safety
-Where Programmes include online components, BbB takes reasonable steps to maintain a safe online environment. However, BbB cannot guarantee the security of third-party platforms and shall not be liable for any data breach, harm, or loss arising from the use of third-party tools or platforms, except where caused by BbB's own negligence.
+              {/* Section 5 */}
+              <h2 className="text-2xl font-display font-bold text-bit-dark dark:text-white mt-10 mb-4 flex items-center gap-3">
+                <span className="w-8 h-8 rounded-full bg-gradient-to-br from-orange-400 to-yellow-400 flex items-center justify-center text-white text-sm font-bold shrink-0">5</span>
+                Programme Changes and Cancellations
+              </h2>
+              <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-4">BbB reserves the right to amend, reschedule, cancel, or discontinue any Programme or session at any time where reasonably necessary. As BbB Programmes are offered <strong>free of charge</strong>, no monetary refunds apply. In the event of a cancellation, BbB will endeavour to offer participants an alternative session or placement where possible.</p>
 
-10. Child Protection
-BbB is deeply committed to the safety and wellbeing of all participants. All tutors and administrators are required to comply with BbB's Child Protection Policy, which sets out standards of conduct for adults working with minors, as well as mandatory reporting obligations.
-Any concerns regarding the safety or wellbeing of a participant should be reported to BbB immediately at info.bbbcoding@gmail.com. Where BbB reasonably believes that a participant is at risk of abuse or harm, BbB may be required to report this to the relevant authorities in accordance with Singapore law, regardless of parental consent.
+              {/* Section 6 */}
+              <h2 className="text-2xl font-display font-bold text-bit-dark dark:text-white mt-10 mb-4 flex items-center gap-3">
+                <span className="w-8 h-8 rounded-full bg-gradient-to-br from-orange-400 to-yellow-400 flex items-center justify-center text-white text-sm font-bold shrink-0">6</span>
+                Photography, Videography, and Media
+              </h2>
+              <h3 className="text-lg font-display font-bold text-bit-dark dark:text-gray-200 mt-6 mb-2">6.1 BbB Media</h3>
+              <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-4">BbB may take photographs and videos during Programme sessions for use in our social media, website, publications, and marketing materials. BbB will not publish clearly identifiable photographs of individual minors without the explicit consent of their parent or guardian.</p>
+              <h3 className="text-lg font-display font-bold text-bit-dark dark:text-gray-200 mt-6 mb-2">6.2 Parental Consent for Photography</h3>
+              <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-4">Parents and guardians will be asked to provide explicit consent for photography as part of the registration process.</p>
+              <h3 className="text-lg font-display font-bold text-bit-dark dark:text-gray-200 mt-6 mb-2">6.3 Venue and Partner Photography</h3>
+              <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-4">From time to time, the venues or partner organisations hosting BbB sessions may also take photographs for their own marketing purposes. BbB will inform parents and guardians of this possibility where known in advance.</p>
+              <h3 className="text-lg font-display font-bold text-bit-dark dark:text-gray-200 mt-6 mb-2">6.4 Participant and Parent Media</h3>
+              <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-4">Participants and parents are welcome to take photographs for personal use during sessions. However, sharing photographs that include other participants — particularly other minors — on any public platform is strictly prohibited without the express consent of those participants' parents or guardians.</p>
 
-11. Amendments to These Terms
-BbB reserves the right to amend these Terms at any time. The most current version will be published on our website. Continued participation in BbB Programmes following any amendment constitutes acceptance of the revised Terms. Where material changes are made, BbB will endeavour to notify registered participants in advance.
+              {/* Section 7 */}
+              <h2 className="text-2xl font-display font-bold text-bit-dark dark:text-white mt-10 mb-4 flex items-center gap-3">
+                <span className="w-8 h-8 rounded-full bg-gradient-to-br from-bit-lavender to-bit-red flex items-center justify-center text-white text-sm font-bold shrink-0">7</span>
+                Personal Data Protection
+              </h2>
+              <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-4">BbB collects, uses, and stores personal data in accordance with Singapore's <strong>Personal Data Protection Act 2012 (PDPA)</strong> and BbB's <a href="/#/privacy" className="text-bit-lavender hover:text-bit-red transition-colors">Privacy Policy</a>. We will not sell personal data. Parents and guardians may request access to, correction of, or deletion of personal data by contacting <a href="mailto:info.bbbcoding@gmail.com" className="text-bit-lavender hover:text-bit-red transition-colors">info.bbbcoding@gmail.com</a>.</p>
 
-12. Governing Law
-These Terms are governed by and construed in accordance with the laws of the Republic of Singapore. Any disputes arising from or in connection with these Terms shall be subject to the non-exclusive jurisdiction of the courts of Singapore.
+              {/* Section 8 */}
+              <h2 className="text-2xl font-display font-bold text-bit-dark dark:text-white mt-10 mb-4 flex items-center gap-3">
+                <span className="w-8 h-8 rounded-full bg-gradient-to-br from-bit-turquoise to-bit-lavender flex items-center justify-center text-white text-sm font-bold shrink-0">8</span>
+                Intellectual Property
+              </h2>
+              <h3 className="text-lg font-display font-bold text-bit-dark dark:text-gray-200 mt-6 mb-2">8.1 BbB Curriculum and Materials</h3>
+              <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-4">All curriculum materials, lesson content, worksheets, and resources produced by BbB remain the intellectual property of Bit by Bit Coding. Reproduction, distribution, or commercial use of BbB materials without prior written consent is prohibited.</p>
+              <h3 className="text-lg font-display font-bold text-bit-dark dark:text-gray-200 mt-6 mb-2">8.2 Student Work</h3>
+              <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-4">Participants retain ownership of original code and projects produced during BbB Programmes. By participating, participants and their parents or guardians grant BbB a non-exclusive, royalty-free licence to showcase participant work (in anonymised or credited form, with consent) for educational or promotional purposes.</p>
 
-13. Contact
-For any questions, concerns, or requests relating to these Terms, please contact us:
-Bit by Bit Coding
-Email: info.bbbcoding@gmail.com
-Instagram: @bbbcoding
-Website: https://bitbybitcoding.github.io
+              {/* Section 9 */}
+              <h2 className="text-2xl font-display font-bold text-bit-dark dark:text-white mt-10 mb-4 flex items-center gap-3">
+                <span className="w-8 h-8 rounded-full bg-gradient-to-br from-bit-red to-bit-lavender flex items-center justify-center text-white text-sm font-bold shrink-0">9</span>
+                Liability
+              </h2>
+              <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-4">To the maximum extent permitted by applicable law, BbB, its volunteers, tutors, administrators, and affiliated organisations shall not be liable for any loss, damage, injury, or harm arising from participation in any BbB Programme, except where such loss or damage arises from BbB's gross negligence or wilful misconduct. Participants are responsible for their own personal devices and belongings during sessions.</p>
 
+              {/* Section 10 */}
+              <h2 className="text-2xl font-display font-bold text-bit-dark dark:text-white mt-10 mb-4 flex items-center gap-3">
+                <span className="w-8 h-8 rounded-full bg-gradient-to-br from-bit-green to-emerald-400 flex items-center justify-center text-white text-sm font-bold shrink-0">10</span>
+                Child Protection
+              </h2>
+              <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-4">BbB is deeply committed to the safety and wellbeing of all participants. All tutors and administrators are required to comply with BbB's <a href="/#/child-policy" className="text-bit-lavender hover:text-bit-red transition-colors">Child Protection Policy</a>. Any concerns regarding the safety or wellbeing of a participant should be reported immediately to <a href="mailto:info.bbbcoding@gmail.com" className="text-bit-lavender hover:text-bit-red transition-colors">info.bbbcoding@gmail.com</a>.</p>
 
-Last updated: March 2026
-These Terms and Conditions are not a substitute for legal advice. BbB recommends seeking independent legal review for formal or binding agreements.
+              {/* Sections 11–13 */}
+              <h2 className="text-2xl font-display font-bold text-bit-dark dark:text-white mt-10 mb-4 flex items-center gap-3">
+                <span className="w-8 h-8 rounded-full bg-gradient-to-br from-bit-lavender to-violet-400 flex items-center justify-center text-white text-sm font-bold shrink-0">11</span>
+                Amendments to These Terms
+              </h2>
+              <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-4">BbB reserves the right to amend these Terms at any time. The most current version will be published on our website. Continued participation in BbB Programmes following any amendment constitutes acceptance of the revised Terms.</p>
 
-*/
+              <h2 className="text-2xl font-display font-bold text-bit-dark dark:text-white mt-10 mb-4 flex items-center gap-3">
+                <span className="w-8 h-8 rounded-full bg-gradient-to-br from-bit-turquoise to-cyan-400 flex items-center justify-center text-white text-sm font-bold shrink-0">12</span>
+                Governing Law
+              </h2>
+              <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-4">These Terms are governed by and construed in accordance with the laws of the <strong>Republic of Singapore</strong>. Any disputes arising from or in connection with these Terms shall be subject to the non-exclusive jurisdiction of the courts of Singapore.</p>
+
+              <h2 className="text-2xl font-display font-bold text-bit-dark dark:text-white mt-10 mb-4 flex items-center gap-3">
+                <span className="w-8 h-8 rounded-full bg-gradient-to-br from-bit-red to-pink-400 flex items-center justify-center text-white text-sm font-bold shrink-0">13</span>
+                Contact
+              </h2>
+              <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed">
+                <strong>Bit by Bit Coding</strong><br />
+                Email: <a href="mailto:info.bbbcoding@gmail.com" className="text-bit-lavender hover:text-bit-red transition-colors">info.bbbcoding@gmail.com</a><br />
+                Instagram: <a href="https://instagram.com/bbbcoding" target="_blank" rel="noopener noreferrer" className="text-bit-lavender hover:text-bit-red transition-colors">@bbbcoding</a><br />
+                Website: <a href="https://bitbybitcoding.github.io" target="_blank" rel="noopener noreferrer" className="text-bit-lavender hover:text-bit-red transition-colors">bitbybitcoding.github.io</a>
+              </p>
+
+              <div className="mt-10 pt-8 border-t border-bit-dark/10 dark:border-gray-700">
+                <p className="text-xs text-bit-dark/50 dark:text-gray-500">Last updated: March 2026. These Terms and Conditions are not a substitute for legal advice.</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer className="w-full py-6 text-center text-bit-dark/50 dark:text-gray-500 text-sm relative z-10">
+        <p>&copy; {new Date().getFullYear()} Bit by Bit Coding.</p>
+        <p>Democratising coding education, bit by bit.</p>
+      </footer>
+    </div>
+  );
+}

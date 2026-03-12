@@ -22,10 +22,10 @@ export function Footer() {
           {/* Logo & Description */}
           <div className="col-span-1 md:col-span-1">
             <div className="flex items-center gap-3 mb-4">
-              <img 
-                src="https://raw.githubusercontent.com/bitbybitcoding/bitbybitcoding.github.io/main/.github/assets/logo.png" 
-                alt="Bit by Bit Logo" 
-                width="32" 
+              <img
+                src="https://raw.githubusercontent.com/bitbybitcoding/bitbybitcoding.github.io/main/.github/assets/logo.png"
+                alt="Bit by Bit Logo"
+                width="32"
                 height="32"
                 className="w-8 h-8"
               />
@@ -52,8 +52,8 @@ export function Footer() {
             <h5 className="text-bit-dark dark:text-white font-display font-bold text-lg mb-4">Organisation</h5>
             <ul className="flex flex-col gap-3 text-sm text-bit-dark/60 dark:text-gray-400">
               <li>
-                <a 
-                  href="/#about" 
+                <a
+                  href="/#about"
                   onClick={handleAboutClick}
                   className="hover:text-bit-lavender transition-colors cursor-pointer"
                 >
@@ -70,22 +70,22 @@ export function Footer() {
           <div>
             <h5 className="text-bit-dark dark:text-white font-display font-bold text-lg mb-4">Connect</h5>
             <div className="flex gap-3">
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="w-10 h-10 rounded-full bg-bit-dark/5 dark:bg-gray-800 flex items-center justify-center text-bit-dark/60 dark:text-gray-400 hover:bg-bit-lavender hover:text-white transition-all"
                 aria-label="Twitter"
               >
                 <Twitter size={18} />
               </a>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="w-10 h-10 rounded-full bg-bit-dark/5 dark:bg-gray-800 flex items-center justify-center text-bit-dark/60 dark:text-gray-400 hover:bg-bit-lavender hover:text-white transition-all"
                 aria-label="GitHub"
               >
                 <Github size={18} />
               </a>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="w-10 h-10 rounded-full bg-bit-dark/5 dark:bg-gray-800 flex items-center justify-center text-bit-dark/60 dark:text-gray-400 hover:bg-bit-lavender hover:text-white transition-all"
                 aria-label="LinkedIn"
               >
@@ -103,6 +103,7 @@ export function Footer() {
           <div className="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2 text-xs text-bit-dark/50 dark:text-gray-500">
             <Link to="/privacy" className="hover:text-bit-dark dark:hover:text-gray-300 transition-colors">Privacy Policy</Link>
             <Link to="/terms" className="hover:text-bit-dark dark:hover:text-gray-300 transition-colors">Terms of Service</Link>
+            <Link to="/conduct" className="hover:text-bit-dark dark:hover:text-gray-300 transition-colors">Code of Conduct</Link>
             <Link to="/consent" className="hover:text-bit-dark dark:hover:text-gray-300 transition-colors">Consent Form</Link>
             <Link to="/child-policy" className="hover:text-bit-dark dark:hover:text-gray-300 transition-colors">Child Protection Policy</Link>
           </div>

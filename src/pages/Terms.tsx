@@ -70,18 +70,18 @@ export function Terms() {
             <Card>
               <SH num="1" icon={Users} gradient="from-bit-lavender to-violet-400" title="Eligibility and Registration" />
               <SubSH title="1.1 Eligibility" />
-              <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-4">BbB Programmes are open to youth aged 13 to 18 residing in Singapore, unless otherwise stated for a specific programme. Participation by persons outside this age range may be considered at BbB&apos;s discretion.</p>
+              <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-4">BbB Programmes are open to youth aged 10 to 18 residing in Singapore, unless otherwise stated for a specific programme. Participation by persons outside this age range may be considered at BbB&apos;s discretion.</p>
               <SubSH title="1.2 Registration" />
               <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-4">Registration must be completed via BbB&apos;s official registration form. A place in a Programme is only confirmed upon receipt of a completed registration form and, where applicable, any required consent documents. BbB reserves the right to refuse or cancel registration at its discretion.</p>
               <SubSH title="1.3 Parental or Guardian Consent" />
-              <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed">As BbB Programmes are designed for minors, a parent or legal guardian must complete the registration form on behalf of the participant. By submitting the form, the parent or guardian confirms that they have the legal authority to consent on the participant&apos;s behalf and that all information provided is accurate and complete.</p>
+              <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed">As BbB Programmes are designed for minors, a parent or legal guardian must complete the registration form on behalf of the participant, or must supervise the completion of the form by their child/ward. By submitting the form, the parent or guardian confirms that they have the legal authority to consent on the participant&apos;s behalf and that all information provided is accurate and complete.</p>
             </Card>
 
             {/* 2 */}
             <Card>
               <SH num="2" icon={BookOpen} gradient="from-bit-turquoise to-cyan-400" title="Programme Conduct" />
               <SubSH title="2.1 Code of Conduct" />
-              <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-4">All participants are required to comply with BbB&apos;s Code of Conduct at all times during Programme activities, including online sessions and any associated communications.</p>
+              <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-4">All participants are required to comply with BbB&apos;s <a href="/#/conduct" className="text-bit-lavender hover:text-bit-red transition-colors">Code of Conduct</a> at all times during Programme activities, including online sessions and any associated communications.</p>
               <SubSH title="2.2 Disciplinary Action" />
               <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-4">BbB reserves the right to take disciplinary action, including suspension or permanent removal from the Programme, in response to breaches of the Code of Conduct. BbB&apos;s decisions on disciplinary matters are final, subject to the appeals process described therein.</p>
               <SubSH title="2.3 Removal from Programme" />

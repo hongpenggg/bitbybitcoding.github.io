@@ -87,7 +87,7 @@ export function Privacy() {
               Bit by Bit Coding (&quot;BbB&quot;, &quot;we&quot;, &quot;us&quot;, &quot;our&quot;) is committed to protecting the personal data of everyone who interacts with us — students, parents and guardians, tutors, volunteers, donors, and community members. This Privacy Policy explains what personal data we collect, why we collect it, how we use and protect it, how long we keep it, and your rights in relation to it.
             </p>
             <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-4">
-              By registering for or participating in any BbB programme, or by using our digital platforms, you acknowledge that you have read and understood this Privacy Policy. This policy applies to BbB&apos;s website (<a href="https://bitbybitcoding.github.io" className="text-bit-lavender hover:text-bit-red transition-colors">bitbybitcoding.github.io</a>), BbB Code Along, BbB Community Portal, and all in-person and online programme activities. It should be read alongside BbB&apos;s{' '}
+              By registering for or participating in any BbB programme, or by using our digital platforms, you acknowledge that you have read and understood this Privacy Policy. This policy applies to BbB&apos;s website (<a href="https://bitbybitcoding.github.io" className="text-bit-lavender hover:text-bit-red transition-colors">bitbybitcoding.github.io</a>), BbB online portals, BbB class management software, and all in-person and online programme activities. It should be read alongside BbB&apos;s{' '}
               <a href="/#/terms" className="text-bit-lavender hover:text-bit-red transition-colors">Terms and Conditions</a> and <a href="/#/child-policy" className="text-bit-lavender hover:text-bit-red transition-colors">Child Protection Policy</a>.
             </p>
             <p className="text-bit-dark/80 dark:text-gray-300 text-sm leading-relaxed">
@@ -102,7 +102,7 @@ export function Privacy() {
             <Card>
               <SH num="1" icon={Shield} gradient="from-bit-lavender to-violet-400" title="Who We Are" />
               <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-4">
-                Bit by Bit Coding is a community ground-up recognised under the <strong>BAGUS Together</strong> initiative, supported by <strong>NVPC</strong>, <strong>Temasek Foundation</strong>, and <strong>Tote Board</strong>. We are a non-profit educational initiative providing free coding education to Singaporean youth aged 13 to 18.
+                Bit by Bit Coding is a community ground-up recognised under the <strong>BAGUS Together</strong> initiative, supported by <strong>NVPC</strong>, <strong>Temasek Foundation</strong>, and <strong>Tote Board</strong>. We are a non-profit educational initiative providing free coding education to Singaporean youth aged 10 to 18.
               </p>
               <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed">
                 <strong>Data Protection Contact:</strong>{' '}
@@ -118,7 +118,7 @@ export function Privacy() {
               <SubSH title="2.1 Data You Provide Directly" />
               <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-3">We collect the following personal data when you register for or participate in BbB programmes:</p>
               <ul className="space-y-2 text-bit-dark/70 dark:text-gray-400 mb-6 list-disc pl-6">
-                <li>Student&apos;s full name, age, date of birth, and school year level</li>
+                <li>Student&apos;s full name, age, date of birth, school, and school year level</li>
                 <li>Parent or guardian&apos;s full name, relationship to student, email address, and mobile phone number</li>
                 <li>Emergency contact details</li>
                 <li>Relevant medical conditions, allergies, or special needs (where disclosed for safety purposes)</li>
@@ -187,7 +187,7 @@ export function Privacy() {
               <SubSH title="5.1 Service Providers" />
               <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-4">We work with trusted third-party service providers for website hosting, email delivery, learning management, and analytics. These providers are contractually required to handle personal data securely and use it only for the services they provide to BbB.</p>
               <SubSH title="5.2 Supporting Organisations" />
-              <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-4">BbB may share limited, aggregated, or anonymised programme data (such as total participant numbers and outcomes) with NVPC, Temasek Foundation, and Tote Board for grant reporting. We will not share identifiable personal data with these bodies without explicit consent.</p>
+              <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-4">BbB may share limited, aggregated, or anonymised programme data (such as total participant numbers and outcomes) with our community non-profit partners, such as, but not limited to, BAGUS Together, NVPC, Temasek Foundation, and Tote Board for grant reporting. We will not share identifiable personal data with these bodies without explicit consent.</p>
               <SubSH title="5.3 Partner Organisations" />
               <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-4">Where BbB collaborates with schools or other partners to deliver sessions, we may share limited participant data (such as roster names or attendance) where necessary for delivery. We will not share personal contact information with partners for their independent use without your consent.</p>
               <SubSH title="5.4 Legal and Safety Disclosures" />
@@ -279,7 +279,7 @@ export function Privacy() {
             {/* 10 */}
             <Card>
               <SH num="10" icon={Shield} gradient="from-bit-green to-emerald-400" title="Children's Privacy" />
-              <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-4">All BbB programmes are designed for young people under 18. We do not permit children under 13 to create independent BbB accounts — a parent or legal guardian must complete all registration processes.</p>
+              <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-4">All BbB programmes are designed for young people under 18. We do not permit children under 13 to create independent BbB accounts without supervision — a parent or legal guardian must assist with the completion of all registration processes.</p>
               <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-4">Parents and guardians may at any time request access to, correction of, or deletion of their child&apos;s personal data. They may also withdraw consent for any optional processing (such as photography or marketing communications).</p>
               <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed">BbB collects only the <strong>minimum personal data necessary</strong> for a child to participate safely in a given activity.</p>
             </Card>

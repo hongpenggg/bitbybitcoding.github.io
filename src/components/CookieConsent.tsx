@@ -106,7 +106,7 @@ export function CookieConsent() {
                 {/* Content */}
                 <div className="flex-grow">
                   <h3 className="text-xl md:text-2xl font-display font-bold text-bit-dark dark:text-white mb-2">
-                    We Value Your Privacy
+                    But first, cookies...
                   </h3>
                   <p className="text-bit-dark/70 dark:text-gray-300 text-sm md:text-base leading-relaxed">
                     We use cookies to improve your experience and analyze website traffic. You can choose which cookies to accept.{' '}

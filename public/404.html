@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bit by Bit Coding</title>
+    <script>
+      // GitHub Pages 404 → HashRouter redirect
+      // When GitHub Pages serves this file for an unknown path like /somelink,
+      // we convert it to /#/somelink so the React HashRouter can handle it.
+      (function () {
+        var path = window.location.pathname;
+        var search = window.location.search;
+        var hash = window.location.hash;
+
+        // Strip leading slash so /#/ + path doesn't double-slash
+        var route = path.replace(/^\//, '');
+
+        // Preserve any query string or existing hash fragment
+        var suffix = search + hash;
+
+        // Redirect to the root with the path encoded as a hash route
+        window.location.replace(
+          window.location.origin + '/#/' + route + suffix
+        );
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>

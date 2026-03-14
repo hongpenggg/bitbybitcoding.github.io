@@ -104,9 +104,9 @@ const mentors = [
   {
     name: 'Nicholas Yeo',
     role: 'Python @ Bit by Bit, Ex-Computing @ VJC',
-    image: 'https://picsum.photos/400',
-    quote: "Security is everyone's responsibility. I'm excited to teach the fundamentals of ethical hacking and defense.",
-    expertise: ['Python', 'C++'],
+    image: 'https://raw.githubusercontent.com/bitbybitcoding/bitbybitcoding.github.io/main/.github/assets/nicholas_profile.jpeg',
+    quote: "never played tag because I knew I was it",
+    expertise: ['Python', 'AI'],
     borderColor: 'border-t-bit-lavender',
     roleColor: 'text-purple-600 dark:text-purple-400',
     overlayColor: 'from-bit-lavender/40',

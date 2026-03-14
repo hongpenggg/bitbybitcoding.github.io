@@ -17,8 +17,8 @@ const tutorStandards = [
 
 const digitalStandards = [
   'All communication with students must take place through BbB-approved channels only (BbB official email and any class management platform designated by the ExCo).',
-  'Personal messaging apps (WhatsApp, Telegram, Signal, etc.), personal social media direct messages, and personal email addresses must not be used to contact students.',
-  'Tutors and administrators must not share their personal social media handles or contact details with students.',
+  'Personal messaging apps (WhatsApp, Telegram, Signal, etc.), personal social media direct messages, and personal email addresses should be avoided when contacting students, unless explicitly approved by Bit by Bit ExCo.',
+  'Tutors and administrators must not share their personal social media handles or contact details with students, unless explicitly approved by Bit by Bit ExCo.',
   'Where a parent or guardian group chat is used, tutors may participate but must maintain professional conduct at all times.',
   'Tutors must not post about individual students or internal BbB matters on personal social media without prior consent and ExCo approval.',
 ];
@@ -92,7 +92,7 @@ const studentExpected = [
 
 const studentDigital = [
   'Use only BbB-approved platforms and tools during sessions.',
-  'Not attempt to contact tutors through personal or unofficial channels.',
+  'Not attempt to contact tutors through personal or unofficial channels, for non-BbB approved purposes.',
   'Not share, post, or distribute photographs, videos, or personal information of other students or BbB personnel without consent.',
   'Not access, view, or share inappropriate content during sessions.',
   'Report any online communication from a tutor through unofficial channels to a parent or guardian and to BbB immediately.',
@@ -240,7 +240,7 @@ export function Conduct() {
             <BulletList items={digitalStandards} color="bg-bit-turquoise" />
             <div className="mt-5 p-4 rounded-xl bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-800">
               <p className="text-xs text-orange-700 dark:text-orange-300 leading-relaxed">
-                <strong>⚠️ Note:</strong> Contacting a student through any personal or unofficial channel is a <strong>moderate offence</strong> on first occurrence and a <strong>severe offence</strong> on recurrence.
+                <strong>⚠️ Note:</strong> Contacting a student through any personal or unofficial channel, without explicit, prior approval from Bit by Bit's ExCo, is a <strong>moderate offence</strong> on first occurrence and a <strong>severe offence</strong> on recurrence.
               </p>
             </div>
           </Card>

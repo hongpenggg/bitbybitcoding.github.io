@@ -72,6 +72,8 @@ export function Footer() {
             <div className="flex gap-3">
               <a
                 href="https://www.instagram.com/bbbcoding"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-bit-dark/5 dark:bg-gray-800 flex items-center justify-center text-bit-dark/60 dark:text-gray-400 hover:bg-bit-lavender hover:text-white transition-all"
                 aria-label="Instagram"
               >
@@ -79,6 +81,8 @@ export function Footer() {
               </a>
               <a
                 href="https://www.github.com/bitbybitcoding"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-bit-dark/5 dark:bg-gray-800 flex items-center justify-center text-bit-dark/60 dark:text-gray-400 hover:bg-bit-lavender hover:text-white transition-all"
                 aria-label="GitHub"
               >
@@ -86,6 +90,8 @@ export function Footer() {
               </a>
               <a
                 href="https://www.linkedin.com/company/bbbcoding/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-bit-dark/5 dark:bg-gray-800 flex items-center justify-center text-bit-dark/60 dark:text-gray-400 hover:bg-bit-lavender hover:text-white transition-all"
                 aria-label="LinkedIn"
               >

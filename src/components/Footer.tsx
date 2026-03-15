@@ -1,5 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom';
-import { Twitter, Github, Linkedin, Mail, Instagram } from 'lucide-react';
+import { Github, Linkedin, Instagram } from 'lucide-react';
 
 export function Footer() {
   const navigate = useNavigate();

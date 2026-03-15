@@ -13,7 +13,7 @@ const sections = [
     questions: [
       {
         q: 'What is Bit by Bit Coding?',
-        a: 'Bit by Bit Coding is a free, multi-year coding education programme for Singaporean youth aged 13–18. We provide rigorous, structured coding pathways that go beyond what\'s typically offered — from Python fundamentals into real industry tools like Flask and SQL, and eventually into C, Java, and robotics. We\'re a recognised ground-up under the BAGUS Together initiative, supported by NVPC, Temasek Foundation, and Tote Board.',
+        a: "Bit by Bit Coding is a free, multi-year coding education programme for Singaporean youth aged 13–18. We provide rigorous, structured coding pathways that go beyond what's typically offered — from Python fundamentals into real industry tools like Flask and SQL, and eventually into C, Java, and robotics. We're a recognised ground-up under the BAGUS Together initiative, supported by NVPC, Temasek Foundation, and Tote Board.",
       },
       {
         q: 'Why is it free?',
@@ -21,7 +21,7 @@ const sections = [
       },
       {
         q: 'Who runs Bit by Bit Coding?',
-        a: 'We\'re a student-led team of volunteers — ex- and current computing students who remember what it felt like to want to learn but not have access. We\'re guided by experienced computing educators and a coding education professor at Cornell University.',
+        a: "We're a student-led team of volunteers — ex- and current computing students who remember what it felt like to want to learn but not have access. We're guided by experienced computing educators and a coding education professor at Cornell University.",
       },
     ],
   },
@@ -29,7 +29,7 @@ const sections = [
     id: 'bootcamp',
     icon: BookOpen,
     gradient: 'from-bit-red to-pink-400',
-    label: 'March Bootcamp \u201926',
+    label: "March Bootcamp '26",
     questions: [
       {
         q: 'What is the Bootcamp?',
@@ -57,11 +57,11 @@ const sections = [
       },
       {
         q: 'My child is in primary school. Can they join?',
-        a: 'Not yet — our current programmes are designed for secondary and JC students (ages 13–18) who bring their own devices. We\'re working on expanding to younger students in a future term. If you would like to see our programme in your primary school, please contact us at info.bbbcoding@gmail.com.',
+        a: "Not yet — our current programmes are designed for secondary and JC students (ages 13–18) who bring their own devices. We're working on expanding to younger students in a future term. If you would like to see our programme in your primary school, please contact us at info.bbbcoding@gmail.com.",
       },
       {
         q: 'How do I sign up?',
-        a: 'Through our registration form, linked on this website. A parent or guardian must complete the form on behalf of, or supervise their child\'s completion for, students under 18.',
+        a: "Through our registration form, linked on this website. A parent or guardian must complete the form on behalf of, or supervise their child's completion for, students under 18.",
       },
     ],
   },
@@ -85,7 +85,7 @@ const sections = [
       },
       {
         q: 'What if my child misses a session?',
-        a: 'Please notify us in advance where possible. We understand life happens — but consistent attendance matters because each session builds on the last. Students who miss sessions repeatedly may have their place offered to another student on the waitlist.',
+        a: "Please notify us in advance where possible. We understand life happens — but consistent attendance matters because each session builds on the last. Students who miss sessions repeatedly may have their place offered to another student on the waitlist.",
       },
       {
         q: 'Will there be homework?',
@@ -101,11 +101,11 @@ const sections = [
     questions: [
       {
         q: 'Is my child safe?',
-        a: 'Yes. All BbB tutors and volunteers are required to read and comply with our Child Protection Policy and Code of Conduct before their first session. We take the safety and dignity of every student seriously.',
+        a: "Yes. All BbB tutors and volunteers are required to read and comply with our Child Protection Policy and Code of Conduct before their first session. We take the safety and dignity of every student seriously.",
       },
       {
         q: 'What is your photography policy?',
-        a: 'We may take photographs during sessions for BbB\'s social media and marketing materials. Photo consent is collected as part of registration. We do not publish clearly identifiable close-up photographs of individual students without explicit parental consent. The venue partner that we work with may also photograph the sessions for their own marketing purposes.',
+        a: "We may take photographs during sessions for BbB's social media and marketing materials. Photo consent is collected as part of registration. We do not publish clearly identifiable close-up photographs of individual students without explicit parental consent. The venue partner that we work with may also photograph the sessions for their own marketing purposes.",
       },
     ],
   },
@@ -125,13 +125,18 @@ const sections = [
       },
       {
         q: "I have a question that isn't answered here.",
-        a: 'Drop us a message on Instagram @bbbcoding, contact us through this website, or email info.bbbcoding@gmail.com. We\'ll get back to you.',
+        a: "Drop us a message on Instagram @bbbcoding, contact us through this website, or email info.bbbcoding@gmail.com. We'll get back to you.",
       },
     ],
   },
 ];
 
-// ─── Accordion item ────────────────────────────────────────────────────────────
+// ─── Helpers ──────────────────────────────────────────────────────────────────
+
+function scrollToSection(id: string) {
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
 
 function AccordionItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false);
@@ -159,7 +164,7 @@ function AccordionItem({ q, a }: { q: string; a: string }) {
   );
 }
 
-// ─── Page ──────────────────────────────────────────────────────────────────────
+// ─── Page ─────────────────────────────────────────────────────────────────────
 
 export function Questions() {
   useEffect(() => { window.scrollTo(0, 0); }, []);
@@ -183,19 +188,19 @@ export function Questions() {
             </p>
           </div>
 
-          {/* Quick-jump pills */}
+          {/* Quick-jump pills — use onClick+scrollIntoView, not href, to avoid HashRouter conflicts */}
           <div className="flex flex-wrap justify-center gap-2 mb-12">
             {sections.map((s) => {
               const Icon = s.icon;
               return (
-                <a
+                <button
                   key={s.id}
-                  href={`#${s.id}`}
-                  className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold bg-white/70 dark:bg-gray-800/70 border border-bit-dark/10 dark:border-gray-700 text-bit-dark/70 dark:text-gray-400 hover:border-bit-lavender/40 hover:text-bit-lavender transition-all duration-150"
+                  onClick={() => scrollToSection(s.id)}
+                  className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold bg-white/70 dark:bg-gray-800/70 border border-bit-dark/10 dark:border-gray-700 text-bit-dark/70 dark:text-gray-400 hover:border-bit-lavender/40 hover:text-bit-lavender transition-all duration-150 cursor-pointer"
                 >
                   <Icon className="w-3.5 h-3.5" />
                   {s.label}
-                </a>
+                </button>
               );
             })}
           </div>
@@ -210,7 +215,6 @@ export function Questions() {
                   id={section.id}
                   className="glass rounded-3xl p-8 md:p-10 border border-white/60 dark:border-gray-700 shadow-xl shadow-bit-lavender/5 bg-white/40 dark:bg-gray-800/40 scroll-mt-28"
                 >
-                  {/* Section heading */}
                   <div className="flex items-center gap-3 mb-6">
                     <div className={`w-9 h-9 rounded-xl bg-gradient-to-br ${section.gradient} flex items-center justify-center shrink-0`}>
                       <Icon className="w-4 h-4 text-white" />
@@ -219,8 +223,6 @@ export function Questions() {
                       {section.label}
                     </h2>
                   </div>
-
-                  {/* Accordion questions */}
                   <div>
                     {section.questions.map((item, i) => (
                       <AccordionItem key={i} q={item.q} a={item.a} />

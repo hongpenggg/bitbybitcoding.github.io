@@ -77,7 +77,7 @@ const sections = [
       },
       {
         q: 'How long is each term?',
-        a: 'Each term is 10 weeks, with sessions held on Saturdays.',
+        a: 'Each term is around 10-12 weeks, with sessions held on Saturdays.',
       },
       {
         q: 'What device does my child need to bring?',

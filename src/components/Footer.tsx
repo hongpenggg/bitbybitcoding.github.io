@@ -1,5 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom';
-import { Twitter, Github, Linkedin } from 'lucide-react';
+import { Twitter, Github, Linkedin, Mail, Instagram } from 'lucide-react';
 
 export function Footer() {
   const navigate = useNavigate();
@@ -71,21 +71,21 @@ export function Footer() {
             <h5 className="text-bit-dark dark:text-white font-display font-bold text-lg mb-4">Connect</h5>
             <div className="flex gap-3">
               <a
-                href="#"
+                href="https://www.instagram.com/bbbcoding"
                 className="w-10 h-10 rounded-full bg-bit-dark/5 dark:bg-gray-800 flex items-center justify-center text-bit-dark/60 dark:text-gray-400 hover:bg-bit-lavender hover:text-white transition-all"
-                aria-label="Twitter"
+                aria-label="Instagram"
               >
-                <Twitter size={18} />
+                <Instagram size={18} />
               </a>
               <a
-                href="#"
+                href="https://www.github.com/bitbybitcoding"
                 className="w-10 h-10 rounded-full bg-bit-dark/5 dark:bg-gray-800 flex items-center justify-center text-bit-dark/60 dark:text-gray-400 hover:bg-bit-lavender hover:text-white transition-all"
                 aria-label="GitHub"
               >
                 <Github size={18} />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/company/bbbcoding/"
                 className="w-10 h-10 rounded-full bg-bit-dark/5 dark:bg-gray-800 flex items-center justify-center text-bit-dark/60 dark:text-gray-400 hover:bg-bit-lavender hover:text-white transition-all"
                 aria-label="LinkedIn"
               >

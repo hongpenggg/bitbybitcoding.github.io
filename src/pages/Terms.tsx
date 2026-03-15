@@ -1,16 +1,22 @@
 import { useEffect } from 'react';
 import { FileText, Users, Shield, Camera, Database, Scale, AlertTriangle, BookOpen, Heart, Globe, RefreshCw } from 'lucide-react';
 
+// Map each quick-ref card to the section card id it should scroll to
 const quickRef = [
-  { icon: Users, label: 'Eligibility', color: 'from-bit-lavender to-violet-400' },
-  { icon: BookOpen, label: 'Programme Conduct', color: 'from-bit-turquoise to-cyan-400' },
-  { icon: AlertTriangle, label: 'Attendance', color: 'from-bit-red to-pink-400' },
-  { icon: Shield, label: 'Safety', color: 'from-bit-green to-emerald-400' },
-  { icon: Camera, label: 'Media', color: 'from-orange-400 to-yellow-400' },
-  { icon: Database, label: 'Data Protection', color: 'from-bit-lavender to-bit-red' },
-  { icon: Scale, label: 'Liability', color: 'from-bit-turquoise to-bit-lavender' },
-  { icon: FileText, label: 'IP & Amendments', color: 'from-bit-red to-bit-lavender' },
+  { icon: Users,         label: 'Eligibility',        color: 'from-bit-lavender to-violet-400',  targetId: 'terms-1'  },
+  { icon: BookOpen,      label: 'Programme Conduct',  color: 'from-bit-turquoise to-cyan-400',   targetId: 'terms-2'  },
+  { icon: AlertTriangle, label: 'Attendance',         color: 'from-bit-red to-pink-400',         targetId: 'terms-3'  },
+  { icon: Shield,        label: 'Safety',             color: 'from-bit-green to-emerald-400',    targetId: 'terms-4'  },
+  { icon: Camera,        label: 'Media',              color: 'from-orange-400 to-yellow-400',    targetId: 'terms-6'  },
+  { icon: Database,      label: 'Data Protection',    color: 'from-bit-lavender to-bit-red',     targetId: 'terms-7'  },
+  { icon: Scale,         label: 'Liability',          color: 'from-bit-turquoise to-bit-lavender', targetId: 'terms-9' },
+  { icon: FileText,      label: 'IP & Amendments',    color: 'from-bit-red to-bit-lavender',     targetId: 'terms-8'  },
 ];
+
+function scrollTo(id: string) {
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
 
 export function Terms() {
   useEffect(() => { window.scrollTo(0, 0); }, []);
@@ -37,17 +43,21 @@ export function Terms() {
             </p>
           </div>
 
-          {/* Quick Reference Cards */}
+          {/* Quick Reference Cards — onClick scroll, not href, to avoid HashRouter conflicts */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
             {quickRef.map((s, i) => {
               const Icon = s.icon;
               return (
-                <div key={i} className="glass rounded-2xl p-4 border border-white/60 dark:border-gray-700 text-center hover:shadow-lg transition-all duration-300">
+                <button
+                  key={i}
+                  onClick={() => scrollTo(s.targetId)}
+                  className="glass rounded-2xl p-4 border border-white/60 dark:border-gray-700 text-center hover:shadow-lg hover:border-bit-lavender/30 transition-all duration-300 cursor-pointer"
+                >
                   <div className={`w-10 h-10 mx-auto rounded-xl bg-gradient-to-br ${s.color} flex items-center justify-center mb-3`}>
                     <Icon className="w-5 h-5 text-white" />
                   </div>
                   <p className="text-xs font-bold text-bit-dark dark:text-gray-300">{s.label}</p>
-                </div>
+                </button>
               );
             })}
           </div>
@@ -66,8 +76,7 @@ export function Terms() {
           {/* Sections */}
           <div className="flex flex-col gap-6">
 
-            {/* 1 */}
-            <Card>
+            <Card id="terms-1">
               <SH num="1" icon={Users} gradient="from-bit-lavender to-violet-400" title="Eligibility and Registration" />
               <SubSH title="1.1 Eligibility" />
               <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-4">BbB Programmes are open to youth aged 10 to 18 residing in Singapore, unless otherwise stated for a specific programme. Participation by persons outside this age range may be considered at BbB&apos;s discretion.</p>
@@ -77,8 +86,7 @@ export function Terms() {
               <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed">As BbB Programmes are designed for minors, a parent or legal guardian must complete the registration form on behalf of the participant, or must supervise the completion of the form by their child/ward. By submitting the form, the parent or guardian confirms that they have the legal authority to consent on the participant&apos;s behalf and that all information provided is accurate and complete.</p>
             </Card>
 
-            {/* 2 */}
-            <Card>
+            <Card id="terms-2">
               <SH num="2" icon={BookOpen} gradient="from-bit-turquoise to-cyan-400" title="Programme Conduct" />
               <SubSH title="2.1 Code of Conduct" />
               <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-4">All participants are required to comply with BbB&apos;s <a href="/#/conduct" className="text-bit-lavender hover:text-bit-red transition-colors">Code of Conduct</a> at all times during Programme activities, including online sessions and any associated communications.</p>
@@ -88,8 +96,7 @@ export function Terms() {
               <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed">BbB reserves the right to remove any participant from a Programme at any time if the participant&apos;s continued presence poses a risk to the safety, wellbeing, or learning experience of others, or if the participant repeatedly or seriously violates these Terms or the Code of Conduct.</p>
             </Card>
 
-            {/* 3 */}
-            <Card>
+            <Card id="terms-3">
               <SH num="3" icon={AlertTriangle} gradient="from-bit-red to-pink-400" title="Attendance and Commitment" />
               <SubSH title="3.1 Expected Attendance" />
               <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-4">Participants are expected to attend all scheduled sessions of the Programme they have enrolled in. Consistent or unexplained absence may result in the participant&apos;s place being offered to another student on the waitlist.</p>
@@ -99,8 +106,7 @@ export function Terms() {
               <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed">Participants are expected to arrive on time for all sessions. Arriving more than 15 minutes late without prior notice may be recorded as a light offence under the Code of Conduct.</p>
             </Card>
 
-            {/* 4 */}
-            <Card>
+            <Card id="terms-4">
               <SH num="4" icon={Shield} gradient="from-bit-green to-emerald-400" title="Supervision and Safety" />
               <SubSH title="4.1 Scope of Supervision" />
               <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-4">BbB&apos;s duty of care and supervision of participants begins at the scheduled start time of each session and ends at the scheduled end time. BbB is not responsible for the safety or supervision of participants travelling to or from the venue.</p>
@@ -112,14 +118,12 @@ export function Terms() {
               <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed">Parents and guardians are required to disclose, at the time of registration, any known medical conditions, allergies, or special needs. BbB shall not be liable for any adverse outcomes arising from incomplete or inaccurate medical disclosures.</p>
             </Card>
 
-            {/* 5 */}
-            <Card>
+            <Card id="terms-5">
               <SH num="5" icon={Camera} gradient="from-orange-400 to-yellow-400" title="Programme Changes and Cancellations" />
               <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed">BbB reserves the right to amend, reschedule, cancel, or discontinue any Programme or session at any time where reasonably necessary. As BbB Programmes are offered <strong>free of charge</strong>, no monetary refunds apply. In the event of a cancellation, BbB will endeavour to offer participants an alternative session or placement where possible.</p>
             </Card>
 
-            {/* 6 */}
-            <Card>
+            <Card id="terms-6">
               <SH num="6" icon={Camera} gradient="from-orange-400 to-yellow-400" title="Photography, Videography, and Media" />
               <SubSH title="6.1 BbB Media" />
               <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-4">BbB may take photographs and videos during Programme sessions for use in our social media, website, publications, and marketing materials. BbB will not publish clearly identifiable photographs of individual minors without the explicit consent of their parent or guardian.</p>
@@ -131,14 +135,12 @@ export function Terms() {
               <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed">Participants and parents are welcome to take photographs for personal use during sessions. However, sharing photographs that include other participants — particularly other minors — on any public platform is strictly prohibited without the express consent of those participants&apos; parents or guardians.</p>
             </Card>
 
-            {/* 7 */}
-            <Card>
+            <Card id="terms-7">
               <SH num="7" icon={Database} gradient="from-bit-lavender to-bit-red" title="Personal Data Protection" />
               <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed">BbB collects, uses, and stores personal data in accordance with Singapore&apos;s <strong>Personal Data Protection Act 2012 (PDPA)</strong> and BbB&apos;s{' '}<a href="/#/privacy" className="text-bit-lavender hover:text-bit-red transition-colors">Privacy Policy</a>. We will not sell personal data. Parents and guardians may request access to, correction of, or deletion of personal data by contacting <a href="mailto:info.bbbcoding@gmail.com" className="text-bit-lavender hover:text-bit-red transition-colors">info.bbbcoding@gmail.com</a>.</p>
             </Card>
 
-            {/* 8 */}
-            <Card>
+            <Card id="terms-8">
               <SH num="8" icon={FileText} gradient="from-bit-turquoise to-bit-lavender" title="Intellectual Property" />
               <SubSH title="8.1 BbB Curriculum and Materials" />
               <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-4">All curriculum materials, lesson content, worksheets, and resources produced by BbB remain the intellectual property of Bit by Bit Coding. Reproduction, distribution, or commercial use of BbB materials without prior written consent is prohibited.</p>
@@ -146,32 +148,27 @@ export function Terms() {
               <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed">Participants retain ownership of original code and projects produced during BbB Programmes. By participating, participants and their parents or guardians grant BbB a non-exclusive, royalty-free licence to showcase participant work (in anonymised or credited form, with consent) for educational or promotional purposes.</p>
             </Card>
 
-            {/* 9 */}
-            <Card>
+            <Card id="terms-9">
               <SH num="9" icon={Scale} gradient="from-bit-red to-bit-lavender" title="Liability" />
               <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed">To the maximum extent permitted by applicable law, BbB, its volunteers, tutors, administrators, and affiliated organisations shall not be liable for any loss, damage, injury, or harm arising from participation in any BbB Programme, except where such loss or damage arises from BbB&apos;s gross negligence or wilful misconduct. Participants are responsible for their own personal devices and belongings during sessions.</p>
             </Card>
 
-            {/* 10 */}
-            <Card>
+            <Card id="terms-10">
               <SH num="10" icon={Heart} gradient="from-bit-green to-emerald-400" title="Child Protection" />
               <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed">BbB is deeply committed to the safety and wellbeing of all participants. All tutors and administrators are required to comply with BbB&apos;s{' '}<a href="/#/child-policy" className="text-bit-lavender hover:text-bit-red transition-colors">Child Protection Policy</a>. Any concerns regarding the safety or wellbeing of a participant should be reported immediately to{' '}<a href="mailto:info.bbbcoding@gmail.com" className="text-bit-lavender hover:text-bit-red transition-colors">info.bbbcoding@gmail.com</a>.</p>
             </Card>
 
-            {/* 11 */}
-            <Card>
+            <Card id="terms-11">
               <SH num="11" icon={RefreshCw} gradient="from-bit-lavender to-violet-400" title="Amendments to These Terms" />
               <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed">BbB reserves the right to amend these Terms at any time. The most current version will be published on our website. Continued participation in BbB Programmes following any amendment constitutes acceptance of the revised Terms.</p>
             </Card>
 
-            {/* 12 */}
-            <Card>
+            <Card id="terms-12">
               <SH num="12" icon={Globe} gradient="from-bit-turquoise to-cyan-400" title="Governing Law" />
               <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed">These Terms are governed by and construed in accordance with the laws of the <strong>Republic of Singapore</strong>. Any disputes arising from or in connection with these Terms shall be subject to the non-exclusive jurisdiction of the courts of Singapore.</p>
             </Card>
 
-            {/* 13 */}
-            <Card>
+            <Card id="terms-13">
               <SH num="13" icon={FileText} gradient="from-bit-red to-pink-400" title="Contact" />
               <p className="text-bit-dark/80 dark:text-gray-300 leading-relaxed mb-3"><strong>Bit by Bit Coding</strong></p>
               <ul className="space-y-1 text-sm text-bit-dark/70 dark:text-gray-400">
@@ -198,9 +195,9 @@ export function Terms() {
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 
-function Card({ children }: { children: React.ReactNode }) {
+function Card({ id, children }: { id: string; children: React.ReactNode }) {
   return (
-    <div className="glass rounded-3xl p-8 md:p-10 border border-white/60 dark:border-gray-700 shadow-xl shadow-bit-lavender/5 bg-white/40 dark:bg-gray-800/40">
+    <div id={id} className="glass rounded-3xl p-8 md:p-10 border border-white/60 dark:border-gray-700 shadow-xl shadow-bit-lavender/5 bg-white/40 dark:bg-gray-800/40 scroll-mt-28">
       {children}
     </div>
   );

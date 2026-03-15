@@ -53,7 +53,7 @@ export function Navigation() {
     { name: 'Home', path: '/' },
     { name: 'Pathways', path: '/#/pathways' },
     { name: 'Blog', path: '/#/blog' },
-    { name: 'FAQ', path: '/#/faq' },
+    { name: 'Questions?', path: '/#/faq' },
     { name: 'Tutors', path: '/#mentors', scrollTo: 'mentors' },
     { name: 'About', path: '/#about', scrollTo: 'about' },
   ];

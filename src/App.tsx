@@ -16,6 +16,7 @@ import { ChildPolicy } from './pages/ChildPolicy';
 import { Conduct } from './pages/Conduct';
 import { BlogPage } from './pages/BlogPage';
 import { BlogPostPage } from './pages/BlogPostPage';
+import { Questions } from './pages/Questions';
 import { NotFoundPage } from './pages/NotFoundPage';
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
             <Route path="/conduct" element={<Conduct />} />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/blog/:slug" element={<BlogPostPage />} />
+            <Route path="/faq" element={<Questions />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </main>

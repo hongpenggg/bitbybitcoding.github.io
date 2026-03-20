@@ -94,7 +94,7 @@ const mentors = [
   {
     name: 'Ashton Too',
     role: 'Python @ Bit by Bit, Ex-Computing @ VJC',
-    image: 'https://raw.githubusercontent.com/bitbybitcoding/bitbybitcoding.github.io/main/.github/assets/brian_profile.jpeg',
+    image: 'https://raw.githubusercontent.com/bitbybitcoding/bitbybitcoding.github.io/main/.github/assets/ashton_profile.jpeg',
     quote: "Building games is my cup of tea. I look forward to sharing my knowledge in it.",
     expertise: ['Python', 'C#'],
     borderColor: 'border-t-bit-green',
